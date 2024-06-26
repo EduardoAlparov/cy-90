@@ -4,12 +4,22 @@
     right: 0;
     bottom: 0;
     left: 0;
-    z-index: 200;
+    z-index: 2000;
 
     width: 100%;
     height: 100%;
 
-    background-color: rgba(0, 0, 0, 0.6);
+    background-image:  linear-gradient(to bottom, rgba(46, 46, 46, 0.10) 0%, rgba(24, 24, 24, 0.40) 79.3%, rgba(7, 7, 7, 0.40) 100%);
+    background-image: -moz-linear-gradient(to bottom, rgba(46, 46, 46, 0.10) 0%, rgba(24, 24, 24, 0.40) 79.3%, rgba(7, 7, 7, 0.40) 100%);
+    background-image: -ms-linear-gradient(to bottom, rgba(46, 46, 46, 0.10) 0%, rgba(24, 24, 24, 0.40) 79.3%, rgba(7, 7, 7, 0.40) 100%);
+    background-image: -webkit-linear-gradient(to bottom, rgba(46, 46, 46, 0.10) 0%, rgba(24, 24, 24, 0.40) 79.3%, rgba(7, 7, 7, 0.40) 100%);
+    background-image: -webkit-linear-gradient(to bottom, rgba(46, 46, 46, 0.10) 0%, rgba(24, 24, 24, 0.40) 79.3%, rgba(7, 7, 7, 0.40) 100%);
+    background-image: -o-linear-gradient(to bottom, rgba(46, 46, 46, 0.10) 0%, rgba(24, 24, 24, 0.40) 79.3%, rgba(7, 7, 7, 0.40) 100%);
+    background-image:  linear-gradient(to bottom, rgba(46, 46, 46, 0.10) 0%, rgba(24, 24, 24, 0.40) 79.3%, rgba(7, 7, 7, 0.40) 100%);
+
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+
     visibility: hidden;
     opacity: 0;
     transition: opacity var(--transition-time), visibility var(--transition-time);
@@ -22,17 +32,12 @@
 
     &__container {
         position: absolute;
-        top: 50%;
-        left: 50%;
+
         display: none;
         width: 100%;
-        max-width: 80%;
         height: auto;
         overflow: auto;
         max-height: 100%;
-        background-color: var(--white, #fff);
-        border-radius: 0.6rem;
-        box-shadow: 0 0 1rem rgba(0, 0, 0, 0.1);
         transform: translate(-50%, -50%);
 
         &.modal-open {
@@ -42,22 +47,179 @@
     }
 
     &__close-btn {
-        position: absolute;
-        top: 2rem;
-        right: 2rem;
-        z-index: 2;
         display: flex;
         align-items: center;
         justify-content: center;
-        width: 2rem;
-        height: 2rem;
-        background-color: transparent;
-        border-radius: 50%;
-        cursor: pointer;
+
+        width: 4rem;
+        height: 4rem;
+
+        @include breakpointMF(portrait-tablet) {
+            width: 5.5rem;
+            height: 5.5rem;
+        }
     }
 
-    &__content {
-        position: relative;
-        padding: 4rem 6rem;
+    &__site-container {
+        display: flex;
+        flex-direction: column;
+        align-items: stretch;
+        height: 100%;
+    }
+
+    &__header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding-top: 3.8rem;
+        padding-left: 0.8rem;
+
+        @include breakpointMF(portrait-tablet) {
+            padding-top: 6.2rem;
+            padding-left: 1.5rem;
+        }
+    }
+
+    &__grid {
+        width: 100%;
+        height: 100%;
+
+        display: grid;
+        grid-template-areas:
+            "m_menus"
+            "m_contacts"
+            "m_times";
+
+        grid-template-rows: 1fr max-content max-content;
+        gap: 5.2rem;
+        padding-left: 0.8rem;
+        padding-bottom: 4.5rem;
+
+        @include breakpointMF(portrait-tablet) {
+            grid-template-areas:
+                "m_contacts m_times m_menus";
+
+            grid-template-columns: 1fr 1fr 54rem;
+            align-items: stretch;
+            gap: unset;
+
+            margin-top: 3.5rem;
+            padding-left: unset;
+            padding-bottom: 10.4rem;
+        }
+    }
+
+    &__menu {
+        grid-area: m_menus;
+
+        display: flex;
+        align-items: center;
+
+        @include breakpointMF(portrait-tablet) {
+            display: block;
+        }
+    }
+
+    &__contacts {
+        grid-area: m_contacts;
+
+        @include breakpointMF(portrait-tablet) {
+            align-self: flex-end;
+        }
+    }
+
+    &__times {
+        grid-area: m_times;
+
+        @include breakpointMF(portrait-tablet) {
+            align-self: flex-end;
+        }
+    }
+
+    &__list {
+        &.page-footer__times-list {
+            display: flex;
+            flex-direction: row;
+            align-items: flex-start;
+            gap: 2.4rem;
+            margin-top: 3.2rem;
+
+            @include breakpointMF(portrait-tablet) {
+                flex-direction: column;
+            }
+        }
+
+        &.page-footer__contacts-list {
+            display: flex;
+            flex-direction: column;
+            gap: 1.3rem;
+            margin-top: 2.4rem;
+
+            @include breakpointMF(portrait-tablet) {
+                margin-top: 4rem;
+            }
+
+            .page-footer__text {
+                br {
+                    @include breakpoint(portrait-tablet) {
+                        display: none !important;
+                    }
+                }
+            }
+        }
+    }
+
+    &__phone {
+        font-family: var(--third-ff);
+        font-size: 2.5rem;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 115%;
+        text-transform: uppercase;
+
+        @include breakpointMF(portrait-tablet) {
+            margin-top: 2.4rem;
+
+            font-family: var(--second-ff);
+            font-size: 3rem;
+            font-style: normal;
+            font-weight: 500;
+            line-height: 100%;
+            text-transform: uppercase;
+
+            background: var(--Gradient, linear-gradient(94deg, #4F4F4F -30.16%, #B5B5B5 128.97%));
+            background-clip: text;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+    }
+
+    &__title {
+        &.page-footer__title {
+            margin-bottom: 0;
+        }
+    }
+
+    &.modal--menu {
+
+        .modal__container {
+            right: 0;
+            top: 0;
+            left: unset;
+
+            height: 100%;
+            max-width: calc(100% - 4.7rem);
+            transform: unset;
+            background-color: var(--back, #101010);
+            box-shadow: unset;
+
+            @include breakpointMF(portrait-tablet) {
+                left: 0;
+                right: 0;
+
+                height: auto;
+                max-width: 100%;
+            }
+        }
     }
 }

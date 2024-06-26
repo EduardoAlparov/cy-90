@@ -44,14 +44,14 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
     // masks and validation:
-    validation();
-    masks();
+    // validation();
+    // masks();
 
     // lazyload for images, videos, iframes and objects:
-    lazyload();
+    // lazyload();
 
     // fancybox images modals:
-    fancybox();
+    // fancybox();
 
     // other scripts:
     setHeaderPadding();

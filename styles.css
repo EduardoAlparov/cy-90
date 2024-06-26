@@ -2,39 +2,43 @@
 
 :root {
     /* layout: */
-    --max-container-width: 168rem;
-    --content-padding: 1rem;
+    --max-container-width: 100%;
+    --content-padding: 1.6rem;
 
     /* colors: */
     --accent: orange;
-    --title: #111;
-    --text: #333;
-    --back: #eee;
-    --white: #fff;
+    --title: #fff;
+    --text: #5e5e5e;
+    --back: #101010;
+    --card: #1a1a1a;
+    --White: #eee;
+    --White-clean: #fff;
+    --Grey: #888;
     --black: #000;
+    --grad1: #262e36;
+    --grad2: #354380;
+
 
     /* typography: */
-    --main-ff: "Roboto", sans-serif;
+    --main-ff: "Ruberoid", sans-serif;
+    --second-ff: "Stapel Medium", sans-serif;
+    --third-ff: "Stapel Narrow", sans-serif;
+    --fourth-ff: "Stapel Text Medium", sans-serif;
     --systemfont: -apple-system, BlinkMacSystemFont, Arial, sans-serif;
 
     /* etc.: */
     --transition: 0.3s ease;
 }
 
-@media only screen and (min-width: 577px) {
-    :root {
-        --content-padding: 1.5rem;
-    }
-}
-
-@media only screen and (min-width: 769px) {
+@media only screen and (min-width: 992px) {
     :root {
         --content-padding: 2rem;
     }
 }
 
-@media only screen and (min-width: 1024px) {
+@media only screen and (min-width: 1401px) {
     :root {
         --content-padding: 4rem;
+        --max-container-width: 166rem;
     }
 }

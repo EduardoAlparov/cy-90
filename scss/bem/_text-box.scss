@@ -1,0 +1,100 @@
+.text-box {
+    &__heading {
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 1.6rem;
+
+        @include breakpointMF(portrait-tablet) {
+            display: inline-block;
+            margin-bottom: 3.2rem;
+        }
+    }
+
+    &__heading-big {
+        font-family: var(--second-ff);
+        font-size: 4rem;
+        font-style: normal;
+        font-weight: 500;
+        line-height: normal;
+        letter-spacing: -0.01em;
+        text-transform: uppercase;
+
+        @include breakpointMF(portrait-tablet) {
+            font-size: 5rem;
+            line-height: 105%;
+        }
+    }
+
+    &__heading-middle {
+        font-family: var(--third-ff);
+        font-size: 2.5rem;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 115%;
+        letter-spacing: -0.01em;
+        text-transform: uppercase;
+
+        @include breakpointMF(portrait-tablet) {
+            font-size: 3.5rem;
+        }
+    }
+
+    &__heading-small {
+        font-family: var(--second-ff);
+        font-size: 2.4rem;
+        font-style: normal;
+        font-weight: 500;
+        line-height: normal;
+        letter-spacing: -0.01em;
+        text-transform: uppercase;
+
+        @include breakpointMF(portrait-tablet) {
+            font-size: 5rem;
+            line-height: 105%;
+        }
+    }
+
+    &__text {
+        color: var(--Grey, #888);
+        font-size: 1.4rem;
+        line-height: 115%;
+        letter-spacing: -0.01em;
+
+        @include breakpointMF(portrait-tablet) {
+            max-width: 44ch;
+            font-size: 2rem;
+            line-height: 130%;
+            letter-spacing: 0.01em;
+        }
+
+        &--wider {
+            @include breakpointMF(portrait-tablet) {
+                max-width: 46ch;
+            }
+        }
+
+        &--widest {
+            @include breakpointMF(portrait-tablet) {
+                max-width: 53ch;
+            }
+        }
+
+        strong {
+            white-space: nowrap;
+
+            @include breakpointMF(portrait-tablet) {
+                font-family: var(--main-ff);
+                font-size: 2rem;
+                font-style: normal;
+                font-weight: 700;
+                line-height: 135%;
+                letter-spacing: 0.01em;
+
+            }
+        }
+    }
+
+    &.text-box--tight {
+        max-width: 65.5rem;
+    }
+}

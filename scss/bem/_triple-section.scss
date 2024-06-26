@@ -1,0 +1,47 @@
+.triple-section {
+    &__heading {
+        &.section__heading {
+            @include breakpoint(portrait-tablet) {
+                margin-bottom: 3.2rem;
+            }
+
+            &.services__heading {
+                margin-bottom: 4.2rem;
+
+                @include breakpointMF(portrait-tablet) {
+                    margin-bottom: 11.8rem;
+                }
+            }
+        }
+    }
+
+    &__body {
+        display: flex;
+        flex-direction: column;
+        align-items: stretch;
+
+        @include breakpointMF(portrait-tablet) {
+            flex-direction: row-reverse;
+            justify-content: flex-end;
+            align-items: stretch;
+            gap: 2rem;
+        }
+    }
+
+    &__cell {
+        margin-bottom: 2rem;
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+
+        @include breakpointMF(portrait-tablet) {
+            width: calc(100% / 3 - (2rem * 2 / 3));
+            margin-bottom: unset;
+        }
+    }
+
+    &__service {
+        height: 100%;
+    }
+}

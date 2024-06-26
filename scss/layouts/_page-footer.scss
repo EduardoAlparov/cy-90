@@ -1,4 +1,141 @@
 .page-footer {
     flex: 0 0 auto;
-    padding: 2rem 0;
+    padding: 1.6rem 0 4.3rem;
+
+    color: var(--White-clean, #fff);
+    background-color: var(--back, #101010);
+
+    @include breakpointMF(portrait-tablet) {
+        padding: 11.7rem 0;
+    }
+}
+
+.page-footer {
+    &__site-container {
+        display: flex;
+        flex-direction: column;
+        align-items: stretch;
+
+        @include breakpointMF(portrait-tablet) {
+            flex-direction: row;
+        }
+    }
+
+    &__title {
+        margin-bottom: 3.2rem;
+
+        @include breakpointMF(portrait-tablet) {
+            margin-bottom: 1.6rem;
+        }
+    }
+
+    &__logo {
+        flex-shrink: 0;
+        margin-bottom: 4rem;
+
+        @include breakpointMF(portrait-tablet) {
+            margin-right: 8.6rem;
+            margin-bottom: unset;
+        }
+    }
+
+    &__grid {
+        display: grid;
+        grid-template-areas:
+            "f_times f_menu"
+            "f_contacts f_contacts";
+
+        grid-template-columns: 1fr min-content;
+        row-gap: 5.6rem;
+        width: 100%;
+
+        @include breakpointMF(portrait-tablet) {
+            grid-template-areas:
+                "f_contacts f_times f_menu";
+
+            grid-template-columns: 34.4rem 1fr max-content;
+            row-gap: unset;
+        }
+    }
+
+    &__contacts {
+        grid-area: f_contacts;
+    }
+
+    &__times {
+        grid-area: f_times;
+
+        @include breakpointMF(portrait-tablet) {
+            justify-self: center;
+        }
+    }
+
+    &__menu {
+        grid-area: f_menu;
+
+        @include breakpointMF(portrait-tablet) {
+            padding-right: 11.7rem;
+        }
+    }
+
+    &__list {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+
+        &.page-footer__contacts-list {
+            gap: 1.3rem;
+
+            @include breakpointMF(portrait-tablet) {
+                gap: 0.8rem;
+                margin-top: -0.8rem;
+            }
+        }
+
+        &.page-footer__times-list {
+            gap: 1.6rem;
+        }
+
+        &.page-footer__menus-list {
+            gap: 0.8rem;
+
+            @include breakpointMF(portrait-tablet) {
+                gap: 1.6rem;
+                padding: 1rem 0 0;
+            }
+        }
+    }
+
+    &__item {
+        & > p {
+            color: var(--Grey, #888);
+            font-size: 1.2rem;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 130%;
+            letter-spacing: 0.02em;
+
+            @include breakpointMF(portrait-tablet) {
+                font-size: 2rem;
+            }
+        }
+
+        & > a {
+            color: var(--Grey, #888);
+            font-size: 1.2rem;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 130%;
+            letter-spacing: 0.02em;
+            white-space: nowrap;
+
+            @include breakpointMF(portrait-tablet) {
+                font-size: 2rem;
+            }
+
+            @include hover() {
+                color: var(--White, #eee);
+            }
+        }
+    }
 }

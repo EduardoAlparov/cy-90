@@ -1,15 +1,20 @@
+html, body {
+    min-height: 100%;
+    margin: 0;
+}
+
 html {
-    font-size: 8px;
+    font-size: 10px;
     box-sizing: border-box;
     -webkit-text-size-adjust: 100%;
 
-    @include breakpointMF(mobile) {
-        font-size: 10px;
+    @include breakpointMF(small-tablet) {
+        font-size: 12px;
     }
 
-    @include breakpointMF(tablet) {
+    @include breakpointMF(portrait-tablet) {
         font-size: 10px;
-        font-size: unquote("clamp(9px, 0.52vw, 25px)");
+        font-size: unquote("clamp(4px, 0.501vw, 25px)");
     }
 
     @include noHighlight();
@@ -18,20 +23,13 @@ html {
 body {
     position: relative;
     min-width: 319px;
-    color: var(--text, #333);
+    min-height: 100vh;
+    min-height: 100dvh;
+
+    color: var(--White, #EEE);
+    @include text-default();
     text-rendering: optimizeSpeed;
+
+    background-color: var(--back, #101010);
     scroll-behavior: smooth;
-
-    @include text-default;
 }
-
-.h1 {
-    @include h1;
-}
-
-.h2 {
-    @include h2;
-}
-
-@include color('white', var(--white, #fff));
-@include color('text', var(--text, #333));

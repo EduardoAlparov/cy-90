@@ -3,18 +3,21 @@
     top: 0;
     right: 0;
     left: 0;
-    z-index: 200;
+    z-index: 1000;
 
-    // flex: 0 0 max-content;
     width: 100%;
     max-width: 100%;
-    padding: 1.2rem 0;
 
-    background-color: var(---back, #eee);
+    background-color: var(--back, #101010);
 
     &__site-container {
         display: flex;
         align-items: center;
         justify-content: space-between;
+        padding-top: 2.2rem;
+
+        @include breakpointMF(portrait-tablet) {
+            padding-top: 3.2rem;
+        }
     }
 }

@@ -1,0 +1,120 @@
+.list-section {
+    &__list {
+        display: flex;
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    &__item {
+        display: flex;
+        flex-direction: column;
+        align-items: stretch;
+
+        margin-bottom: 7.2rem;
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+
+        @include breakpointMF(portrait-tablet) {
+            flex-direction: row;
+            align-items: flex-start;
+            justify-content: space-between;
+            // column-gap: 7rem;
+
+            margin-bottom: 17.6rem;
+
+            &:last-child {
+                margin-bottom: 0;
+            }
+        }
+    }
+
+    &__title {
+        max-width: min-content;
+        margin-bottom: 2.4rem;
+
+        @include breakpointMF(portrait-tablet) {
+            flex-grow: 1;
+            max-width: unset;
+            margin-bottom: unset;
+        }
+    }
+
+    &__column {
+        @include breakpointMF(portrait-tablet) {
+            flex: 0 0 71.7rem;
+        }
+    }
+
+    &__subtitle {
+        margin-bottom: 2.4rem;
+        font-size: 2.2rem;
+        font-weight: 500;
+        line-height: 105%;
+
+        @include breakpointMF(portrait-tablet) {
+            margin-bottom: 3.2rem;
+            font-size: 3rem;
+            font-weight: 600;
+            line-height: 130%;
+            text-transform: uppercase;
+        }
+    }
+
+    &__points {
+        display: flex;
+        flex-direction: column;
+    }
+
+    ol:is(.list-section__points) {
+        list-style: none;
+        counter-reset: item;
+
+
+        li {
+            position: relative;
+            counter-increment: item;
+            padding-left: 1.5rem;
+
+            @include breakpointMF(portrait-tablet) {
+                padding-left: 2.5rem;
+            }
+
+            &::before {
+                position: absolute;
+                top: 0;
+                left: 0;
+
+                content: counter(item)'.\00A0';
+            }
+        }
+    }
+
+    ul:is(.list-section__points) {
+        li {
+            max-width: 30ch;
+
+            @include breakpointMF(portrait-tablet) {
+                max-width: 42rem;
+            }
+        }
+    }
+
+    &__point {
+        margin-bottom: 1.2rem;
+        color: var(--Grey, #888);
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+
+        @include breakpointMF(portrait-tablet) {
+            margin-bottom: 2.4rem;
+
+            &:last-child {
+                margin-bottom: 0;
+            }
+        }
+    }
+}

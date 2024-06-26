@@ -1,0 +1,144 @@
+.cascade-section {
+    &__heading {
+        &.section__heading {
+            @include breakpoint(portrait-tablet) {
+                flex-direction: row-reverse;
+                justify-content: space-between;
+                align-items: flex-end;
+                column-gap: 3.2rem;
+                margin-bottom: 3.2rem;
+            }
+
+            .section__title {
+                @include breakpoint(portrait-tablet) {
+                    transform: translateY(0.4rem);
+                }
+            }
+        }
+    }
+
+    &__body {
+        display: grid;
+        grid-template-columns: 100%;
+        gap: 2rem;
+        width: 100%;
+
+        @include breakpointMF(portrait-tablet) {
+            grid-template-columns: max-content max-content auto;
+        }
+    }
+
+    &__stats {
+        padding: 4rem 2.4rem;
+
+        background: var(--card, #1A1A1A);
+        border-radius: 0.5rem;
+
+        @include breakpointMF(portrait-tablet) {
+            padding: 4rem 5rem;
+
+            border-radius: 1rem;
+        }
+    }
+
+    &__stat {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 1.6rem;
+        margin-bottom: 5.6rem;
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+
+        @include breakpointMF(portrait-tablet) {
+            gap: 2.4rem;
+            margin-bottom: 9.6rem;
+
+            &:last-child {
+                margin-bottom: 0;
+            }
+        }
+
+        &--reverse {
+            @include breakpointMF(portrait-tablet) {
+                flex-direction: column-reverse;
+            }
+        }
+    }
+
+    &__name {
+        color: var(--text, #5e5e5e);
+        font-family: var(--third-ff);
+        font-size: 2.5rem;
+        line-height: 115%;
+        letter-spacing: -0.01em;
+        text-align: center;
+        text-transform: uppercase;
+
+        @include breakpointMF(portrait-tablet) {
+            font-size: 3.5rem;
+            text-align: left;
+        }
+    }
+
+    &__value {
+        font-size: 4rem;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 100%;
+        letter-spacing: -0.01em;
+        text-transform: uppercase;
+
+        @include breakpointMF(portrait-tablet) {
+            font-size: 5rem;
+            font-weight: 600;
+            line-height: 105%;
+        }
+    }
+
+    &__small-image,
+    &__big-image {
+        position: relative;
+        overflow: hidden;
+
+        &::before {
+            position: absolute;
+            top: 0;
+            left: 0;
+            bottom: 0;
+            right: 0;
+            z-index: 200;
+
+            background: linear-gradient(0deg, rgba(0, 0, 0, 0.20) 0%, rgba(0, 0, 0, 0.20) 100%);
+            content: "";
+        }
+
+        img {
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            z-index: 100;
+
+            display: block;
+            width: 100%;
+            max-width: unset;
+            min-height: 100%;
+            object-fit: cover;
+            object-position: center;
+        }
+    }
+
+    &__small-image {
+        width: 100%;
+        aspect-ratio: 0.947 / 1;
+        border-radius: 0.5rem;
+
+        @include breakpointMF(portrait-tablet) {
+            width: 40rem;
+            border-radius: unset;
+        }
+    }
+}

@@ -1,5 +1,6 @@
 # Шаблон для верстки HTML/CSS/JS для vs-code
 
+<details>
 ## Возможности и принцип работы:
 
 * Разработка отслеживается (в расширении для vs-code) - Live Server -
@@ -88,3 +89,9 @@
 ## Про js:
 
 * JavaScript разбит на модули './js/modules', которые подключаются в './js/main.js'
+
+</details>
+
+# Ссылки на верстку
+
+## Страница - [Все блоки](https://eduardoalparov.github.io/cy-90/ui.html).

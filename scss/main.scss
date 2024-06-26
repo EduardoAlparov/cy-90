@@ -6,7 +6,7 @@
 @import 'utils/mixins';
 
 // FONTS:
-//// @import 'content/fonts';
+@import 'content/fonts';
 
 // SETTINGS:
 @import 'settings/global';
@@ -17,11 +17,24 @@
 @import 'layouts/modal';
 @import 'layouts/page-header';
 @import 'layouts/page-footer';
-@import 'layouts/grid';
+// @import 'layouts/grid';
 
 
 //UI:
 @import 'ui/button';
+@import 'ui/logo';
+@import 'ui/big-logo';
+@import 'ui/burger-btn';
+@import 'ui/phone';
 
 //BEM:
-@import 'bem/logo';
+@import 'bem/menu';
+@import 'bem/service';
+@import 'bem/text-box';
+@import 'bem/information-box';
+
+@import 'bem/triple-section';
+@import 'bem/grid-section';
+@import 'bem/cascade-section';
+@import 'bem/about-section';
+@import 'bem/list-section';

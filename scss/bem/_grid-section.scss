@@ -1,0 +1,101 @@
+.grid-section {
+    &__site-container {
+        display: flex;
+        flex-direction: column-reverse;
+        align-items: stretch;
+    }
+
+    &__heading {
+        &.section__heading {
+            align-items: center;
+            margin-top: 3.2rem;
+            margin-bottom: 0;
+
+            @include breakpointMF(portrait-tablet) {
+                margin-top: 4rem;
+            }
+
+            h2 {
+                @include breakpoint(portrait-tablet) {
+                    margin-bottom: 0.8rem;
+
+                    color: var(--text, #5e5e5e);
+                    text-align: center;
+                    font-family: var(--third-ff);
+                    font-size: 2.5rem;
+                    font-style: normal;
+                    font-weight: 400;
+                    line-height: 115%;
+                    letter-spacing: -0.01em;
+                }
+            }
+
+            p {
+                @include breakpoint(portrait-tablet) {
+                    font-size: 4rem;
+                    font-style: normal;
+                    font-weight: 500;
+                    line-height: 105%;
+                    letter-spacing: -0.01em;
+                    text-transform: uppercase;
+                }
+            }
+        }
+    }
+
+    &__body {
+        display: grid;
+        grid-template-columns: 100%;
+        gap: 2rem;
+
+        @include breakpointMF(portrait-tablet) {
+            grid-template-columns: repeat(4, 1fr);
+            grid-template-rows: repeat(2, 36.8rem);
+        }
+    }
+
+    &__cell {
+        &--big {
+            @include breakpointMF(portrait-tablet) {
+                grid-column: span 2;
+            }
+        }
+
+        &--out {
+            padding-top: 4rem;
+
+            @include breakpoint(portrait-tablet) {
+                grid-row: 4;
+            }
+
+            @include breakpointMF(portrait-tablet) {
+                padding-top: unset;
+            }
+        }
+    }
+
+    &__text-box {
+        padding-bottom: 1.6rem;
+
+        @include breakpointMF(portrait-tablet) {
+            padding-bottom: unset;
+        }
+    }
+
+    &.grid-section--no-reverse {
+        .grid-section__site-container {
+            flex-direction: column;
+        }
+
+        .grid-section__heading {
+            &.section__heading {
+                margin-top: unset;
+                margin-bottom: 1.6rem;
+
+                @include breakpointMF(portrait-tablet) {
+                    margin-bottom: 5.6rem;
+                }
+            }
+        }
+    }
+}

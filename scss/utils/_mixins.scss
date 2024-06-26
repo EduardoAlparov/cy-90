@@ -1,6 +1,6 @@
 @import '_variables.scss';
 
-@mixin font($size: 1.6rem, $line-height: 1.375, $weight: 400, $bottom: false) {
+@mixin font($size: 1.6rem, $line-height: 1.46, $weight: 400, $bottom: false) {
     margin: 0;
     font-family: var(--main-ff, Arial);
     font-weight: $weight;
@@ -206,6 +206,12 @@
         }
     }
 
+    @else if $class == portrait-tablet {
+        @media only screen and (max-width: (992px)) {
+            @content;
+        }
+    }
+
     @else if $class == small-tablet {
         @media only screen and (max-width: (768px)) {
             @content;
@@ -219,7 +225,7 @@
     }
 
     @else if $class == small-mobile {
-        @media only screen and (max-width: (576px)) {
+        @media only screen and (max-width: (466px)) {
             @content;
         }
     }
@@ -250,7 +256,7 @@
         }
     }
 
-    @else if $class == portait-tablet {
+    @else if $class == portrait-tablet {
         @media only screen and (min-width: 992px) {
             @content;
         }
