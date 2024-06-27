@@ -1,0 +1,31 @@
+.objects-section {
+    &__heading {
+        &.section__heading {
+            margin-bottom: 2.7rem;
+
+            @include breakpointMF(portrait-tablet) {
+                margin-bottom: 4.6rem;
+            }
+        }
+    }
+
+    &__list {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 2rem;
+    }
+
+    &__item {
+        width: 100%;
+
+        @include breakpointMF(portrait-tablet) {
+            width: calc(100% / 3 - (2rem * 2 / 3));
+        }
+    }
+
+    &__object {
+        &.object {
+            max-width: unset;
+        }
+    }
+}

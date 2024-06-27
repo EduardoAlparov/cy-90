@@ -44,4 +44,32 @@
     &__service {
         height: 100%;
     }
+
+    &__big-image {
+        width: 100%;
+        aspect-ratio: 2.52 / 1;
+        margin-top: 10.4rem;
+
+    }
+
+    &__image-container {
+        position: relative;
+        width: 100%;
+        height: 100%;
+        background-color: var(--back);
+
+        img {
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+
+            display: block;
+            width: 100%;
+            max-width: unset;
+            min-height: 100%;
+            object-fit: cover;
+            object-position: center;
+        }
+    }
 }

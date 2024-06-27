@@ -1,0 +1,66 @@
+.simple-section {
+    &__body {
+        display: grid;
+
+        grid-template-columns: 100%;
+        grid-template-areas:
+            "b_title"
+            "b_number"
+            "b_subtitle"
+            "b_text";
+
+        @include breakpointMF(portrait-tablet) {
+            grid-template-columns: 1fr calc(47rem + 6.6rem);
+            grid-template-rows: repeat(3, max-content);
+            grid-template-areas:
+                "b_title b_title"
+                "b_subtitle b_number"
+                "b_subtitle b_text";
+        }
+    }
+
+    &__title {
+        grid-area: b_title;
+        margin-bottom: 3.2rem;
+
+        @include breakpointMF(portrait-tablet) {
+            margin-bottom: 8rem;
+        }
+    }
+
+    &__number {
+        grid-area: b_number;
+        margin-bottom: 2.4rem;
+
+        @include breakpointMF(portrait-tablet) {
+            margin-bottom: 4rem;
+        }
+    }
+
+    &__text {
+        grid-area: b_text;
+        max-width: 30ch;
+        color: var(--Grey, #888);
+
+        @include breakpointMF(portrait-tablet) {
+            max-width: unset;
+            padding-right: 6.6rem;
+        }
+    }
+
+    &__subtitle {
+        grid-area: b_subtitle;
+        margin-bottom: 1.6rem;
+
+        @include breakpointMF(portrait-tablet) {
+            margin-bottom: unset;
+            padding-bottom: 2rem;
+        }
+
+        p {
+            @include breakpointMF(portrait-tablet) {
+                max-width: 25ch;
+            }
+        }
+    }
+}
