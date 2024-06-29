@@ -1,0 +1,34 @@
+.breadcrumbs {
+    &__list {
+        display: flex;
+        align-items: center;
+        column-gap: 2.4rem;
+
+        overflow: auto;
+
+        @include breakpointMF(portrait-tablet) {
+            column-gap : 8rem;
+        }
+    }
+
+    &__link {
+        color: var(--White, #EEE);
+        font-size: 1.2rem;
+        line-height: 135%;
+        letter-spacing: 0.02em;
+
+        @include breakpointMF(portrait-tablet) {
+            font-size: 2rem;
+            line-height: 130%;
+        }
+    }
+
+    &__item {
+        &:last-child {
+            a {
+                color: var(--Grey, #888);
+                pointer-events: none;
+            }
+        }
+    }
+}

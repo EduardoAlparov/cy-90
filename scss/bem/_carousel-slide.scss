@@ -1,0 +1,118 @@
+.carousel-slide {
+    position: relative;
+
+    &__body {
+        position: relative;
+        z-index: 500;
+
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+
+        height: 100%;
+        padding: 5.6rem 0.5rem;
+
+        @include breakpointMF(portrait-tablet) {
+            padding: 8.9rem 0 8.2rem;
+        }
+    }
+
+    &__header {
+        @include breakpointMF(portrait-tablet) {
+            padding: 1rem 1rem 1rem 6.8rem;
+        }
+    }
+
+    &__subtitle {
+        @include breakpointMF(portrait-tablet) {
+           margin-bottom: 0.8rem;
+        }
+    }
+
+    &__list {
+        display: none;
+        align-items: center;
+        justify-content: space-between;
+
+        @include breakpointMF(portrait-tablet) {
+            display: flex;
+        }
+    }
+
+    &__list-item {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        padding: 4rem 6.4rem;
+
+        &:first-child {
+            margin-right: 6rem;
+        }
+
+        &:nth-child(2) {
+            position: relative;
+
+            flex: 1 1 auto;
+
+            &::after,
+            &::before {
+                position: absolute;
+                top: 0;
+                bottom: 0;
+
+                width: 1px;
+                height: 100%;
+
+                background-color: var(--border, #C4C4C4);
+                content: "";
+            }
+
+            &::before {
+                left: 0;
+            }
+
+            &::after {
+                right: 0;
+            }
+        }
+    }
+
+    &__start {
+        margin-bottom: 1.6rem;
+    }
+
+    &__picture {
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        z-index: 100;
+
+        &::before {
+            position: absolute;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            z-index: 200;
+
+            width: 100%;
+            height: 100%;
+
+            background: linear-gradient(180deg, rgba(24, 24, 24, 0.40) 0%, rgba(21, 21, 21, 0.25) 39.57%, rgba(19, 19, 19, 0.40) 75%, rgba(15, 15, 15, 0.70) 100%);
+
+            content: "";
+        }
+
+        img {
+            display: block;
+            width: 100%;
+            max-width: unset;
+            min-height: 100%;
+            object-fit: cover;
+            object-position: center;
+        }
+    }
+}

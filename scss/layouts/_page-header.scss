@@ -20,4 +20,12 @@
             padding-top: 3.2rem;
         }
     }
+
+    &__breadcrumbs {
+        margin-top: 7.6rem;
+
+        @include breakpointMF(portrait-tablet) {
+            margin-top: 12.8rem;
+        }
+    }
 }

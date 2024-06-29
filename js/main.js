@@ -1,5 +1,5 @@
 import Modal from "./modules/Modal.js";
-import Map from "./modules/Map.js";
+import maps from "./modules/maps.js";
 
 import validation from './modules/validation.js';
 import masks from './modules/masks.js';
@@ -8,6 +8,7 @@ import lazyload from './modules/lazyload.js';
 import fancybox from './modules/fancybox.js';
 
 import setHeaderPadding from './modules/setHeaderPadding.js';
+import carouselSwiper from './modules/carouselSwiper.js';
 
 document.addEventListener("DOMContentLoaded", () => {
     const body = document.body;
@@ -25,24 +26,6 @@ document.addEventListener("DOMContentLoaded", () => {
         },
     });
 
-    // inits map:
-    if(document.getElementById('yamapsId')) {
-        const map = new Map('yamapsId', {
-            // map center:
-            center: [55.77, 49.15],
-            // map zoom value:
-            zoom: 14,
-            // placemarks:
-            coords: [
-                [55.767398, 49.150961]
-            ],
-            // map control elements:
-            controls: [
-
-            ]
-        })
-    }
-
     // masks and validation:
     // validation();
     // masks();
@@ -55,4 +38,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
     // other scripts:
     setHeaderPadding();
+    carouselSwiper();
+    maps();
 })
