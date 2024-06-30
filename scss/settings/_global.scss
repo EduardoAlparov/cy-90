@@ -4,9 +4,13 @@ html, body {
 }
 
 html {
-    font-size: 10px;
+    font-size: 8px;
     box-sizing: border-box;
     -webkit-text-size-adjust: 100%;
+
+    @include breakpointMF(supersmall-mobile) {
+        font-size: 10px;
+    }
 
     @include breakpointMF(small-tablet) {
         font-size: 12px;
@@ -32,4 +36,10 @@ body {
 
     background-color: var(--back, #101010);
     scroll-behavior: smooth;
+
+    &.body-main-page {
+        .page-header__breadcrumbs {
+            display: none;
+        }
+    }
 }

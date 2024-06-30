@@ -279,4 +279,10 @@
             @content;
         }
     }
+
+    @else if $class == supersmall-mobile {
+        @media only screen and (min-width: (370px)) {
+            @content;
+        }
+    }
 }

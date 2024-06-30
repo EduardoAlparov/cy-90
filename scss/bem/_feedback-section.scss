@@ -1,0 +1,36 @@
+.feedback-section {
+    @include breakpoint(portrait-tablet) {
+        display: none;
+    }
+
+    &__site-container {
+        padding-top: 1.5rem;
+        padding-bottom: 13rem;
+    }
+
+    &__heading {
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 8rem;
+        margin-left: 30rem;
+    }
+
+    &__title {
+        &--top {
+            margin-bottom: 2rem;
+        }
+
+        &--bottom {
+            margin-left: auto;
+            padding-right: 6rem;
+        }
+    }
+
+    &__footer {
+        display: flex;
+        align-items: flex-start;
+        column-gap: 7.8rem;
+
+        margin-left: 30rem;
+    }
+}

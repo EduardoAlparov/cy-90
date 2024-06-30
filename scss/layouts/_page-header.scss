@@ -8,8 +8,6 @@
     width: 100%;
     max-width: 100%;
 
-    background-color: var(--back, #101010);
-
     &__site-container {
         display: flex;
         align-items: center;
@@ -18,6 +16,16 @@
 
         @include breakpointMF(portrait-tablet) {
             padding-top: 3.2rem;
+        }
+    }
+
+    &__button {
+        .burger-btn {
+            margin-left: auto;
+        }
+
+        @include breakpointMF(portrait-tablet) {
+            min-width: 30rem;
         }
     }
 

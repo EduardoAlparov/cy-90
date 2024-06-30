@@ -24,21 +24,23 @@
             href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.css"/>
         <link rel="stylesheet" href="./styles.css">
     </head>
-    <body class="preload">
+    <body class="preload body-main-page">
         <div class="wrapper">
             <header class="page-header">
                 <div class="page-header__site-container">
-                    <a href="/" class="logo">
+                    <a href="/" class="page-header__logo logo">
                         <svg class="icon">
                             <use xlink:href="./images/sprite.svg#logo"></use>
                         </svg>
                     </a>
 
-                    <a href="tel:+74952690571" class="phone hide-on-mobile">+7 495 269 05 71</a>
+                    <a href="tel:+74952690571" class="page-header__phone phone hide-on-mobile">+7 495 269 05 71</a>
 
-                    <button class="burger-btn" data-path="menu-modal" type="button">
-                        <span></span>
-                    </button>
+                    <div class="page-header__button">
+                        <button class="burger-btn" data-path="menu-modal" type="button">
+                            <span></span>
+                        </button>
+                    </div>
                 </div>
                 <div class="page-header__breadcrumbs breadcrumbs">
                     <div class="breadcrumbs__site-container">
@@ -58,14 +60,47 @@
                 </div>
             </header>
             <main class="page-main">
-                <section class="section ui-section">
-                    <div class="section__site-container _intro-padding-top">
-                        <div class="ui-section__list">
-                            <div class="ui-section__item">
-
-                            </div>
+                <section class="section intro-section">
+                    <div class="intro-section__site-container _intro-padding-top">
+                        <div class="intro-section__heading">
+                            <h1 class="intro-section__title intro-section__title--h1-big">
+                                13 лет
+                            </h1>
+                            <p class="intro-section__text intro-section__text--h3">
+                                выполнение&nbsp;строительно-монтажных&nbsp;работ
+                            </p>
+                            <p class="intro-section__subtitle intro-section__subtitle--h2-big">
+                                в Москве
+                            </p>
                         </div>
                     </div>
+
+                    <div class="intro-section__body">
+                        <div class="intro-section__media">
+                            <div class="intro-section__picture">
+                                <picture>
+                                    <source srcset="./images/intro/pic-1.webp" media="(min-width: 992px)" type="image/webp">
+                                    <source srcset="./images/intro/pic-1m.webp" media="(max-width: 992px)" type="image/webp">
+                                    <source srcset="./images/intro/pic-1m.jpg" media="(max-width: 992px)">
+                                    <img data-swiper-parallax-opacity="0" src="./images/intro/pic-1.jpg"  media="(min-width: 992px)" alt="">
+                                </picture>
+                            </div>
+                        </div>
+
+                        <div class="intro-section__content">
+                            <a href="#" type="button" class="intro-section__video-btn video-btn">
+                                <span>Видео</span>
+                                <svg class="icon">
+                                    <use xlink:href="./images/sprite.svg#play"></use>
+                                </svg>
+                            </a>
+
+                            <p class="intro-section__slogan">
+                                Лидерство на рынке монолитных конструкций: качество и сроки гарантированы!
+                            </p>
+                        </div>
+                    </div>
+
                 </section>
 
                 <section class="section triple-section">
@@ -1330,6 +1365,30 @@
                             <div class="simple-section__text simple-section__text--text">
                                 Темп строительства нашей компании до 7 этажей в месяц
                             </div>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="section feedback-section">
+                    <div class="feedback-section__site-container">
+
+                        <div class="feedback-section__heading">
+                            <p class="feedback-section__title feedback-section__title--top feedback-section__title--h1">
+                                Не&nbsp;нашли&nbsp;ответ&nbsp;на<br>интересующий&nbsp;вас<br>вопрос,
+                            </p>
+                            <p class="feedback-section__title feedback-section__title--bottom feedback-section__title--h1">
+                                свяжитесь<br>с&nbsp;нами
+                            </p>
+                        </div>
+                        <div class="feedback-section__footer">
+                            <p class="feedback-section__text feedback-section__text--text">
+                                Оставьте свои контакты, мы в скором времени<br>
+                                свяжемся с&nbsp;Вами и подробно ответим на все вопросы
+                            </p>
+
+                            <a href="#" class="feedback-section__btn feedback-btn">
+                                Хочу сотрудничать
+                            </a>
                         </div>
                     </div>
                 </section>
