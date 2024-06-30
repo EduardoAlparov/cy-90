@@ -1238,6 +1238,7 @@ textarea:required:valid {
   }
 }
 .service__image {
+  position: relative;
   width: 100%;
   aspect-ratio: 1.38/1;
   overflow: hidden;
@@ -1248,6 +1249,11 @@ textarea:required:valid {
   }
 }
 .service__image img {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
   display: block;
   width: 100%;
   max-width: unset;
@@ -2027,6 +2033,9 @@ textarea:required:valid {
   }
 }
 
+.carousel-section {
+  overflow: hidden;
+}
 @media only screen and (max-width: 992px) {
   .carousel-section__heading.section__heading {
     margin-bottom: 3.2rem;

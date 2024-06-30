@@ -1,4 +1,6 @@
 .carousel-section {
+    overflow: hidden;
+
     &__heading.section__heading {
         @include breakpoint(portrait-tablet) {
             margin-bottom: 3.2rem;

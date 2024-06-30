@@ -12,6 +12,7 @@
     }
 
     &__image {
+        position: relative;
         width: 100%;
         aspect-ratio: 1.38 / 1;
         overflow: hidden;
@@ -21,6 +22,11 @@
         }
 
         img {
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+
             display: block;
             width: 100%;
             max-width: unset;
