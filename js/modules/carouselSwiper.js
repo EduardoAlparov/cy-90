@@ -7,6 +7,10 @@ export default () => {
             speed: 900,
             parallax: true,
 
+            autoplay: {
+                delay: 3000
+            },
+
             pagination: {
                 el: ".swiper-pagination",
                 clickable: true,
@@ -17,9 +21,8 @@ export default () => {
 
             breakpoints: {
                 992: {
-
                 }
-              }
+            }
         });
     })
 }
