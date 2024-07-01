@@ -1,0 +1,138 @@
+.contacts-section {
+    &__intro {
+        width: 100%;
+        height: 47.3rem;
+        margin-bottom: 4rem;
+
+        @include breakpointMF(portrait-tablet) {
+            height: 53.2rem;
+            margin-bottom: 8rem;
+        }
+    }
+
+    &__image-container {
+        position: relative;
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+
+        img {
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            z-index: 100;
+
+            display: block;
+
+            width: 100%;
+            max-width: unset;
+            min-height: 100%;
+
+            object-fit: cover;
+            object-position: center;
+        }
+    }
+
+    &__row {
+        margin-bottom: 10.4rem;
+
+        @include breakpointMF(portrait-tablet) {
+            margin-bottom: 14.6rem;
+        }
+    }
+
+    &__site-container {
+        display: grid;
+        grid-template-columns: 100%;
+
+        @include breakpointMF(portrait-tablet) {
+            grid-template-columns: 50% 1fr;
+            column-gap: 3.7rem;
+        }
+    }
+
+    &__title {
+        margin-bottom: 3.2rem;
+
+        @include breakpointMF(portrait-tablet) {
+            margin-bottom: unset;
+        }
+    }
+
+    &__contacts {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+
+        @include breakpointMF(portrait-tablet) {
+            flex-direction: row;
+            align-items: flex-start;
+            justify-content: space-between;
+        }
+
+        .modal__times {
+
+            @include breakpointMF(portrait-tablet) {
+                padding-right: 5.4rem;
+            }
+
+            .modal__title {
+                margin-bottom: 2.4rem;
+
+
+                @include breakpointMF(portrait-tablet) {
+                    margin-bottom: 3.2rem;
+                }
+            }
+
+            .page-footer__times-list.modal__list {
+                flex-direction: column;
+                gap: 2.4rem;
+            }
+        }
+
+        .modal__contacts {
+            align-self: flex-start;
+            margin-bottom: 4rem;
+
+            @include breakpointMF(portrait-tablet) {
+                margin-bottom: unset;
+            }
+
+            .modal__title {
+                margin-bottom: 1.6rem;
+
+
+                @include breakpointMF(portrait-tablet) {
+                    margin-bottom: 3.2rem;
+                }
+            }
+        }
+    }
+
+    &__vacancies {
+        width: 100%;
+
+        @include breakpointMF(portrait-tablet) {
+            max-width: 68rem;
+        }
+    }
+
+    &__vacancy {
+        width: 100%;
+        margin-bottom: 1rem;
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+
+        @include breakpointMF(portrait-tablet) {
+            margin-bottom: 2rem;
+
+            &:last-child {
+                margin-bottom: 0;
+            }
+        }
+    }
+}

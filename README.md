@@ -95,3 +95,9 @@
 # Ссылки на верстку
 
 ## Страница - [Все блоки](https://eduardoalparov.github.io/cy-90/ui.html).
+## Страница - [Главная](https://eduardoalparov.github.io/cy-90/).
+## Страница - [О компании](https://eduardoalparov.github.io/cy-90/about.html).
+## Страница - [Портфолио](https://eduardoalparov.github.io/cy-90/portfolio.html).
+## Страница - [Страница объекта](https://eduardoalparov.github.io/cy-90/object.html).
+## Страница - [Услуги](https://eduardoalparov.github.io/cy-90/services.html).
+## Страница - [Контакты](https://eduardoalparov.github.io/cy-90/contacts.html).

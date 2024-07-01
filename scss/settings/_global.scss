@@ -37,9 +37,10 @@ body {
     background-color: var(--back, #101010);
     scroll-behavior: smooth;
 
-    &.body-main-page {
+    &.body-portfolio-page,
+    &.body-object-page {
         .page-header__breadcrumbs {
-            display: none;
+            display: block;
         }
     }
 }

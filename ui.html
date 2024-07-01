@@ -4,7 +4,7 @@
         <meta
         charset="utf-8">
         <!-- <base href="/"> -->
-        <title>Компоненты</title>
+        <title>Все блоки</title>
         <meta name="description" content="">
         <meta
             name="viewport"
@@ -22,7 +22,7 @@
             rel="preload stylesheet"
             as="style"
             href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.css"/>
-        <link rel="stylesheet" href="./styles.css">
+        <link rel="stylesheet" href="./_styles.css">
     </head>
     <body class="preload body-main-page">
         <div class="wrapper">
@@ -263,6 +263,124 @@
                                 <img src="./images/services/big.jpg" alt="">
                             </picture>
                         </div>
+                    </div>
+                </section>
+
+                <section class="section contacts-section">
+                    <div class="contacts-section__intro _intro-padding-top">
+                        <div class="contacts-section__image-container">
+                            <picture>
+                                <source srcset="./images/intro/contacts.webp" media="(min-width: 992px)" type="image/webp">
+                                <source srcset="./images/intro/contacts-m.webp" media="(max-width: 992px)" type="image/webp">
+                                <source srcset="./images/intro/contacts-m.jpg" media="(max-width: 992px)">
+                                <img src="./images/intro/contacts.jpg"  media="(min-width: 992px)" alt="">
+                            </picture>
+                        </div>
+                    </div>
+
+                    <div class="contacts-section__row contacts-section__site-container">
+                        <h2 class="contacts-section__title contacts-section__title--h2">Контакты</h2>
+
+                        <div class="contacts-section__col contacts-section__contacts">
+                            <div class="modal__contacts">
+                                <p class="modal__title page-footer__title--h3">
+                                    Центральный офис
+                                </p>
+
+                                <a href="tel:+74952690571" class="modal__phone modal__phone--bigger">
+                                    +7 495 269 05 71
+                                </a>
+
+                                <ul class="page-footer__contacts-list modal__list">
+                                    <li class="page-footer__item">
+                                        <p class="page-footer__text">
+                                            г. Москва, 1-й Магистральный тупик, 5а.
+                                        </p>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="modal__times">
+                                <p class="modal__title page-footer__title page-footer__title--h3">
+                                    Время работы
+                                </p>
+
+                                <ul class="page-footer__times-list modal__list">
+                                    <li class="page-footer__item">
+                                        <p class="page-footer__text">
+                                            Пн-пт<br>09:00-18:00
+                                        </p>
+                                    </li>
+                                    <li class="page-footer__item">
+                                        <p class="page-footer__text">
+                                            Сб<br>10:00-16:00
+                                        </p>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="contacts-section__site-container">
+                        <h2 class="contacts-section__title contacts-section__title--h2">Открытые вакансии:</h2>
+
+                        <ul class="contacts-section__col contacts-section__vacancies">
+                            <li class="contacts-section__vacancy vacancy">
+                                <input hidden type="checkbox" class="visually-hidden" name="vacancy-item-input" id="vacancy-id-001">
+                                <div class="vacancy__button">
+                                    <label for="vacancy-id-001" class="vacancy__label"></label>
+                                    <span class="vacancy__name">Начальник участка</span>
+                                    <svg class="icon">
+                                        <use xlink:href="./images/sprite.svg#plus"></use>
+                                    </svg>
+                                </div>
+                                <div class="vacancy__dropdown">
+                                    <a href="#" class="vacancy__link vacancy__link--text">
+                                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                        Maiores totam cumque illum ducimus quia iste eum placeat
+                                        vitae excepturi, tempore dolorum sint. Veritatis, nesciunt!
+                                        Sint blanditiis veniam dolorem illum nemo?
+                                    </a>
+                                </div>
+                            </li>
+
+                            <li class="contacts-section__vacancy vacancy">
+                                <input hidden type="checkbox" class="visually-hidden" name="vacancy-item-input" id="vacancy-id-002">
+                                <div class="vacancy__button">
+                                    <label for="vacancy-id-002" class="vacancy__label"></label>
+                                    <span class="vacancy__name">Ведущий инженер ПТО</span>
+                                    <svg class="icon">
+                                        <use xlink:href="./images/sprite.svg#plus"></use>
+                                    </svg>
+                                </div>
+                                <div class="vacancy__dropdown">
+                                    <a href="#" class="vacancy__link vacancy__link--text">
+                                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                        Maiores totam cumque illum ducimus quia iste eum placeat.
+                                    </a>
+                                </div>
+                            </li>
+
+                            <li class="contacts-section__vacancy vacancy">
+                                <input hidden type="checkbox" class="visually-hidden" name="vacancy-item-input" id="vacancy-id-003">
+                                <div class="vacancy__button">
+                                    <label for="vacancy-id-003" class="vacancy__label"></label>
+                                    <span class="vacancy__name">Производитель работ</span>
+                                    <svg class="icon">
+                                        <use xlink:href="./images/sprite.svg#plus"></use>
+                                    </svg>
+                                </div>
+                                <div class="vacancy__dropdown">
+                                    <a href="#" class="vacancy__link vacancy__link--text">
+                                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                        Maiores totam cumque illum ducimus quia iste eum placeat.
+                                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                        Maiores totam cumque illum ducimus quia iste eum placeat.
+                                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                        Maiores totam cumque illum ducimus quia iste eum placeat.
+                                    </a>
+                                </div>
+                            </li>
+                        </ul>
                     </div>
                 </section>
 
@@ -939,6 +1057,63 @@
                                 </div>
                             </li>
                         </ul>
+                    </div>
+                </section>
+
+                <section class="section partners-section js-partners-swiper">
+                    <div class="partners-section__site-container">
+                        <div class="partners-section__heading section__heading">
+                            <p class="section__subtitle section__subtitle--h2">
+                                Наши Основные поставщики:
+                            </p>
+                        </div>
+
+                        <div class="partners-section__body">
+                            <div class="partners-section__swiper swiper">
+                                <ul class="partners-section__swiper-wrapper swiper-wrapper">
+                                    <li class="partners-section__swiper-slide swiper-slide">
+                                        <div class="partner">
+                                            <img src="./images/partners/img-1.png" alt="">
+                                        </div>
+                                    </li>
+                                    <li class="partners-section__swiper-slide swiper-slide">
+                                        <div class="partner">
+                                            <img src="./images/partners/img-2.png" alt="">
+                                        </div>
+                                    </li>
+                                    <li class="partners-section__swiper-slide swiper-slide">
+                                        <div class="partner">
+                                            <img src="./images/partners/img-3.png" alt="">
+                                        </div>
+                                    </li>
+                                    <li class="partners-section__swiper-slide swiper-slide">
+                                        <div class="partner">
+                                            <img src="./images/partners/img-4.png" alt="">
+                                        </div>
+                                    </li>
+                                    <li class="partners-section__swiper-slide swiper-slide">
+                                        <div class="partner">
+                                            <img src="./images/partners/img-5.png" alt="">
+                                        </div>
+                                    </li>
+                                    <li class="partners-section__swiper-slide swiper-slide">
+                                        <div class="partner">
+                                            <img src="./images/partners/img-6.png" alt="">
+                                        </div>
+                                    </li>
+                                    <li class="partners-section__swiper-slide swiper-slide">
+                                        <div class="partner">
+                                            <img src="./images/partners/img-7.png" alt="">
+                                        </div>
+                                    </li>
+                                    <li class="partners-section__swiper-slide swiper-slide">
+                                        <div class="partner">
+                                            <img src="./images/partners/img-8.png" alt="">
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
                     </div>
                 </section>
 

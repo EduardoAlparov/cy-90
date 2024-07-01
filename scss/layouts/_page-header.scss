@@ -30,6 +30,7 @@
     }
 
     &__breadcrumbs {
+        display: none;
         margin-top: 7.6rem;
 
         @include breakpointMF(portrait-tablet) {

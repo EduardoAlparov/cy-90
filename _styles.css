@@ -1,9 +1,11 @@
+/* @import url('./css/main.css'); */
 @import url('./css/main.min.css');
 
 :root {
     /* layout: */
     --max-container-width: 100%;
     --content-padding: 1.6rem;
+    --header-height: 6.2rem;
 
     /* colors: */
     --accent: orange;
@@ -21,7 +23,6 @@
     --grad1: #262e36;
     --grad2: #354380;
 
-
     /* typography: */
     --main-ff: "Ruberoid", sans-serif;
     --second-ff: "Stapel Medium", sans-serif;
@@ -36,6 +37,7 @@
 @media only screen and (min-width: 992px) {
     :root {
         --content-padding: 2rem;
+        --header-height: 10.2rem;
     }
 }
 

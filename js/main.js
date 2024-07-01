@@ -9,6 +9,7 @@ import fancybox from './modules/fancybox.js';
 
 import setHeaderPadding from './modules/setHeaderPadding.js';
 import carouselSwiper from './modules/carouselSwiper.js';
+import partnersSwiper from './modules/partnersSwiper.js';
 
 document.addEventListener("DOMContentLoaded", () => {
     const body = document.body;
@@ -26,6 +27,8 @@ document.addEventListener("DOMContentLoaded", () => {
         },
     });
 
+    maps();
+
     // masks and validation:
     // validation();
     // masks();
@@ -39,5 +42,5 @@ document.addEventListener("DOMContentLoaded", () => {
     // other scripts:
     setHeaderPadding();
     carouselSwiper();
-    maps();
+    partnersSwiper();
 })
