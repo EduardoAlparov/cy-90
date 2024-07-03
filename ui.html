@@ -19,12 +19,12 @@
             href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap">
         <link rel="preload stylesheet" as="style" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
         <link
-            rel="preload stylesheet"
-            as="style"
-            href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.css"/>
+            rel="stylesheet"
+            href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.css"
+        />
         <link rel="stylesheet" href="./styles.css">
     </head>
-    <body class="preload body-main-page">
+    <body class="preload body-contacts-page">
         <div class="wrapper">
             <header class="page-header">
                 <div class="page-header__site-container">
@@ -88,12 +88,12 @@
                         </div>
 
                         <div class="intro-section__content">
-                            <a href="#" type="button" class="intro-section__video-btn video-btn">
+                            <button data-fancybox data-src="#dialog-content" class="intro-section__video-btn video-btn js-video-button">
                                 <span>Видео</span>
                                 <svg class="icon">
                                     <use xlink:href="./images/sprite.svg#play"></use>
                                 </svg>
-                            </a>
+                            </button>
 
                             <p class="intro-section__slogan">
                                 Лидерство на рынке монолитных конструкций: качество и сроки гарантированы!
@@ -334,12 +334,96 @@
                                     </svg>
                                 </div>
                                 <div class="vacancy__dropdown">
-                                    <a href="#" class="vacancy__link vacancy__link--text">
-                                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                                        Maiores totam cumque illum ducimus quia iste eum placeat
-                                        vitae excepturi, tempore dolorum sint. Veritatis, nesciunt!
-                                        Sint blanditiis veniam dolorem illum nemo?
-                                    </a>
+                                    <ul class="vacancy__tables">
+                                        <li class="vacancy__table">
+                                            <p class="vacancy__title">
+                                                Обязанности:
+                                            </p>
+
+                                            <ul class="vacancy__list">
+                                                <li class="vacancy__item vacancy__item--text">
+                                                    Подготовка строительного производства на
+                                                    участке строительства;
+                                                </li>
+                                                <li class="vacancy__item vacancy__item--text">
+                                                    Материально-техническое обеспечение строительного
+                                                    производства на участке строительства;
+                                                </li>
+                                                <li class="vacancy__item vacancy__item--text">
+                                                    Ведение материального учета и дальнейшего
+                                                    списания материалов;
+                                                </li>
+                                                <li class="vacancy__item vacancy__item--text">
+                                                    Оперативное управление строительным
+                                                    производством на участке строительства;
+                                                </li>
+                                                <li class="vacancy__item vacancy__item--text">
+                                                    Приемка и контроль качества результатов выполненных
+                                                    видов и этапов строительных работ на участке
+                                                    строительства с последующей сдачей техническому надзору;
+                                                </li>
+                                                <li class="vacancy__item vacancy__item--text">
+                                                    Сдача заказчику результатов строительных работ.
+                                                </li>
+                                                <li class="vacancy__item vacancy__item--text">
+                                                    Контроль сроков выполнения работ.
+                                                </li>
+                                            </ul>
+                                        </li>
+                                        <li class="vacancy__table">
+                                            <p class="vacancy__title">
+                                                Требования:
+                                            </p>
+
+                                            <ul class="vacancy__list">
+                                                <li class="vacancy__item vacancy__item--text">
+                                                    высшее строительное образование;
+                                                </li>
+                                                <li class="vacancy__item vacancy__item--text">
+                                                    Опыт работы в монолитном многоэтажном
+                                                    домостроении от 3 лет;
+                                                </li>
+                                                <li class="vacancy__item vacancy__item--text">
+                                                    Опыт руководства коллективом до 10 ИТР и
+                                                    до 200 рабочих разных профессий;
+                                                </li>
+                                                <li class="vacancy__item vacancy__item--text">
+                                                    Опыт взаимодействия с заказчиком, техническим заказчиком,
+                                                    авторским надзором, подрядчиками, надзорными органами;
+                                                </li>
+                                                <li class="vacancy__item vacancy__item--text">
+                                                    Аттестация по основам промышленной безопасности А.1,
+                                                    по безопасному производству работ с применением
+                                                    подъемных сооружений Б.31 (желательно).
+                                                </li>
+                                                <li class="vacancy__item vacancy__item--text">
+                                                    Уверенный пользователь пакета microsoft office
+                                                    и программы autocad;
+                                                </li>
+                                                <li class="vacancy__item vacancy__item--text">
+                                                    Опыт чтения чертежей рабочей документации
+                                                    с полноценным расчетом раскроя арматуры.
+                                                </li>
+                                            </ul>
+                                        </li>
+                                        <li class="vacancy__table">
+                                            <p class="vacancy__title">
+                                                Условия:
+                                            </p>
+
+                                            <ul class="vacancy__list">
+                                                <li class="vacancy__item vacancy__item--text">
+                                                    Оформление по ТК РФ, з/п два раза в месяц без задержек;
+                                                </li>
+                                                <li class="vacancy__item vacancy__item--text">
+                                                    График работы 6/1;
+                                                </li>
+                                                <li class="vacancy__item vacancy__item--text">
+                                                    Соцпакет.
+                                                </li>
+                                            </ul>
+                                        </li>
+                                    </ul>
                                 </div>
                             </li>
 
@@ -353,10 +437,96 @@
                                     </svg>
                                 </div>
                                 <div class="vacancy__dropdown">
-                                    <a href="#" class="vacancy__link vacancy__link--text">
-                                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                                        Maiores totam cumque illum ducimus quia iste eum placeat.
-                                    </a>
+                                    <ul class="vacancy__tables">
+                                        <li class="vacancy__table">
+                                            <p class="vacancy__title">
+                                                Обязанности:
+                                            </p>
+
+                                            <ul class="vacancy__list">
+                                                <li class="vacancy__item vacancy__item--text">
+                                                    Подготовка строительного производства на
+                                                    участке строительства;
+                                                </li>
+                                                <li class="vacancy__item vacancy__item--text">
+                                                    Материально-техническое обеспечение строительного
+                                                    производства на участке строительства;
+                                                </li>
+                                                <li class="vacancy__item vacancy__item--text">
+                                                    Ведение материального учета и дальнейшего
+                                                    списания материалов;
+                                                </li>
+                                                <li class="vacancy__item vacancy__item--text">
+                                                    Оперативное управление строительным
+                                                    производством на участке строительства;
+                                                </li>
+                                                <li class="vacancy__item vacancy__item--text">
+                                                    Приемка и контроль качества результатов выполненных
+                                                    видов и этапов строительных работ на участке
+                                                    строительства с последующей сдачей техническому надзору;
+                                                </li>
+                                                <li class="vacancy__item vacancy__item--text">
+                                                    Сдача заказчику результатов строительных работ.
+                                                </li>
+                                                <li class="vacancy__item vacancy__item--text">
+                                                    Контроль сроков выполнения работ.
+                                                </li>
+                                            </ul>
+                                        </li>
+                                        <li class="vacancy__table">
+                                            <p class="vacancy__title">
+                                                Требования:
+                                            </p>
+
+                                            <ul class="vacancy__list">
+                                                <li class="vacancy__item vacancy__item--text">
+                                                    высшее строительное образование;
+                                                </li>
+                                                <li class="vacancy__item vacancy__item--text">
+                                                    Опыт работы в монолитном многоэтажном
+                                                    домостроении от 3 лет;
+                                                </li>
+                                                <li class="vacancy__item vacancy__item--text">
+                                                    Опыт руководства коллективом до 10 ИТР и
+                                                    до 200 рабочих разных профессий;
+                                                </li>
+                                                <li class="vacancy__item vacancy__item--text">
+                                                    Опыт взаимодействия с заказчиком, техническим заказчиком,
+                                                    авторским надзором, подрядчиками, надзорными органами;
+                                                </li>
+                                                <li class="vacancy__item vacancy__item--text">
+                                                    Аттестация по основам промышленной безопасности А.1,
+                                                    по безопасному производству работ с применением
+                                                    подъемных сооружений Б.31 (желательно).
+                                                </li>
+                                                <li class="vacancy__item vacancy__item--text">
+                                                    Уверенный пользователь пакета microsoft office
+                                                    и программы autocad;
+                                                </li>
+                                                <li class="vacancy__item vacancy__item--text">
+                                                    Опыт чтения чертежей рабочей документации
+                                                    с полноценным расчетом раскроя арматуры.
+                                                </li>
+                                            </ul>
+                                        </li>
+                                        <li class="vacancy__table">
+                                            <p class="vacancy__title">
+                                                Условия:
+                                            </p>
+
+                                            <ul class="vacancy__list">
+                                                <li class="vacancy__item vacancy__item--text">
+                                                    Оформление по ТК РФ, з/п два раза в месяц без задержек;
+                                                </li>
+                                                <li class="vacancy__item vacancy__item--text">
+                                                    График работы 6/1;
+                                                </li>
+                                                <li class="vacancy__item vacancy__item--text">
+                                                    Соцпакет.
+                                                </li>
+                                            </ul>
+                                        </li>
+                                    </ul>
                                 </div>
                             </li>
 
@@ -370,14 +540,96 @@
                                     </svg>
                                 </div>
                                 <div class="vacancy__dropdown">
-                                    <a href="#" class="vacancy__link vacancy__link--text">
-                                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                                        Maiores totam cumque illum ducimus quia iste eum placeat.
-                                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                                        Maiores totam cumque illum ducimus quia iste eum placeat.
-                                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                                        Maiores totam cumque illum ducimus quia iste eum placeat.
-                                    </a>
+                                    <ul class="vacancy__tables">
+                                        <li class="vacancy__table">
+                                            <p class="vacancy__title">
+                                                Обязанности:
+                                            </p>
+
+                                            <ul class="vacancy__list">
+                                                <li class="vacancy__item vacancy__item--text">
+                                                    Подготовка строительного производства на
+                                                    участке строительства;
+                                                </li>
+                                                <li class="vacancy__item vacancy__item--text">
+                                                    Материально-техническое обеспечение строительного
+                                                    производства на участке строительства;
+                                                </li>
+                                                <li class="vacancy__item vacancy__item--text">
+                                                    Ведение материального учета и дальнейшего
+                                                    списания материалов;
+                                                </li>
+                                                <li class="vacancy__item vacancy__item--text">
+                                                    Оперативное управление строительным
+                                                    производством на участке строительства;
+                                                </li>
+                                                <li class="vacancy__item vacancy__item--text">
+                                                    Приемка и контроль качества результатов выполненных
+                                                    видов и этапов строительных работ на участке
+                                                    строительства с последующей сдачей техническому надзору;
+                                                </li>
+                                                <li class="vacancy__item vacancy__item--text">
+                                                    Сдача заказчику результатов строительных работ.
+                                                </li>
+                                                <li class="vacancy__item vacancy__item--text">
+                                                    Контроль сроков выполнения работ.
+                                                </li>
+                                            </ul>
+                                        </li>
+                                        <li class="vacancy__table">
+                                            <p class="vacancy__title">
+                                                Требования:
+                                            </p>
+
+                                            <ul class="vacancy__list">
+                                                <li class="vacancy__item vacancy__item--text">
+                                                    высшее строительное образование;
+                                                </li>
+                                                <li class="vacancy__item vacancy__item--text">
+                                                    Опыт работы в монолитном многоэтажном
+                                                    домостроении от 3 лет;
+                                                </li>
+                                                <li class="vacancy__item vacancy__item--text">
+                                                    Опыт руководства коллективом до 10 ИТР и
+                                                    до 200 рабочих разных профессий;
+                                                </li>
+                                                <li class="vacancy__item vacancy__item--text">
+                                                    Опыт взаимодействия с заказчиком, техническим заказчиком,
+                                                    авторским надзором, подрядчиками, надзорными органами;
+                                                </li>
+                                                <li class="vacancy__item vacancy__item--text">
+                                                    Аттестация по основам промышленной безопасности А.1,
+                                                    по безопасному производству работ с применением
+                                                    подъемных сооружений Б.31 (желательно).
+                                                </li>
+                                                <li class="vacancy__item vacancy__item--text">
+                                                    Уверенный пользователь пакета microsoft office
+                                                    и программы autocad;
+                                                </li>
+                                                <li class="vacancy__item vacancy__item--text">
+                                                    Опыт чтения чертежей рабочей документации
+                                                    с полноценным расчетом раскроя арматуры.
+                                                </li>
+                                            </ul>
+                                        </li>
+                                        <li class="vacancy__table">
+                                            <p class="vacancy__title">
+                                                Условия:
+                                            </p>
+
+                                            <ul class="vacancy__list">
+                                                <li class="vacancy__item vacancy__item--text">
+                                                    Оформление по ТК РФ, з/п два раза в месяц без задержек;
+                                                </li>
+                                                <li class="vacancy__item vacancy__item--text">
+                                                    График работы 6/1;
+                                                </li>
+                                                <li class="vacancy__item vacancy__item--text">
+                                                    Соцпакет.
+                                                </li>
+                                            </ul>
+                                        </li>
+                                    </ul>
                                 </div>
                             </li>
                         </ul>
@@ -1668,21 +1920,21 @@
 
                     <div class="modal__grid">
                         <div class="modal__menu menu">
-                            <ul class="menu__list">
-                                <li class="menu__item">
-                                    <a href="./index.html" class="menu__link menu__link--active">Главная</a>
+                            <ul class="menu__list js-hover-opacity">
+                                <li class="menu__item menu__item--actual">
+                                    <a href="./index.html" class="menu__link js-hover-link">Главная</a>
                                 </li>
                                 <li class="menu__item">
-                                    <a href="./about.html" class="menu__link">О компании</a>
+                                    <a href="./about.html" class="menu__link js-hover-link">О компании</a>
                                 </li>
                                 <li class="menu__item">
-                                    <a href="./portfolio.html" class="menu__link">Портфолио</a>
+                                    <a href="./portfolio.html" class="menu__link js-hover-link">Портфолио</a>
                                 </li>
                                 <li class="menu__item">
-                                    <a href="./services.html" class="menu__link">Услуги</a>
+                                    <a href="./services.html" class="menu__link js-hover-link">Услуги</a>
                                 </li>
                                 <li class="menu__item">
-                                    <a href="./contacts.html" class="menu__link">Контакты</a>
+                                    <a href="./contacts.html" class="menu__link js-hover-link">Контакты</a>
                                 </li>
                             </ul>
                         </div>
@@ -1731,6 +1983,12 @@
             </div>
         </div>
 
+        <div id="dialog-content" data-video-modal style="display:none;">
+            <video controls="true" muted>
+                <source src="./images/video.mp4" type="video/mp4" />
+            </video>
+        </div>
+
         <script
             async
             src="https://code.jquery.com/jquery-3.7.1.slim.min.js"
@@ -1745,7 +2003,11 @@
             referrerpolicy="no-referrer"
             defer></script>
         <script async src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js" defer></script>
-        <script async src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.umd.js" defer></script>
+
+        <script defer src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.umd.js"></script>
+
+        <script defer src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+        <script defer src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
 
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
         <script src="https://api-maps.yandex.ru/2.1/?apikey=72c05200-f928-4e05-aed9-e60fedabd791&lang=ru_RU"

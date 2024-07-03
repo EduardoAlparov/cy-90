@@ -37,4 +37,57 @@
             margin-top: 12.8rem;
         }
     }
+
+    &.page-header--fixed {
+        position: fixed;
+        animation: transAnim 0.3s ease 1 forwards;
+
+        .page-header__logo {
+            opacity: 0;
+        }
+
+        .page-header__phone {
+            opacity: 0;
+        }
+
+        .page-header__button {
+            .burger-btn {
+                background-color: rgba(136, 136, 136, 0.25);
+            }
+        }
+
+        .page-header__breadcrumbs {
+            display: none;
+        }
+    }
+}
+
+@keyframes transAnim {
+    0% {
+        transform: translateY(-100%);
+    }
+
+    100% {
+        transform: translateY(0%);
+    }
+}
+
+@keyframes transAnimReverse {
+    0% {
+        transform: translateY(0%);
+    }
+
+    100% {
+        transform: translateY(-100%);
+    }
+}
+
+@keyframes opacityAnim {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
 }

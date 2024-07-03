@@ -2,19 +2,74 @@ export default () => {
     const sections = document.querySelectorAll('.js-partners-swiper');
 
     sections.forEach((section) => {
-        const sw = section.querySelector('.partners-section__swiper.swiper');
+        const swMobile = section.querySelector('.partners-section__swiper--mobile.swiper');
+        const swTop = section.querySelector('.partners-section__swiper--top.swiper');
+        const swBottom = section.querySelector('.partners-section__swiper--bottom.swiper');
+
         const isMobile = window.matchMedia('(max-width: 992px)').matches;
 
-        const swiper = new Swiper(sw, {
+        const swiperMobile = new Swiper(swMobile, {
             init: false,
             spaceBetween: 56,
-            slidesPerView: 1.1,
+            slidesPerView: 1.2,
+        });
+
+        const swiperTop = new Swiper(swTop, {
+            init: false,
+            loop: true,
+            loopAdditionalSlides: 0,
+
+            freeMode: true,
+            freeModeMomentum: false,
+
+            spaceBetween: 211,
+            speed: 15000,
+
+	        slidesPerView: 'auto',
+            centeredSlides: true,
+            centeredSlidesBounds: true,
+            centerInsufficientSlides: true,
+
+            autoplay: {
+                enabled: true,
+                delay: 0,
+                pauseOnMouseEnter: false,
+                disableOnInteraction: true,
+            },
+
+        });
+
+        const swiperBottom = new Swiper(swBottom, {
+            init: false,
+            loop: true,
+            loopAdditionalSlides: 0,
+
+            freeMode: true,
+            freeModeMomentum: false,
+
+            spaceBetween: 164,
+            speed: 16000,
+
+	        slidesPerView: 'auto',
+            centeredSlides: true,
+            centeredSlidesBounds: true,
+            centerInsufficientSlides: true,
+
+            autoplay: {
+                enabled: true,
+                delay: 0,
+                pauseOnMouseEnter: false,
+                disableOnInteraction: true,
+                reverseDirection: true,
+            },
+
         });
 
         if(isMobile) {
-            swiper.init();
+            swiperMobile.init();
         } else {
-            return;
+            swiperTop.init();
+            swiperBottom.init();
         }
     })
 }

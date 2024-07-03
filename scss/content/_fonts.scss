@@ -12,26 +12,26 @@
   font-style: normal;
   font-weight: 450;
   src: local("Ruberoid Regular"),
-    url("../fonts/Ruberoid-Light.woff") format("woff"),
-    url("../fonts/Ruberoid-Light.woff2") format("woff2");
+    url("../fonts/Ruberoid-Regular.woff") format("woff"),
+    url("../fonts/Ruberoid-Regular.woff2") format("woff2");
 }
 
 @font-face {
   font-family: "Ruberoid";
   font-style: normal;
   font-weight: 500;
-  src: local("Ruberoid Meduim"),
-    url("../fonts/Ruberoid-Bold.woff") format("woff"),
-    url("../fonts/Ruberoid-Bold.woff2") format("woff2");
+  src: local("Ruberoid Medium"),
+    url("../fonts/Ruberoid-Medium.woff") format("woff"),
+    url("../fonts/Ruberoid-Medium.woff2") format("woff2");
 }
 
 @font-face {
   font-family: "Ruberoid";
   font-style: normal;
   font-weight: 700;
-  src: local("Ruberoid Medium"),
-    url("../fonts/Ruberoid-Medium.woff") format("woff"),
-    url("../fonts/Ruberoid-Medium.woff2") format("woff2");
+  src: local("Ruberoid Bold"),
+    url("../fonts/Ruberoid-Bold.woff") format("woff"),
+    url("../fonts/Ruberoid-Bold.woff2") format("woff2");
 }
 
 @font-face {

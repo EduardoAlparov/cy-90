@@ -1,4 +1,12 @@
 .triple-section {
+    &.services {
+        padding: 9.5rem 0;
+
+        @include breakpointMF(portrait-tablet) {
+            padding: 12rem 0 16rem;
+        }
+    }
+
     &__heading {
         &.section__heading {
             @include breakpoint(portrait-tablet) {
@@ -22,6 +30,7 @@
 
         @include breakpointMF(portrait-tablet) {
             flex-direction: row-reverse;
+            flex-wrap: wrap;
             justify-content: flex-end;
             align-items: stretch;
             gap: 2rem;

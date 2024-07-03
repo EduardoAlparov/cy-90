@@ -1,10 +1,10 @@
 .breadcrumbs {
     &__list {
         display: flex;
+        flex-wrap: wrap;
         align-items: center;
         column-gap: 2.4rem;
-
-        overflow: auto;
+        row-gap: 0.8rem;
 
         @include breakpointMF(portrait-tablet) {
             column-gap : 8rem;
@@ -16,6 +16,7 @@
         font-size: 1.2rem;
         line-height: 135%;
         letter-spacing: 0.02em;
+        pointer-events: none;
 
         @include breakpointMF(portrait-tablet) {
             font-size: 2rem;

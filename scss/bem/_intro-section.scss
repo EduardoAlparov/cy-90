@@ -161,4 +161,41 @@
             letter-spacing: 0.02em;
         }
     }
+
+    &.intro-section--about {
+        @include breakpoint(portrait-tablet) {
+            justify-content: flex-end;
+        }
+
+
+        .intro-section__heading {
+            margin-bottom: 6rem;
+
+            @include breakpointMF(portrait-tablet) {
+                align-items: flex-start;
+                margin-bottom: 12.3rem;
+            }
+        }
+
+        .intro-section__title {
+            @include breakpoint(portrait-tablet) {
+                margin-bottom: -0.2rem;
+
+                font-family: var(--fourth-ff);
+                font-size: 6.3rem;
+                font-style: normal;
+                font-weight: 500;
+                line-height: 107%;
+                text-transform: uppercase;
+            }
+        }
+
+        .intro-section__text {
+            width: unset;
+
+            @include breakpointMF(portrait-tablet) {
+                text-align: left;
+            }
+        }
+    }
 }

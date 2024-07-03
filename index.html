@@ -5,7 +5,7 @@
         charset="utf-8">
         <!-- <base href="/"> -->
         <title>Главная</title>
-        <meta name="description" content="Simple Starter 2.0 Description ">
+        <meta name="description" content="">
         <meta
             name="viewport"
             content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
@@ -19,45 +19,870 @@
             href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap">
         <link rel="preload stylesheet" as="style" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
         <link
-            rel="preload stylesheet"
-            as="style"
-            href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.css"/>
+            rel="stylesheet"
+            href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.css"
+        />
         <link rel="stylesheet" href="./styles.css">
     </head>
-    <body class="preload">
+    <body class="preload body-contacts-page">
         <div class="wrapper">
             <header class="page-header">
                 <div class="page-header__site-container">
-                    <a href="/" class="logo">
-                        HDR-LOGO
+                    <a href="/" class="page-header__logo logo">
+                        <svg class="icon">
+                            <use xlink:href="./images/sprite.svg#logo"></use>
+                        </svg>
                     </a>
-                    <button data-path="modal" class="button">
-                        show modal
-                    </button>
+
+                    <a href="tel:+74952690571" class="page-header__phone phone hide-on-mobile">+7 495 269 05 71</a>
+
+                    <div class="page-header__button">
+                        <button class="burger-btn" data-path="menu-modal" type="button">
+                            <span></span>
+                        </button>
+                    </div>
+                </div>
+                <div class="page-header__breadcrumbs breadcrumbs">
+                    <div class="breadcrumbs__site-container">
+                        <ul class="breadcrumbs__list">
+                            <li class="breadcrumbs__item">
+                                <a href="#" class="breadcrumbs__link">
+                                    Главная
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
                 </div>
             </header>
             <main class="page-main">
-                <section class="section">
+                <section class="section intro-section">
+                    <div class="intro-section__site-container _intro-padding-top">
+                        <div class="intro-section__heading">
+                            <h1 class="intro-section__title intro-section__title--h1-big">
+                                13 лет
+                            </h1>
+                            <p class="intro-section__text intro-section__text--h3">
+                                выполнение&nbsp;строительно-монтажных&nbsp;работ
+                            </p>
+                            <p class="intro-section__subtitle intro-section__subtitle--h2-big">
+                                в Москве
+                            </p>
+                        </div>
+                    </div>
 
+                    <div class="intro-section__body">
+                        <div class="intro-section__media">
+                            <div class="intro-section__picture">
+                                <picture>
+                                    <source srcset="./images/intro/pic-1.webp" media="(min-width: 992px)" type="image/webp">
+                                    <source srcset="./images/intro/pic-1m.webp" media="(max-width: 992px)" type="image/webp">
+                                    <source srcset="./images/intro/pic-1m.jpg" media="(max-width: 992px)">
+                                    <img data-swiper-parallax-opacity="0" src="./images/intro/pic-1.jpg"  media="(min-width: 992px)" alt="">
+                                </picture>
+                            </div>
+                        </div>
+
+                        <div class="intro-section__content">
+                            <button data-fancybox data-src="#dialog-content" class="intro-section__video-btn video-btn js-video-button">
+                                <span>Видео</span>
+                                <svg class="icon">
+                                    <use xlink:href="./images/sprite.svg#play"></use>
+                                </svg>
+                            </button>
+
+                            <p class="intro-section__slogan">
+                                Лидерство на рынке монолитных конструкций: качество и сроки гарантированы!
+                            </p>
+                        </div>
+                    </div>
+
+                </section>
+
+                <section class="section triple-section">
+                    <div class="triple-section__site-container">
+                        <div class="triple-section__heading section__heading">
+                            <h2 class="section__title section__title--h1">
+                                ТОП-3
+                            </h2>
+
+                            <p class="section__subtitle section__subtitle--h2">
+                                востребованных услуг
+                            </p>
+                        </div>
+
+                        <div class="triple-section__body">
+                            <div class="triple-section__cell">
+                                <a href="#" class="triple-section__service service">
+                                    <div class="service__image">
+                                        <picture>
+                                            <source srcset="./images/services/pic-1.webp" type="image/webp">
+                                            <img src="./images/services/pic-1.jpg" alt="">
+                                        </picture>
+                                    </div>
+
+                                    <div class="service__info">
+                                        <h4 class="service__name service__name--h3">
+                                            каменная кладка
+                                        </h4>
+                                        <p class="service__text service__text--text">
+                                            Привнесите элегантность и прочность в свой дом с нашей каменной
+                                            кладкой! Наша продукция сочетает в себе непревзойденное качество
+                                            и изысканный дизайн, создавая атмосферу уюта и стиля в любом
+                                            помещении
+                                        </p>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="triple-section__cell">
+                                <a href="#" class="triple-section__service service">
+                                    <div class="service__image">
+                                        <picture>
+                                            <source srcset="./images/services/pic-2.webp" type="image/webp">
+                                            <img src="./images/services/pic-2.jpg" alt="">
+                                        </picture>
+                                    </div>
+
+                                    <div class="service__info">
+                                        <h4 class="service__name service__name--h3">
+                                            монолитные работы
+                                        </h4>
+                                        <p class="service__text service__text--text">
+                                            Мы используем только самые современные технологии и высококачественные
+                                            материалы, чтобы обеспечить максимальную надежность и
+                                            безопасность вашего строения
+                                        </p>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="triple-section__cell">
+                                <a href="#" class="triple-section__service service">
+                                    <div class="service__image">
+                                        <picture>
+                                            <source srcset="./images/services/pic-3.webp" type="image/webp">
+                                            <img src="./images/services/pic-3.jpg" alt="">
+                                        </picture>
+                                    </div>
+
+                                    <div class="service__info">
+                                        <h4 class="service__name service__name--h3">
+                                            ГИДРОИЗОЛЯЦИОННЫЕ РАБОТЫ
+                                        </h4>
+                                        <p class="service__text service__text--text">
+                                            Обратитесь к нам сегодня, и мы обеспечим вас надежной гидроизоляцией, которая прослужит вам долгие годы!
+                                        </p>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="section grid-section">
+                    <div class="grid-section__site-container">
+                        <div class="grid-section__heading section__heading">
+                            <h2 class="section__subtitle section__subtitle--h2">
+                                Общий объем бетона
+                            </h2>
+                            <p class="section__subtitl e section__subtitle--h2">
+                                467 933,21 м3
+                            </p>
+                        </div>
+
+                        <div class="grid-section__body">
+                            <div class="grid-section__cell grid-section__cell--big">
+                                <div class="grid-section__text-box text-box">
+                                    <p class="text-box__heading">
+                                        <span class="text-box__heading-big">Тех.</span>
+                                        <span class="text-box__heading-small">показатели</span>
+                                    </p>
+                                    <p class="text-box__text">
+                                        СУ-90 является лидером на рынке, специализируемся на&nbsp;выполнении
+                                        работ монолитных конструкций, приоритетами
+                                        нашей компании являются соблюдение сроков строительства
+                                        и качество выполняемых работ.
+                                    </p>
+                                </div>
+                            </div>
+
+                            <div class="grid-section__cell">
+                                <div class="grid-section__information-box information-box">
+                                    <p class="information-box__number">
+                                        3
+                                    </p>
+                                    <p class="information-box__text">
+                                        года на&nbsp;рынке
+                                    </p>
+                                </div>
+                            </div>
+
+                            <div class="grid-section__cell">
+                                <div class="grid-section__information-box information-box">
+                                    <p class="information-box__number">
+                                        20
+                                    </p>
+                                    <p class="information-box__text">
+                                        объектов в&nbsp;портфеле
+                                    </p>
+                                </div>
+                            </div>
+
+                            <div class="grid-section__cell grid-section__cell--big">
+                                <div class="grid-section__information-box information-box">
+                                    <p class="information-box__number">
+                                        486 232 м2
+                                    </p>
+                                    <p class="information-box__text">
+                                        Площадь реализованных&nbsp;объектов
+                                    </p>
+                                </div>
+                            </div>
+
+                            <div class="grid-section__cell grid-section__cell--big">
+                                <div class="grid-section__information-box information-box">
+                                    <p class="information-box__number">
+                                        604 461 м2
+                                    </p>
+                                    <p class="information-box__text">
+                                        Площадь строящихся&nbsp;объектов
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="section cascade-section">
+                    <div class="cascade-section__site-container">
+                        <div class="cascade-section__heading section__heading">
+                            <h2 class="section__title section__title--h1">
+                                2021 г.
+                            </h2>
+
+                            <div class="section__subtitle">
+                                <p class="text-box__heading">
+                                    <span class="text-box__heading-big">Фин.</span>
+                                    <span class="text-box__heading-small">показатели</span>
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="cascade-section__body">
+                            <ul class="cascade-section__stats">
+                                <li class="cascade-section__stat">
+                                    <span class="cascade-section__name">Выручка</span>
+                                    <p class="cascade-section__value">
+                                        276 197 000
+                                        <span class="hide-on-mobile">
+                                            руб.
+                                        </span>
+                                        <span class="show-on-mobile">
+                                            ₽
+                                        </span>
+                                    </p>
+                                </li>
+                                <li class="cascade-section__stat">
+                                    <span class="cascade-section__name">Площадь</span>
+                                    <span class="cascade-section__value">74 420 м2</span>
+                                </li>
+                                <li class="cascade-section__stat cascade-section__stat--reverse">
+                                    <span class="cascade-section__name">Объектов</span>
+                                    <span class="cascade-section__value">3</span>
+                                </li>
+                            </ul>
+
+                            <div class="cascade-section__small-image">
+                                <picture>
+                                    <source srcset="./images/cascade/small.webp" type="image/webp">
+                                    <img src="./images/cascade/small.jpg" alt="">
+                                </picture>
+                            </div>
+
+                            <div class="cascade-section__big-image hide-on-mobile">
+                                <picture>
+                                    <source srcset="./images/cascade/big.webp" type="image/webp">
+                                    <img src="./images/cascade/big.jpg" alt="">
+                                </picture>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="section grid-section grid-section--no-reverse">
+                    <div class="grid-section__site-container">
+                        <div class="grid-section__heading section__heading">
+                            <h2 class="section__title section__title--h1">
+                                О нас
+                            </h2>
+                        </div>
+
+                        <div class="grid-section__body">
+                            <div class="grid-section__cell grid-section__cell--big">
+                                <div class="grid-section__text-box text-box text-box--tight">
+                                    <div class="text-box__heading">
+                                        <p class="text-box__heading-middle">
+                                            На рынке с 2011 года на бригадном подряде,
+                                            с 2021 как самостоятельная организация
+                                             ООО «СУ-90»
+                                        </p>
+                                    </div>
+                                    <p class="text-box__text">
+                                        Мы успешно работаем на рынке строительных услуг <strong>13 лет</strong> и за время
+                                        работы зарекомендовали себя, как надежный деловой партнер в области
+                                        строительства. Богатый опыт работы на объектах различного
+                                        уровня сложности позволяют нашей компании качественно и в срок
+                                        исполнять взятые на себя обязательства.
+                                    </p>
+                                </div>
+                            </div>
+
+
+                            <div class="grid-section__cell">
+                                <div class="grid-section__information-box information-box">
+                                    <p class="information-box__number">
+                                        70
+                                    </p>
+                                    <p class="information-box__text">
+                                        объектов строительства
+                                    </p>
+                                </div>
+                            </div>
+
+                            <div class="grid-section__cell">
+                                <div class="grid-section__information-box information-box">
+                                    <p class="information-box__number">
+                                        5
+                                    </p>
+                                    <p class="information-box__text">
+                                        лет&nbsp;гарантийный&nbsp;срок на&nbsp;работы
+                                    </p>
+                                </div>
+                            </div>
+
+                            <div class="grid-section__cell">
+                                <div class="grid-section__information-box information-box">
+                                    <p class="information-box__number">
+                                        1000
+                                    </p>
+                                    <p class="information-box__text">
+                                        Сотрудников в&nbsp;штате
+                                    </p>
+                                </div>
+                            </div>
+
+                            <div class="grid-section__cell">
+                                <div class="grid-section__information-box information-box">
+                                    <p class="information-box__number">
+                                        13
+                                    </p>
+                                    <p class="information-box__text">
+                                        лет&nbsp;в&nbsp;сфере строительства
+                                    </p>
+                                </div>
+                            </div>
+
+                            <div class="grid-section__cell grid-section__cell--big grid-section__cell--out">
+                                <div class="grid-section__text-box text-box">
+                                    <p class="text-box__text">
+                                        Мы работаем для тех, кто ценит своевременность и&nbsp;качество выполняемых
+                                        работ. Штат сотрудников организации состоит из&nbsp;высококвалифицированных&nbsp;ИТР.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="section carousel-section js-carousel">
+                    <div class="carousel-section__site-container">
+                        <div class="carousel-section__heading section__heading">
+                            <h2 class="section__title section__title--h1">
+                                ТОП-5
+                            </h2>
+
+                            <p class="section__subtitle section__subtitle--h2">
+                                Сданных объектов
+                            </p>
+                        </div>
+
+                        <div class="carousel-section__body">
+                            <div class="carousel-section__swiper swiper">
+                                <ul class="carousel-section__swiper-wrapper swiper-wrapper">
+                                    <li class="carousel-section__swiper-slide swiper-slide carousel-slide">
+                                        <div class="carousel-slide__picture">
+                                            <picture>
+                                                <source srcset="./images/carousel/carousel-1.webp" media="(min-width: 992px)" type="image/webp">
+                                                <source srcset="./images/carousel/carousel-m1.webp" media="(max-width: 992px)" type="image/webp">
+                                                <source srcset="./images/carousel/carousel-m1.jpg" media="(max-width: 992px)">
+                                                <img data-swiper-parallax-opacity="0" src="./images/carousel/carousel-1.jpg"  media="(min-width: 992px)" alt="">
+                                            </picture>
+                                        </div>
+
+                                        <div class="carousel-slide__body" data-swiper-parallax-opacity="0" data-swiper-parallax="-200">
+                                            <div class="carousel-slide__header">
+                                                <p class="carousel-slide__subtitle carousel-slide__subtitle--h3">
+                                                    АРХИТЕКТУРА
+                                                </p>
+                                                <p class="carousel-slide__name carousel-slide__name--h2">
+                                                    ЖК Wellton Towers
+                                                </p>
+                                            </div>
+
+                                            <ul class="carousel-slide__list">
+                                                <li class="carousel-slide__list-item">
+                                                    <p class="carousel-slide__start carousel-slide__start--h3">
+                                                        Начало строительства
+                                                    </p>
+                                                    <p class="carousel-slide__numbers carousel-slide__numbers--h2">
+                                                        19.02.21
+                                                    </p>
+                                                </li>
+                                                <li class="carousel-slide__list-item">
+                                                    <p class="carousel-slide__start carousel-slide__start--h3">
+                                                        Общая площадь проекта
+                                                    </p>
+                                                    <p class="carousel-slide__numbers carousel-slide__numbers--h2">
+                                                        15 317 м2
+                                                    </p>
+                                                </li>
+                                                <li class="carousel-slide__list-item">
+                                                    <p class="carousel-slide__start carousel-slide__start--h3">
+                                                        Конец строительства
+                                                    </p>
+                                                    <p class="carousel-slide__numbers carousel-slide__numbers--h2">
+                                                        31.12.22
+                                                    </p>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </li>
+
+                                    <li class="carousel-section__swiper-slide swiper-slide carousel-slide">
+                                        <div class="carousel-slide__picture">
+                                            <picture>
+                                                <source srcset="./images/carousel/carousel-2.webp" media="(min-width: 992px)" type="image/webp">
+                                                <source srcset="./images/carousel/carousel-m2.webp" media="(max-width: 992px)" type="image/webp">
+                                                <source srcset="./images/carousel/carousel-m2.jpg" media="(max-width: 992px)">
+                                                <img data-swiper-parallax-opacity="0" src="./images/carousel/carousel-2.jpg"  media="(min-width: 992px)" alt="">
+                                            </picture>
+                                        </div>
+
+                                        <div class="carousel-slide__body" data-swiper-parallax-opacity="0" data-swiper-parallax="-200">
+                                            <div class="carousel-slide__header">
+                                                <p class="carousel-slide__subtitle carousel-slide__subtitle--h3">
+                                                    АРХИТЕКТУРА
+                                                </p>
+                                                <p class="carousel-slide__name carousel-slide__name--h2">
+                                                    ЖК "Дмитровское небо"
+                                                </p>
+                                            </div>
+
+                                            <ul class="carousel-slide__list">
+                                                <li class="carousel-slide__list-item">
+                                                    <p class="carousel-slide__start carousel-slide__start--h3">
+                                                        Начало строительства
+                                                    </p>
+                                                    <p class="carousel-slide__numbers carousel-slide__numbers--h2">
+                                                        13.03.22
+                                                    </p>
+                                                </li>
+                                                <li class="carousel-slide__list-item">
+                                                    <p class="carousel-slide__start carousel-slide__start--h3">
+                                                        Общая площадь проекта
+                                                    </p>
+                                                    <p class="carousel-slide__numbers carousel-slide__numbers--h2">
+                                                        154 473 м2
+                                                    </p>
+                                                </li>
+                                                <li class="carousel-slide__list-item">
+                                                    <p class="carousel-slide__start carousel-slide__start--h3">
+                                                        Конец строительства
+                                                    </p>
+                                                    <p class="carousel-slide__numbers carousel-slide__numbers--h2">
+                                                        1.10.23
+                                                    </p>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </li>
+
+                                    <li class="carousel-section__swiper-slide swiper-slide carousel-slide">
+                                        <div class="carousel-slide__picture">
+                                            <picture>
+                                                <source srcset="./images/carousel/carousel-3.webp" media="(min-width: 992px)" type="image/webp">
+                                                <source srcset="./images/carousel/carousel-m3.webp" media="(max-width: 992px)" type="image/webp">
+                                                <source srcset="./images/carousel/carousel-m3.jpg" media="(max-width: 992px)">
+                                                <img data-swiper-parallax-opacity="0" src="./images/carousel/carousel-3.jpg"  media="(min-width: 992px)" alt="">
+                                            </picture>
+                                        </div>
+
+                                        <div class="carousel-slide__body" data-swiper-parallax-opacity="0" data-swiper-parallax="-200">
+                                            <div class="carousel-slide__header">
+                                                <p class="carousel-slide__subtitle carousel-slide__subtitle--h3">
+                                                    АРХИТЕКТУРА
+                                                </p>
+                                                <p class="carousel-slide__name carousel-slide__name--h2">
+                                                    ЖК «Famos»
+                                                </p>
+                                            </div>
+
+                                            <ul class="carousel-slide__list">
+                                                <li class="carousel-slide__list-item">
+                                                    <p class="carousel-slide__start carousel-slide__start--h3">
+                                                        Начало строительства
+                                                    </p>
+                                                    <p class="carousel-slide__numbers carousel-slide__numbers--h2">
+                                                        01.02.22
+                                                    </p>
+                                                </li>
+                                                <li class="carousel-slide__list-item">
+                                                    <p class="carousel-slide__start carousel-slide__start--h3">
+                                                        Общая площадь проекта
+                                                    </p>
+                                                    <p class="carousel-slide__numbers carousel-slide__numbers--h2">
+                                                        58 276,9 м2
+                                                    </p>
+                                                </li>
+                                                <li class="carousel-slide__list-item">
+                                                    <p class="carousel-slide__start carousel-slide__start--h3">
+                                                        Конец строительства
+                                                    </p>
+                                                    <p class="carousel-slide__numbers carousel-slide__numbers--h2">
+                                                        15.11.22
+                                                    </p>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </li>
+
+                                    <li class="carousel-section__swiper-slide swiper-slide carousel-slide">
+                                        <div class="carousel-slide__picture">
+                                            <picture>
+                                                <source srcset="./images/carousel/carousel-4.webp" media="(min-width: 992px)" type="image/webp">
+                                                <source srcset="./images/carousel/carousel-m4.webp" media="(max-width: 992px)" type="image/webp">
+                                                <source srcset="./images/carousel/carousel-m4.jpg" media="(max-width: 992px)">
+                                                <img data-swiper-parallax-opacity="0" src="./images/carousel/carousel-4.jpg"  media="(min-width: 992px)" alt="">
+                                            </picture>
+                                        </div>
+
+                                        <div class="carousel-slide__body" data-swiper-parallax-opacity="0" data-swiper-parallax="-200">
+                                            <div class="carousel-slide__header">
+                                                <p class="carousel-slide__subtitle carousel-slide__subtitle--h3">
+                                                    АРХИТЕКТУРА
+                                                </p>
+                                                <p class="carousel-slide__name carousel-slide__name--h2">
+                                                    Жк Варшавская
+                                                </p>
+                                            </div>
+
+                                            <ul class="carousel-slide__list">
+                                                <li class="carousel-slide__list-item">
+                                                    <p class="carousel-slide__start carousel-slide__start--h3">
+                                                        Начало строительства
+                                                    </p>
+                                                    <p class="carousel-slide__numbers carousel-slide__numbers--h2">
+                                                        16.05.21
+                                                    </p>
+                                                </li>
+                                                <li class="carousel-slide__list-item">
+                                                    <p class="carousel-slide__start carousel-slide__start--h3">
+                                                        Общая площадь проекта
+                                                    </p>
+                                                    <p class="carousel-slide__numbers carousel-slide__numbers--h2">
+                                                        104 000 м2
+                                                    </p>
+                                                </li>
+                                                <li class="carousel-slide__list-item">
+                                                    <p class="carousel-slide__start carousel-slide__start--h3">
+                                                        Конец строительства
+                                                    </p>
+                                                    <p class="carousel-slide__numbers carousel-slide__numbers--h2">
+                                                        31.12.22
+                                                    </p>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </li>
+
+                                    <li class="carousel-section__swiper-slide swiper-slide carousel-slide">
+                                        <div class="carousel-slide__picture">
+                                            <picture>
+                                                <source srcset="./images/carousel/carousel-5.webp" media="(min-width: 992px)" type="image/webp">
+                                                <source srcset="./images/carousel/carousel-m5.webp" media="(max-width: 992px)" type="image/webp">
+                                                <source srcset="./images/carousel/carousel-m5.jpg" media="(max-width: 992px)">
+                                                <img data-swiper-parallax-opacity="0" src="./images/carousel/carousel-5.jpg"  media="(min-width: 992px)" alt="">
+                                            </picture>
+                                        </div>
+
+                                        <div class="carousel-slide__body" data-swiper-parallax-opacity="0" data-swiper-parallax="-200">
+                                            <div class="carousel-slide__header">
+                                                <p class="carousel-slide__subtitle carousel-slide__subtitle--h3">
+                                                    АРХИТЕКТУРА
+                                                </p>
+                                                <p class="carousel-slide__name carousel-slide__name--h2">
+                                                    ЖК Михалковский
+                                                </p>
+                                            </div>
+
+                                            <ul class="carousel-slide__list">
+                                                <li class="carousel-slide__list-item">
+                                                    <p class="carousel-slide__start carousel-slide__start--h3">
+                                                        Начало строительства
+                                                    </p>
+                                                    <p class="carousel-slide__numbers carousel-slide__numbers--h2">
+                                                        01.10.22
+                                                    </p>
+                                                </li>
+                                                <li class="carousel-slide__list-item">
+                                                    <p class="carousel-slide__start carousel-slide__start--h3">
+                                                        Общая площадь проекта
+                                                    </p>
+                                                    <p class="carousel-slide__numbers carousel-slide__numbers--h2">
+                                                        43 482 м2
+                                                    </p>
+                                                </li>
+                                                <li class="carousel-slide__list-item">
+                                                    <p class="carousel-slide__start carousel-slide__start--h3">
+                                                        Конец строительства
+                                                    </p>
+                                                    <p class="carousel-slide__numbers carousel-slide__numbers--h2">
+                                                        21.06.23
+                                                    </p>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </li>
+                                </ul>
+
+                                <div class="carousel-section__pagination">
+                                    <div class="swiper-pagination">
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+
+                <section class="section simple-section">
+                    <div class="simple-section__site-container">
+                        <div class="simple-section__body">
+                            <div class="simple-section__title simple-section__title--h1">
+                                20 ОБЪЕКТОВ +
+                            </div>
+
+                            <div class="simple-section__number gradient-number">
+                                <span>
+                                    01
+                                </span>
+                            </div>
+
+                            <div class="simple-section__subtitle simple-section__subtitle--h2">
+                                <p>
+                                    Возведение объектов значительно быстрее конкурентов
+                                </p>
+                            </div>
+
+                            <div class="simple-section__text simple-section__text--text">
+                                Темп строительства нашей компании до 7 этажей в месяц
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="section feedback-section">
+                    <div class="feedback-section__site-container">
+
+                        <div class="feedback-section__heading">
+                            <p class="feedback-section__title feedback-section__title--top feedback-section__title--h1">
+                                Не&nbsp;нашли&nbsp;ответ&nbsp;на<br>интересующий&nbsp;вас<br>вопрос,
+                            </p>
+                            <p class="feedback-section__title feedback-section__title--bottom feedback-section__title--h1">
+                                свяжитесь<br>с&nbsp;нами
+                            </p>
+                        </div>
+                        <div class="feedback-section__footer">
+                            <p class="feedback-section__text feedback-section__text--text">
+                                Оставьте свои контакты, мы в скором времени<br>
+                                свяжемся с&nbsp;Вами и подробно ответим на все вопросы
+                            </p>
+
+                            <a href="#" class="feedback-section__btn feedback-btn">
+                                Хочу сотрудничать
+                            </a>
+                        </div>
+                    </div>
                 </section>
             </main>
             <footer class="page-footer _bg-text _color-white">
-                <div class="footer__site-container">
-                    footer
+                <div class="page-footer__site-container">
+                    <div class="page-footer__logo">
+                        <a href="./index.html" class="big-logo">
+                            <p>ООО "Су-90"</p>
+                            <span>Строительные работы</span>
+                        </a>
+                    </div>
+
+                    <div class="page-footer__grid">
+                        <div class="page-footer__contacts">
+                            <a href="tel:+74952690571" class="page-footer__title page-footer__title--h3">
+                                +7 495 269 05 71
+                            </a>
+
+                            <ul class="page-footer__contacts-list page-footer__list">
+                                <li class="page-footer__item">
+                                    <a href="mailto:90-su@mail.ru">
+                                        90-su@mail.ru
+                                    </a>
+                                </li>
+                                <li class="page-footer__item">
+                                    <p class="page-footer__text">
+                                        г. Москва, 1-й Магистральный тупик, 5а.
+                                    </p>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <div class="page-footer__times">
+                            <p class="page-footer__title page-footer__title--h3">
+                                Время работы
+                            </p>
+
+                            <ul class="page-footer__times-list page-footer__list">
+                                <li class="page-footer__item">
+                                    <p class="page-footer__text">
+                                        Пн-пт<br>09:00-18:00
+                                    </p>
+                                </li>
+                                <li class="page-footer__item">
+                                    <p class="page-footer__text">
+                                        Сб<br>10:00-16:00
+                                    </p>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <div class="page-footer__menu">
+                            <p class="page-footer__title page-footer__title--h3">
+                                Меню
+                            </p>
+
+                            <ul class="page-footer__menus-list page-footer__list">
+                                <li class="page-footer__item">
+                                    <a href="./about.html">
+                                        О компании
+                                    </a>
+                                </li>
+                                <li class="page-footer__item">
+                                    <a href="./portfolio.html">
+                                        Портфолио
+                                    </a>
+                                </li>
+                                <li class="page-footer__item">
+                                    <a href="./services.html">
+                                        Услуги
+                                    </a>
+                                </li>
+                                <li class="page-footer__item">
+                                    <a href="./contacts.html">
+                                        Контакты
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
                 </div>
             </footer>
         </div>
-        <div class="modal">
-            <div class="modal__container" data-target="modal">
-                <div class="modal__content">
-                    <button type="button" class="modal__close-btn modal-close">
-                        <svg class="icon">
-                            <use xlink:href="./images/sprite.svg#close"></use>
-                        </svg>
-                    </button>
+
+        <div class="modal modal--menu">
+            <div class="modal__container" data-target="menu-modal">
+                <div class="modal__site-container">
+                    <div class="modal__header">
+                        <a href="/" class="logo">
+                            <svg class="icon">
+                                <use xlink:href="./images/sprite.svg#logo"></use>
+                            </svg>
+                        </a>
+
+                        <button type="button" class="modal__close-btn modal-close">
+                            <svg class="icon">
+                                <use xlink:href="./images/sprite.svg#close"></use>
+                            </svg>
+                        </button>
+                    </div>
+
+                    <div class="modal__grid">
+                        <div class="modal__menu menu">
+                            <ul class="menu__list js-hover-opacity">
+                                <li class="menu__item menu__item--actual">
+                                    <a href="./index.html" class="menu__link js-hover-link">Главная</a>
+                                </li>
+                                <li class="menu__item">
+                                    <a href="./about.html" class="menu__link js-hover-link">О компании</a>
+                                </li>
+                                <li class="menu__item">
+                                    <a href="./portfolio.html" class="menu__link js-hover-link">Портфолио</a>
+                                </li>
+                                <li class="menu__item">
+                                    <a href="./services.html" class="menu__link js-hover-link">Услуги</a>
+                                </li>
+                                <li class="menu__item">
+                                    <a href="./contacts.html" class="menu__link js-hover-link">Контакты</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="modal__contacts">
+                            <p class="modal__title page-footer__title--h3 hide-on-mobile">
+                                Центральный офис
+                            </p>
+
+                            <a href="tel:+74952690571" class="modal__phone">
+                                +7 495 269 05 71
+                            </a>
+
+                            <ul class="page-footer__contacts-list modal__list">
+                                <li class="page-footer__item show-on-mobile">
+                                    <a href="mailto:90-su@mail.ru">
+                                        90-su@mail.ru
+                                    </a>
+                                </li>
+                                <li class="page-footer__item">
+                                    <p class="page-footer__text">
+                                        г. Москва,<br> 1-й Магистральный тупик, 5а.
+                                    </p>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="modal__times">
+                            <p class="modal__title page-footer__title page-footer__title--h3">
+                                Время работы
+                            </p>
+
+                            <ul class="page-footer__times-list modal__list">
+                                <li class="page-footer__item">
+                                    <p class="page-footer__text">
+                                        Пн-пт<br>09:00-18:00
+                                    </p>
+                                </li>
+                                <li class="page-footer__item">
+                                    <p class="page-footer__text">
+                                        Сб<br>10:00-16:00
+                                    </p>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
+
+        <div id="dialog-content" data-video-modal style="display:none;">
+            <video controls="true" muted>
+                <source src="./images/video.mp4" type="video/mp4" />
+            </video>
+        </div>
+
         <script
             async
             src="https://code.jquery.com/jquery-3.7.1.slim.min.js"
@@ -72,7 +897,15 @@
             referrerpolicy="no-referrer"
             defer></script>
         <script async src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js" defer></script>
-        <script async src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.umd.js" defer></script>
+
+        <script defer src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.umd.js"></script>
+
+        <script defer src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+        <script defer src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <script src="https://api-maps.yandex.ru/2.1/?apikey=72c05200-f928-4e05-aed9-e60fedabd791&lang=ru_RU"
+            type="text/javascript"></script>
         <script src="./js/main.js" type="module" defer></script>
     </body>
 </html>

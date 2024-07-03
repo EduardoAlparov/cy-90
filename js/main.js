@@ -1,13 +1,17 @@
 import Modal from "./modules/Modal.js";
 import maps from "./modules/maps.js";
 
-import validation from './modules/validation.js';
-import masks from './modules/masks.js';
-import lazyload from './modules/lazyload.js';
+// import validation from './modules/validation.js';
+// import masks from './modules/masks.js';
+// import lazyload from './modules/lazyload.js';
 
 import fancybox from './modules/fancybox.js';
 
+import menuLinksOpacity from './modules/menuLinksOpacity.js';
+
 import setHeaderPadding from './modules/setHeaderPadding.js';
+import setFixedHeader from './modules/setFixedHeader.js';
+
 import carouselSwiper from './modules/carouselSwiper.js';
 import partnersSwiper from './modules/partnersSwiper.js';
 
@@ -37,10 +41,14 @@ document.addEventListener("DOMContentLoaded", () => {
     // lazyload();
 
     // fancybox images modals:
-    // fancybox();
+    fancybox();
 
     // other scripts:
+    menuLinksOpacity();
+
     setHeaderPadding();
+    setFixedHeader();
+
     carouselSwiper();
     partnersSwiper();
 })

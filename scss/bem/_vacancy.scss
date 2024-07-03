@@ -15,6 +15,7 @@
         transition: border 0.2s ease;
 
         @include breakpointMF(portrait-tablet) {
+            max-width: 68rem;
             padding: 3.2rem;
         }
 
@@ -70,30 +71,116 @@
 
         transition: 0.4s ease;
         transition-property: height, max-height, transform, padding, opacity;
-
-        background-color: var(--card, #1a1a1a);
-        border-radius: 0 0 1rem 1rem;
     }
 
-    &__link {
-        padding: 1.6rem 3.2rem 2rem;
-    }
-
-    input[type="checkbox"] {
+    input[type="checkbox"],
+    input[type="radio"] {
         &:checked {
             & ~ .vacancy__button {
-                border-radius: 1rem 1rem 0 0;
-
                 .icon {
-                    transform: rotate(135deg);
+                    transform: rotate(90deg);
                 }
             }
 
             & ~ .vacancy__dropdown {
-                max-height: 1000px;
+                max-height: 3000px;
                 transform: scaleY(1);
                 opacity: 1;
                 pointer-events: all;
+            }
+        }
+    }
+
+    &__tables {
+        display: flex;
+        flex-direction: column;
+        align-items: stretch;
+        width: 100%;
+        padding-top: 1rem;
+
+        @include breakpointMF(portrait-tablet) {
+            padding-top: 2rem;
+        }
+    }
+
+    &__table {
+        margin-bottom: 1rem;
+        padding: 2rem 3.2rem;
+
+        background-color: var(--card, #1a1a1a);
+        border-radius: 1rem;
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+
+        @include breakpointMF(portrait-tablet) {
+            margin-bottom: 2rem;
+            padding: 3.2rem;
+
+            &:last-child {
+                margin-bottom: 0;
+            }
+        }
+    }
+
+    &__title {
+        margin-bottom: 2.4rem;
+        color: var(--Grey, #888);
+        font-family: var(--second-ff);
+        font-size: 1.6rem;
+        font-weight: 500;
+        line-height: normal;
+        text-transform: uppercase;
+
+        @include breakpointMF(portrait-tablet) {
+            font-size: 3rem;
+            font-style: normal;
+            font-weight: 500;
+            line-height: 100%;
+            text-transform: uppercase;
+        }
+    }
+
+    &__item {
+        position: relative;
+
+        margin-bottom: 1.6rem;
+        padding-left: 2rem;
+
+        color: var(--Grey, #888);
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+
+        @include breakpointMF(portrait-tablet) {
+            max-width: 47ch;
+            margin-bottom: 2.4rem;
+            padding-left: 3rem;
+        }
+
+        &::before {
+            position: absolute;
+            top: 0.6rem;
+            left: 0.8rem;
+
+            display: block;
+
+            width: 2px;
+            height: 2px;
+
+            background-color: var(--Grey, #888);
+            border-radius: 100%;
+            content: "";
+
+
+            @include breakpointMF(portrait-tablet) {
+                top: 1.3rem;
+                left: 1.2rem;
+
+                width: 3.5px;
+                height: 3.5px;
             }
         }
     }

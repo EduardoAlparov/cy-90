@@ -148,10 +148,16 @@ export default class Modal {
   enableScroll() {
     let pagePosition = parseInt(document.body.dataset.position, 10);
     this.unlockPadding();
-    document.body.style.top = 'auto';
+    document.body.style.top = 'unset';
     document.body.classList.remove('disable-scroll');
-    window.scroll({ top: pagePosition, left: 0 });
     document.body.removeAttribute('data-position');
+
+    setTimeout(() => {
+      window.scrollTo( {
+        top: pagePosition,
+        left: 0,
+      });
+    }, 0);
   }
 
   lockPadding() {

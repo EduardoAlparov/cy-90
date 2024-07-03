@@ -10,8 +10,8 @@
     background-color: rgba(136, 136, 136, 0.25);
 
     @include breakpointMF(portrait-tablet) {
-        width: 3.9rem;
-        height: 2.8rem;
+        width: 5.5rem;
+        height: 4.8rem;
         background-color: transparent;
     }
 
@@ -67,6 +67,12 @@
             min-height: 1.5px;
             background-size: 3rem auto;
         }
+    }
+}
+
+.body-contacts-page {
+    .burger-btn {
+        background-color: rgba(136, 136, 136, 0.25);
     }
 }
 

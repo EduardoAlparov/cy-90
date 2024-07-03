@@ -31,6 +31,7 @@
 
         @include breakpointMF(portrait-tablet) {
             font-size: 9.6rem;
+            letter-spacing: unset;
         }
     }
 

@@ -1,4 +1,13 @@
 .partners-section {
+    &.section {
+        overflow: hidden;
+        padding: 11rem 0 14.4rem;
+
+        @include breakpointMF(portrait-tablet) {
+            padding: 9.6rem 0 14.6rem;
+        }
+    }
+
     &__heading {
         &.section__heading {
             margin-bottom: 3.2rem;
@@ -9,65 +18,62 @@
         }
     }
 
-    &__swiper-wrapper.swiper-wrapper {
-        @include breakpointMF(portrait-tablet) {
-            display: flex;
-            flex-wrap: wrap;
-            align-items: center;
-            justify-content: space-between;
-            row-gap: 4rem;
-            column-gap: 16rem;
-        }
-    }
+    &__swiper {
+        &--top,
+        &--bottom {
+            &.swiper {
+                margin: 0 -100%;
+                padding: 0 100%;
+            }
 
-    &__swiper-slide.swiper-slide {
+            .partners-section__swiper-slide.swiper-slide {
+                width: max-content;
+                max-width: max-content;
+            }
 
-        &:nth-child(1),
-        &:nth-child(2),
-        &:nth-child(3) {
-            @include breakpointMF(portrait-tablet) {
-                margin-right: 1rem;
+            .partners-section__swiper-wrapper.swiper-wrapper {
+                --swiper-wrapper-transition-timing-function: linear;
+                will-change: transfrom;
             }
         }
 
-        &:nth-child(5) {
-            @include breakpointMF(portrait-tablet) {
-                margin-left: auto;
+        &--top {
+            &.swiper {
+                margin-bottom: 3rem;
             }
         }
 
-        &:nth-child(8) {
-            @include breakpointMF(portrait-tablet) {
-                margin-right: auto;
-            }
-        }
-
-        @include breakpointMF(portrait-tablet) {
-            width: max-content;
+        &--mobile {
+            margin-right: calc(var(--content-padding) * -1);
+            padding-right: var(--content-padding);
         }
     }
 }
 
 .partner {
+    position: relative;
+
     width: 100%;
+    min-width: min-content;
     max-width: 25.1rem;
-    max-height: 12.4rem;
+    height: 12.4rem;
 
     @include breakpointMF(portrait-tablet) {
         max-width: 34rem;
-        max-height: 16.5rem;
+        height: 16.5rem;
     }
 
     img {
         display: block;
-
+        width: auto;
+        max-width: 100%;
+        min-height: 100%;
         object-fit: contain;
         object-position: center;
 
         @include breakpointMF(portrait-tablet) {
             width: 100%;
-            max-width: unset;
-            min-height: 100%;
+            height: 100%;
         }
     }
 }

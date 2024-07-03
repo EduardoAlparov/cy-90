@@ -12,6 +12,25 @@
         &:last-child {
             margin-bottom: 0;
         }
+
+        &._low-opacity {
+            .menu__link {
+                color: var(--Grey, #888);
+            }
+        }
+
+        &.menu__item--actual {
+            .menu__link {
+                color: var(--Grey, #888);
+                pointer-events: none;
+            }
+
+            &._low-opacity {
+                .menu__link {
+                    color: var(--Grey, #888);
+                }
+            }
+        }
     }
 
     &__link {

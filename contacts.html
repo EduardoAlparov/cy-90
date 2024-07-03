@@ -1,0 +1,643 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta
+        charset="utf-8">
+        <!-- <base href="/"> -->
+        <title>Контакты</title>
+        <meta name="description" content="">
+        <meta
+            name="viewport"
+            content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+        <meta property="og:image" content="images/preview.jpg">
+        <link rel="icon" href="images/favicon.png">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link
+            rel="preload stylesheet"
+            as="style"
+            href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap">
+        <link rel="preload stylesheet" as="style" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+        <link
+            rel="stylesheet"
+            href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.css"
+        />
+        <link rel="stylesheet" href="./styles.css">
+    </head>
+    <body class="preload body-contacts-page">
+        <div class="wrapper">
+            <header class="page-header">
+                <div class="page-header__site-container">
+                    <a href="/" class="page-header__logo logo">
+                        <svg class="icon">
+                            <use xlink:href="./images/sprite.svg#logo"></use>
+                        </svg>
+                    </a>
+
+                    <a href="tel:+74952690571" class="page-header__phone phone hide-on-mobile">+7 495 269 05 71</a>
+
+                    <div class="page-header__button">
+                        <button class="burger-btn" data-path="menu-modal" type="button">
+                            <span></span>
+                        </button>
+                    </div>
+                </div>
+                <div class="page-header__breadcrumbs breadcrumbs">
+                    <div class="breadcrumbs__site-container">
+                        <ul class="breadcrumbs__list">
+                            <li class="breadcrumbs__item">
+                                <a href="#" class="breadcrumbs__link">
+                                    Контакты
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </header>
+            <main class="page-main">
+                <section class="section contacts-section">
+                    <div class="contacts-section__intro _intro-padding-top">
+                        <div class="contacts-section__image-container">
+                            <picture>
+                                <source srcset="./images/intro/contacts.webp" media="(min-width: 992px)" type="image/webp">
+                                <source srcset="./images/intro/contacts-m.webp" media="(max-width: 992px)" type="image/webp">
+                                <source srcset="./images/intro/contacts-m.jpg" media="(max-width: 992px)">
+                                <img src="./images/intro/contacts.jpg"  media="(min-width: 992px)" alt="">
+                            </picture>
+                        </div>
+                    </div>
+
+                    <div class="contacts-section__row contacts-section__site-container">
+                        <h2 class="contacts-section__title contacts-section__title--h2">Контакты</h2>
+
+                        <div class="contacts-section__col contacts-section__contacts">
+                            <div class="modal__contacts">
+                                <p class="modal__title page-footer__title--h3">
+                                    Центральный офис
+                                </p>
+
+                                <a href="tel:+74952690571" class="modal__phone modal__phone--bigger">
+                                    +7 495 269 05 71
+                                </a>
+
+                                <ul class="page-footer__contacts-list modal__list">
+                                    <li class="page-footer__item">
+                                        <p class="page-footer__text">
+                                            г. Москва, 1-й Магистральный тупик, 5а.
+                                        </p>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="modal__times">
+                                <p class="modal__title page-footer__title page-footer__title--h3">
+                                    Время работы
+                                </p>
+
+                                <ul class="page-footer__times-list modal__list">
+                                    <li class="page-footer__item">
+                                        <p class="page-footer__text">
+                                            Пн-пт<br>09:00-18:00
+                                        </p>
+                                    </li>
+                                    <li class="page-footer__item">
+                                        <p class="page-footer__text">
+                                            Сб<br>10:00-16:00
+                                        </p>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="contacts-section__site-container">
+                        <h2 class="contacts-section__title contacts-section__title--h2">Открытые вакансии:</h2>
+
+                        <ul class="contacts-section__col contacts-section__vacancies">
+                            <li class="contacts-section__vacancy vacancy">
+                                <input hidden type="checkbox" class="visually-hidden" name="vacancy-item-input" id="vacancy-id-001">
+                                <div class="vacancy__button">
+                                    <label for="vacancy-id-001" class="vacancy__label"></label>
+                                    <span class="vacancy__name">Начальник участка</span>
+                                    <svg class="icon">
+                                        <use xlink:href="./images/sprite.svg#plus"></use>
+                                    </svg>
+                                </div>
+                                <div class="vacancy__dropdown">
+                                    <ul class="vacancy__tables">
+                                        <li class="vacancy__table">
+                                            <p class="vacancy__title">
+                                                Обязанности:
+                                            </p>
+
+                                            <ul class="vacancy__list">
+                                                <li class="vacancy__item vacancy__item--text">
+                                                    Подготовка строительного производства на
+                                                    участке строительства;
+                                                </li>
+                                                <li class="vacancy__item vacancy__item--text">
+                                                    Материально-техническое обеспечение строительного
+                                                    производства на участке строительства;
+                                                </li>
+                                                <li class="vacancy__item vacancy__item--text">
+                                                    Ведение материального учета и дальнейшего
+                                                    списания материалов;
+                                                </li>
+                                                <li class="vacancy__item vacancy__item--text">
+                                                    Оперативное управление строительным
+                                                    производством на участке строительства;
+                                                </li>
+                                                <li class="vacancy__item vacancy__item--text">
+                                                    Приемка и контроль качества результатов выполненных
+                                                    видов и этапов строительных работ на участке
+                                                    строительства с последующей сдачей техническому надзору;
+                                                </li>
+                                                <li class="vacancy__item vacancy__item--text">
+                                                    Сдача заказчику результатов строительных работ.
+                                                </li>
+                                                <li class="vacancy__item vacancy__item--text">
+                                                    Контроль сроков выполнения работ.
+                                                </li>
+                                            </ul>
+                                        </li>
+                                        <li class="vacancy__table">
+                                            <p class="vacancy__title">
+                                                Требования:
+                                            </p>
+
+                                            <ul class="vacancy__list">
+                                                <li class="vacancy__item vacancy__item--text">
+                                                    высшее строительное образование;
+                                                </li>
+                                                <li class="vacancy__item vacancy__item--text">
+                                                    Опыт работы в монолитном многоэтажном
+                                                    домостроении от 3 лет;
+                                                </li>
+                                                <li class="vacancy__item vacancy__item--text">
+                                                    Опыт руководства коллективом до 10 ИТР и
+                                                    до 200 рабочих разных профессий;
+                                                </li>
+                                                <li class="vacancy__item vacancy__item--text">
+                                                    Опыт взаимодействия с заказчиком, техническим заказчиком,
+                                                    авторским надзором, подрядчиками, надзорными органами;
+                                                </li>
+                                                <li class="vacancy__item vacancy__item--text">
+                                                    Аттестация по основам промышленной безопасности А.1,
+                                                    по безопасному производству работ с применением
+                                                    подъемных сооружений Б.31 (желательно).
+                                                </li>
+                                                <li class="vacancy__item vacancy__item--text">
+                                                    Уверенный пользователь пакета microsoft office
+                                                    и программы autocad;
+                                                </li>
+                                                <li class="vacancy__item vacancy__item--text">
+                                                    Опыт чтения чертежей рабочей документации
+                                                    с полноценным расчетом раскроя арматуры.
+                                                </li>
+                                            </ul>
+                                        </li>
+                                        <li class="vacancy__table">
+                                            <p class="vacancy__title">
+                                                Условия:
+                                            </p>
+
+                                            <ul class="vacancy__list">
+                                                <li class="vacancy__item vacancy__item--text">
+                                                    Оформление по ТК РФ, з/п два раза в месяц без задержек;
+                                                </li>
+                                                <li class="vacancy__item vacancy__item--text">
+                                                    График работы 6/1;
+                                                </li>
+                                                <li class="vacancy__item vacancy__item--text">
+                                                    Соцпакет.
+                                                </li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </li>
+
+                            <li class="contacts-section__vacancy vacancy">
+                                <input hidden type="checkbox" class="visually-hidden" name="vacancy-item-input" id="vacancy-id-002">
+                                <div class="vacancy__button">
+                                    <label for="vacancy-id-002" class="vacancy__label"></label>
+                                    <span class="vacancy__name">Ведущий инженер ПТО</span>
+                                    <svg class="icon">
+                                        <use xlink:href="./images/sprite.svg#plus"></use>
+                                    </svg>
+                                </div>
+                                <div class="vacancy__dropdown">
+                                    <ul class="vacancy__tables">
+                                        <li class="vacancy__table">
+                                            <p class="vacancy__title">
+                                                Обязанности:
+                                            </p>
+
+                                            <ul class="vacancy__list">
+                                                <li class="vacancy__item vacancy__item--text">
+                                                    Подготовка строительного производства на
+                                                    участке строительства;
+                                                </li>
+                                                <li class="vacancy__item vacancy__item--text">
+                                                    Материально-техническое обеспечение строительного
+                                                    производства на участке строительства;
+                                                </li>
+                                                <li class="vacancy__item vacancy__item--text">
+                                                    Ведение материального учета и дальнейшего
+                                                    списания материалов;
+                                                </li>
+                                                <li class="vacancy__item vacancy__item--text">
+                                                    Оперативное управление строительным
+                                                    производством на участке строительства;
+                                                </li>
+                                                <li class="vacancy__item vacancy__item--text">
+                                                    Приемка и контроль качества результатов выполненных
+                                                    видов и этапов строительных работ на участке
+                                                    строительства с последующей сдачей техническому надзору;
+                                                </li>
+                                                <li class="vacancy__item vacancy__item--text">
+                                                    Сдача заказчику результатов строительных работ.
+                                                </li>
+                                                <li class="vacancy__item vacancy__item--text">
+                                                    Контроль сроков выполнения работ.
+                                                </li>
+                                            </ul>
+                                        </li>
+                                        <li class="vacancy__table">
+                                            <p class="vacancy__title">
+                                                Требования:
+                                            </p>
+
+                                            <ul class="vacancy__list">
+                                                <li class="vacancy__item vacancy__item--text">
+                                                    высшее строительное образование;
+                                                </li>
+                                                <li class="vacancy__item vacancy__item--text">
+                                                    Опыт работы в монолитном многоэтажном
+                                                    домостроении от 3 лет;
+                                                </li>
+                                                <li class="vacancy__item vacancy__item--text">
+                                                    Опыт руководства коллективом до 10 ИТР и
+                                                    до 200 рабочих разных профессий;
+                                                </li>
+                                                <li class="vacancy__item vacancy__item--text">
+                                                    Опыт взаимодействия с заказчиком, техническим заказчиком,
+                                                    авторским надзором, подрядчиками, надзорными органами;
+                                                </li>
+                                                <li class="vacancy__item vacancy__item--text">
+                                                    Аттестация по основам промышленной безопасности А.1,
+                                                    по безопасному производству работ с применением
+                                                    подъемных сооружений Б.31 (желательно).
+                                                </li>
+                                                <li class="vacancy__item vacancy__item--text">
+                                                    Уверенный пользователь пакета microsoft office
+                                                    и программы autocad;
+                                                </li>
+                                                <li class="vacancy__item vacancy__item--text">
+                                                    Опыт чтения чертежей рабочей документации
+                                                    с полноценным расчетом раскроя арматуры.
+                                                </li>
+                                            </ul>
+                                        </li>
+                                        <li class="vacancy__table">
+                                            <p class="vacancy__title">
+                                                Условия:
+                                            </p>
+
+                                            <ul class="vacancy__list">
+                                                <li class="vacancy__item vacancy__item--text">
+                                                    Оформление по ТК РФ, з/п два раза в месяц без задержек;
+                                                </li>
+                                                <li class="vacancy__item vacancy__item--text">
+                                                    График работы 6/1;
+                                                </li>
+                                                <li class="vacancy__item vacancy__item--text">
+                                                    Соцпакет.
+                                                </li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </li>
+
+                            <li class="contacts-section__vacancy vacancy">
+                                <input hidden type="checkbox" class="visually-hidden" name="vacancy-item-input" id="vacancy-id-003">
+                                <div class="vacancy__button">
+                                    <label for="vacancy-id-003" class="vacancy__label"></label>
+                                    <span class="vacancy__name">Производитель работ</span>
+                                    <svg class="icon">
+                                        <use xlink:href="./images/sprite.svg#plus"></use>
+                                    </svg>
+                                </div>
+                                <div class="vacancy__dropdown">
+                                    <ul class="vacancy__tables">
+                                        <li class="vacancy__table">
+                                            <p class="vacancy__title">
+                                                Обязанности:
+                                            </p>
+
+                                            <ul class="vacancy__list">
+                                                <li class="vacancy__item vacancy__item--text">
+                                                    Подготовка строительного производства на
+                                                    участке строительства;
+                                                </li>
+                                                <li class="vacancy__item vacancy__item--text">
+                                                    Материально-техническое обеспечение строительного
+                                                    производства на участке строительства;
+                                                </li>
+                                                <li class="vacancy__item vacancy__item--text">
+                                                    Ведение материального учета и дальнейшего
+                                                    списания материалов;
+                                                </li>
+                                                <li class="vacancy__item vacancy__item--text">
+                                                    Оперативное управление строительным
+                                                    производством на участке строительства;
+                                                </li>
+                                                <li class="vacancy__item vacancy__item--text">
+                                                    Приемка и контроль качества результатов выполненных
+                                                    видов и этапов строительных работ на участке
+                                                    строительства с последующей сдачей техническому надзору;
+                                                </li>
+                                                <li class="vacancy__item vacancy__item--text">
+                                                    Сдача заказчику результатов строительных работ.
+                                                </li>
+                                                <li class="vacancy__item vacancy__item--text">
+                                                    Контроль сроков выполнения работ.
+                                                </li>
+                                            </ul>
+                                        </li>
+                                        <li class="vacancy__table">
+                                            <p class="vacancy__title">
+                                                Требования:
+                                            </p>
+
+                                            <ul class="vacancy__list">
+                                                <li class="vacancy__item vacancy__item--text">
+                                                    высшее строительное образование;
+                                                </li>
+                                                <li class="vacancy__item vacancy__item--text">
+                                                    Опыт работы в монолитном многоэтажном
+                                                    домостроении от 3 лет;
+                                                </li>
+                                                <li class="vacancy__item vacancy__item--text">
+                                                    Опыт руководства коллективом до 10 ИТР и
+                                                    до 200 рабочих разных профессий;
+                                                </li>
+                                                <li class="vacancy__item vacancy__item--text">
+                                                    Опыт взаимодействия с заказчиком, техническим заказчиком,
+                                                    авторским надзором, подрядчиками, надзорными органами;
+                                                </li>
+                                                <li class="vacancy__item vacancy__item--text">
+                                                    Аттестация по основам промышленной безопасности А.1,
+                                                    по безопасному производству работ с применением
+                                                    подъемных сооружений Б.31 (желательно).
+                                                </li>
+                                                <li class="vacancy__item vacancy__item--text">
+                                                    Уверенный пользователь пакета microsoft office
+                                                    и программы autocad;
+                                                </li>
+                                                <li class="vacancy__item vacancy__item--text">
+                                                    Опыт чтения чертежей рабочей документации
+                                                    с полноценным расчетом раскроя арматуры.
+                                                </li>
+                                            </ul>
+                                        </li>
+                                        <li class="vacancy__table">
+                                            <p class="vacancy__title">
+                                                Условия:
+                                            </p>
+
+                                            <ul class="vacancy__list">
+                                                <li class="vacancy__item vacancy__item--text">
+                                                    Оформление по ТК РФ, з/п два раза в месяц без задержек;
+                                                </li>
+                                                <li class="vacancy__item vacancy__item--text">
+                                                    График работы 6/1;
+                                                </li>
+                                                <li class="vacancy__item vacancy__item--text">
+                                                    Соцпакет.
+                                                </li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </section>
+
+                <section class="section map-section map-section--contacts">
+                    <script>
+                        var mapData = [
+                            {
+                                coords: [55.766310, 37.531954],
+                                greyIcon: false
+                            },
+                        ];
+
+                        var mapZoom = 13;
+
+                        var mapCenter = [55.781793, 37.531198];
+                    </script>
+
+                    <div class="map-section__site-container">
+                        <div class="map-section__map-wrapper js-map">
+
+                        </div>
+                    </div>
+                </section>
+            </main>
+            <footer class="page-footer _bg-text _color-white">
+                <div class="page-footer__site-container">
+                    <div class="page-footer__logo">
+                        <a href="./index.html" class="big-logo">
+                            <p>ООО "Су-90"</p>
+                            <span>Строительные работы</span>
+                        </a>
+                    </div>
+
+                    <div class="page-footer__grid">
+                        <div class="page-footer__contacts">
+                            <a href="tel:+74952690571" class="page-footer__title page-footer__title--h3">
+                                +7 495 269 05 71
+                            </a>
+
+                            <ul class="page-footer__contacts-list page-footer__list">
+                                <li class="page-footer__item">
+                                    <a href="mailto:90-su@mail.ru">
+                                        90-su@mail.ru
+                                    </a>
+                                </li>
+                                <li class="page-footer__item">
+                                    <p class="page-footer__text">
+                                        г. Москва, 1-й Магистральный тупик, 5а.
+                                    </p>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <div class="page-footer__times">
+                            <p class="page-footer__title page-footer__title--h3">
+                                Время работы
+                            </p>
+
+                            <ul class="page-footer__times-list page-footer__list">
+                                <li class="page-footer__item">
+                                    <p class="page-footer__text">
+                                        Пн-пт<br>09:00-18:00
+                                    </p>
+                                </li>
+                                <li class="page-footer__item">
+                                    <p class="page-footer__text">
+                                        Сб<br>10:00-16:00
+                                    </p>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <div class="page-footer__menu">
+                            <p class="page-footer__title page-footer__title--h3">
+                                Меню
+                            </p>
+
+                            <ul class="page-footer__menus-list page-footer__list">
+                                <li class="page-footer__item">
+                                    <a href="./about.html">
+                                        О компании
+                                    </a>
+                                </li>
+                                <li class="page-footer__item">
+                                    <a href="./portfolio.html">
+                                        Портфолио
+                                    </a>
+                                </li>
+                                <li class="page-footer__item">
+                                    <a href="./services.html">
+                                        Услуги
+                                    </a>
+                                </li>
+                                <li class="page-footer__item">
+                                    <a href="./contacts.html">
+                                        Контакты
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </footer>
+        </div>
+
+        <div class="modal modal--menu">
+            <div class="modal__container" data-target="menu-modal">
+                <div class="modal__site-container">
+                    <div class="modal__header">
+                        <a href="/" class="logo">
+                            <svg class="icon">
+                                <use xlink:href="./images/sprite.svg#logo"></use>
+                            </svg>
+                        </a>
+
+                        <button type="button" class="modal__close-btn modal-close">
+                            <svg class="icon">
+                                <use xlink:href="./images/sprite.svg#close"></use>
+                            </svg>
+                        </button>
+                    </div>
+
+                    <div class="modal__grid">
+                        <div class="modal__menu menu">
+                            <ul class="menu__list js-hover-opacity">
+                                <li class="menu__item">
+                                    <a href="./index.html" class="menu__link js-hover-link">Главная</a>
+                                </li>
+                                <li class="menu__item">
+                                    <a href="./about.html" class="menu__link js-hover-link">О компании</a>
+                                </li>
+                                <li class="menu__item">
+                                    <a href="./portfolio.html" class="menu__link js-hover-link">Портфолио</a>
+                                </li>
+                                <li class="menu__item">
+                                    <a href="./services.html" class="menu__link js-hover-link">Услуги</a>
+                                </li>
+                                <li class="menu__item  menu__item--actual">
+                                    <a href="./contacts.html" class="menu__link js-hover-link">Контакты</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="modal__contacts">
+                            <p class="modal__title page-footer__title--h3 hide-on-mobile">
+                                Центральный офис
+                            </p>
+
+                            <a href="tel:+74952690571" class="modal__phone">
+                                +7 495 269 05 71
+                            </a>
+
+                            <ul class="page-footer__contacts-list modal__list">
+                                <li class="page-footer__item show-on-mobile">
+                                    <a href="mailto:90-su@mail.ru">
+                                        90-su@mail.ru
+                                    </a>
+                                </li>
+                                <li class="page-footer__item">
+                                    <p class="page-footer__text">
+                                        г. Москва,<br> 1-й Магистральный тупик, 5а.
+                                    </p>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="modal__times">
+                            <p class="modal__title page-footer__title page-footer__title--h3">
+                                Время работы
+                            </p>
+
+                            <ul class="page-footer__times-list modal__list">
+                                <li class="page-footer__item">
+                                    <p class="page-footer__text">
+                                        Пн-пт<br>09:00-18:00
+                                    </p>
+                                </li>
+                                <li class="page-footer__item">
+                                    <p class="page-footer__text">
+                                        Сб<br>10:00-16:00
+                                    </p>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="dialog-content" data-video-modal style="display:none;">
+            <video controls="true" muted>
+                <source src="./images/video.mp4" type="video/mp4" />
+            </video>
+        </div>
+
+        <script
+            async
+            src="https://code.jquery.com/jquery-3.7.1.slim.min.js"
+            integrity="sha256-kmHvs0B+OpCW5GVHUNjv9rOmY0IvSIRcf7zGUDTDQM8="
+            crossorigin="anonymous"
+            defer></script>
+        <script
+            async
+            src="https://cdnjs.cloudflare.com/ajax/libs/jquery.inputmask/5.0.8/inputmask.min.js"
+            integrity="sha512-7MSrprC5qi3xYbOIZqbB59XEYQMILpy0tQhiHDOjX8v0+7zUJ54o5Xw2UB0GXvim3LKMPbHld9BPzV9euBjfug=="
+            crossorigin="anonymous"
+            referrerpolicy="no-referrer"
+            defer></script>
+        <script async src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js" defer></script>
+
+        <script defer src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.umd.js"></script>
+
+        <script defer src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+        <script defer src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <script src="https://api-maps.yandex.ru/2.1/?apikey=72c05200-f928-4e05-aed9-e60fedabd791&lang=ru_RU"
+            type="text/javascript"></script>
+        <script src="./js/main.js" type="module" defer></script>
+    </body>
+</html>

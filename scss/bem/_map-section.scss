@@ -1,4 +1,10 @@
 .map-section {
+    padding: 2.8rem 0 9.4rem;
+
+    &.map-section--objects {
+        padding: 10rem 0 20.7rem;
+    }
+
     &__map-wrapper {
         width: 100%;
         overflow: hidden;
@@ -17,6 +23,16 @@
 
             @include breakpointMF(portrait-tablet) {
                 aspect-ratio: 2 / 1;
+            }
+        }
+    }
+
+    &.section {
+        &.map-section--contacts {
+            padding: 3.3rem 0 10.6rem;
+
+            @include breakpointMF(portrait-tablet) {
+                padding: 11.3rem 0;
             }
         }
     }

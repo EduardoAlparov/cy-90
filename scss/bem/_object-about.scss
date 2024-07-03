@@ -1,4 +1,12 @@
 .object-about {
+    &.section {
+        padding: 8rem 0 10.6rem;
+
+        @include breakpointMF(portrait-tablet) {
+            padding: 8rem 0 12.3rem;
+        }
+    }
+
     &__carousel {
         margin-bottom: 4rem;
 
@@ -102,12 +110,6 @@
         }
     }
 
-    &__information-box {
-        &.information-box {
-
-        }
-    }
-
     &__info-cell {
         &:not(:nth-child(2)) {
             .object-about__information-box.information-box {
@@ -133,6 +135,16 @@
                         max-width: unset;
                     }
                 }
+            }
+        }
+    }
+
+    &__map {
+        &.map-section {
+            display: none;
+
+            @include breakpointMF(portrait-tablet) {
+                display: block;
             }
         }
     }

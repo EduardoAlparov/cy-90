@@ -1,10 +1,26 @@
 .objects-section {
+    &.section {
+        padding: 8rem 0 2.8rem;
+        @include breakpointMF(portrait-tablet) {
+            padding: 12.1rem 0 10rem;
+        }
+    }
+
     &__heading {
         &.section__heading {
             margin-bottom: 2.7rem;
 
             @include breakpointMF(portrait-tablet) {
                 margin-bottom: 4.6rem;
+            }
+        }
+    }
+
+    &__title {
+        &.section__title {
+            @include breakpoint(portrait-tablet) {
+                font-size: 2.4rem;
+                line-height: normal;
             }
         }
     }
