@@ -82,6 +82,19 @@
         }
     }
 
+    &__information-box {
+        &--transition {
+            transform: translateY(0%);
+            opacity: 1;
+
+            transition-duration: 0.6s;
+            transition-timing-function: ease-out;
+            transition-property: transform, opacity;
+
+            will-change: transform;
+        }
+    }
+
     &.grid-section--no-reverse {
         .grid-section__site-container {
             flex-direction: column;

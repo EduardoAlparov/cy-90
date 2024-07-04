@@ -32,11 +32,32 @@
 
         @include breakpointMF(portrait-tablet) {
             flex-direction: row;
-            align-items: flex-end;
+            align-items: center;
             justify-content: space-between;
 
             margin-top: 8rem;
             margin-bottom: 5.1rem;
+        }
+
+        &--transition {
+            overflow: hidden;
+
+            .intro-section__subtitle,
+            .intro-section__text,
+            .intro-section__title {
+                transform: translateY(0%);
+
+                transition-duration: 0.5s;
+                transition-timing-function: ease-out;
+                transition-property: transform;
+            }
+        }
+
+        .intro-section__subtitle {
+            @include breakpointMF(portrait-tablet) {
+                margin-top: auto;
+                margin-bottom: 1rem;
+            }
         }
     }
 
@@ -112,6 +133,15 @@
             @include breakpointMF(portrait-tablet) {
                 background: linear-gradient(180deg, rgba(46, 46, 46, 0.10) 0%, rgba(24, 24, 24, 0.40) 79.3%, rgba(7, 7, 7, 0.40) 100%);
             }
+        }
+
+        &--transition {
+            transform-origin: center;
+            transform: scale(1.05);
+
+            transition-duration: 0.5s;
+            transition-timing-function: ease-out;
+            transition-property: transform;
         }
     }
 

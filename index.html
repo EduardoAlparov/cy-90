@@ -55,9 +55,9 @@
                 </div>
             </header>
             <main class="page-main">
-                <section class="section intro-section">
+                <section class="section intro-section js-animation-trigger">
                     <div class="intro-section__site-container _intro-padding-top">
-                        <div class="intro-section__heading">
+                        <div class="intro-section__heading intro-section__heading--transition">
                             <h1 class="intro-section__title intro-section__title--h1-big">
                                 13 лет
                             </h1>
@@ -72,12 +72,12 @@
 
                     <div class="intro-section__body">
                         <div class="intro-section__media">
-                            <div class="intro-section__picture">
+                            <div class="intro-section__picture intro-section__picture--transition">
                                 <picture>
                                     <source srcset="./images/intro/pic-1.webp" media="(min-width: 992px)" type="image/webp">
                                     <source srcset="./images/intro/pic-1m.webp" media="(max-width: 992px)" type="image/webp">
                                     <source srcset="./images/intro/pic-1m.jpg" media="(max-width: 992px)">
-                                    <img data-swiper-parallax-opacity="0" src="./images/intro/pic-1.jpg"  media="(min-width: 992px)" alt="">
+                                    <img src="./images/intro/pic-1.jpg"  media="(min-width: 992px)" alt="">
                                 </picture>
                             </div>
                         </div>
@@ -98,7 +98,7 @@
 
                 </section>
 
-                <section class="section triple-section">
+                <section class="section triple-section js-animation-trigger">
                     <div class="triple-section__site-container">
                         <div class="triple-section__heading section__heading">
                             <h2 class="section__title section__title--h1">
@@ -113,7 +113,7 @@
                         <div class="triple-section__body">
                             <div class="triple-section__cell">
                                 <a href="#" class="triple-section__service service">
-                                    <div class="service__image">
+                                    <div class="service__image service__image--transition">
                                         <picture>
                                             <source srcset="./images/services/pic-1.webp" type="image/webp">
                                             <img src="./images/services/pic-1.jpg" alt="">
@@ -135,7 +135,7 @@
                             </div>
                             <div class="triple-section__cell">
                                 <a href="#" class="triple-section__service service">
-                                    <div class="service__image">
+                                    <div class="service__image service__image--transition">
                                         <picture>
                                             <source srcset="./images/services/pic-2.webp" type="image/webp">
                                             <img src="./images/services/pic-2.jpg" alt="">
@@ -156,7 +156,7 @@
                             </div>
                             <div class="triple-section__cell">
                                 <a href="#" class="triple-section__service service">
-                                    <div class="service__image">
+                                    <div class="service__image service__image--transition">
                                         <picture>
                                             <source srcset="./images/services/pic-3.webp" type="image/webp">
                                             <img src="./images/services/pic-3.jpg" alt="">
@@ -177,7 +177,7 @@
                     </div>
                 </section>
 
-                <section class="section grid-section">
+                <section class="section grid-section js-animation-trigger">
                     <div class="grid-section__site-container">
                         <div class="grid-section__heading section__heading">
                             <h2 class="section__subtitle section__subtitle--h2">
@@ -204,8 +204,8 @@
                                 </div>
                             </div>
 
-                            <div class="grid-section__cell">
-                                <div class="grid-section__information-box information-box">
+                            <div class="grid-section__cell grid-section__cell--from-top">
+                                <div class="grid-section__information-box grid-section__information-box--transition information-box">
                                     <p class="information-box__number">
                                         3
                                     </p>
@@ -215,8 +215,8 @@
                                 </div>
                             </div>
 
-                            <div class="grid-section__cell">
-                                <div class="grid-section__information-box information-box">
+                            <div class="grid-section__cell grid-section__cell--from-top">
+                                <div class="grid-section__information-box grid-section__information-box--transition information-box">
                                     <p class="information-box__number">
                                         20
                                     </p>
@@ -226,8 +226,8 @@
                                 </div>
                             </div>
 
-                            <div class="grid-section__cell grid-section__cell--big">
-                                <div class="grid-section__information-box information-box">
+                            <div class="grid-section__cell grid-section__cell--big grid-section__cell--from-bottom">
+                                <div class="grid-section__information-box grid-section__information-box--transition information-box">
                                     <p class="information-box__number">
                                         486 232 м2
                                     </p>
@@ -237,8 +237,8 @@
                                 </div>
                             </div>
 
-                            <div class="grid-section__cell grid-section__cell--big">
-                                <div class="grid-section__information-box information-box">
+                            <div class="grid-section__cell grid-section__cell--big grid-section__cell--from-bottom">
+                                <div class="grid-section__information-box grid-section__information-box--transition information-box">
                                     <p class="information-box__number">
                                         604 461 м2
                                     </p>
@@ -251,63 +251,183 @@
                     </div>
                 </section>
 
-                <section class="section cascade-section">
-                    <div class="cascade-section__site-container">
-                        <div class="cascade-section__heading section__heading">
-                            <h2 class="section__title section__title--h1">
-                                2021 г.
-                            </h2>
+                <section class="section cascade-section js-cascade-section js-animation-trigger">
+                    <ul class="cascade-section__slider js-cascade-slider">
+                        <li class="cascade-section__slider-item">
+                            <div class="cascade-section__site-container">
+                                <div class="cascade-section__heading section__heading">
+                                    <h2 class="section__title section__title--h1">
+                                        2021 г.
+                                    </h2>
 
-                            <div class="section__subtitle">
-                                <p class="text-box__heading">
-                                    <span class="text-box__heading-big">Фин.</span>
-                                    <span class="text-box__heading-small">показатели</span>
-                                </p>
+                                    <div class="section__subtitle">
+                                        <p class="text-box__heading">
+                                            <span class="text-box__heading-big">Фин.</span>
+                                            <span class="text-box__heading-small">показатели</span>
+                                        </p>
+                                    </div>
+                                </div>
+
+                                <div class="cascade-section__body">
+                                    <ul class="cascade-section__stats cascade-section__stats--transition">
+                                        <li class="cascade-section__stat">
+                                            <span class="cascade-section__name">Выручка</span>
+                                            <p class="cascade-section__value">
+                                                276&nbsp;197&nbsp;000
+                                                <span class="hide-on-mobile">
+                                                    руб.
+                                                </span>
+                                                <span class="show-on-mobile">
+                                                    ₽
+                                                </span>
+                                            </p>
+                                        </li>
+                                        <li class="cascade-section__stat">
+                                            <span class="cascade-section__name">Площадь</span>
+                                            <span class="cascade-section__value">74&nbsp;420&nbsp;м2</span>
+                                        </li>
+                                        <li class="cascade-section__stat cascade-section__stat--reverse">
+                                            <span class="cascade-section__name">Объектов</span>
+                                            <span class="cascade-section__value">3</span>
+                                        </li>
+                                    </ul>
+
+                                    <div class="cascade-section__images cascade-section__images--transition">
+                                        <div class="cascade-section__small-image">
+                                            <picture>
+                                                <source srcset="./images/cascade/small.webp" type="image/webp">
+                                                <img src="./images/cascade/small.jpg" alt="">
+                                            </picture>
+                                        </div>
+
+                                        <div class="cascade-section__big-image hide-on-mobile">
+                                            <picture>
+                                                <source srcset="./images/cascade/big.webp" type="image/webp">
+                                                <img src="./images/cascade/big.jpg" alt="">
+                                            </picture>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
-                        </div>
+                        </li>
+                        <li class="cascade-section__slider-item">
+                            <div class="cascade-section__site-container">
+                                <div class="cascade-section__heading section__heading">
+                                    <h2 class="section__title section__title--h1">
+                                        2022 г.
+                                    </h2>
 
-                        <div class="cascade-section__body">
-                            <ul class="cascade-section__stats">
-                                <li class="cascade-section__stat">
-                                    <span class="cascade-section__name">Выручка</span>
-                                    <p class="cascade-section__value">
-                                        276 197 000
-                                        <span class="hide-on-mobile">
-                                            руб.
-                                        </span>
-                                        <span class="show-on-mobile">
-                                            ₽
-                                        </span>
-                                    </p>
-                                </li>
-                                <li class="cascade-section__stat">
-                                    <span class="cascade-section__name">Площадь</span>
-                                    <span class="cascade-section__value">74 420 м2</span>
-                                </li>
-                                <li class="cascade-section__stat cascade-section__stat--reverse">
-                                    <span class="cascade-section__name">Объектов</span>
-                                    <span class="cascade-section__value">3</span>
-                                </li>
-                            </ul>
+                                    <div class="section__subtitle">
+                                        <p class="text-box__heading">
+                                            <span class="text-box__heading-big">Фин.</span>
+                                            <span class="text-box__heading-small">показатели</span>
+                                        </p>
+                                    </div>
+                                </div>
 
-                            <div class="cascade-section__small-image">
-                                <picture>
-                                    <source srcset="./images/cascade/small.webp" type="image/webp">
-                                    <img src="./images/cascade/small.jpg" alt="">
-                                </picture>
+                                <div class="cascade-section__body">
+                                    <ul class="cascade-section__stats">
+                                        <li class="cascade-section__stat">
+                                            <span class="cascade-section__name">Выручка</span>
+                                            <p class="cascade-section__value">
+                                                616&nbsp;435&nbsp;000
+                                                <span class="hide-on-mobile">
+                                                    руб.
+                                                </span>
+                                                <span class="show-on-mobile">
+                                                    ₽
+                                                </span>
+                                            </p>
+                                        </li>
+                                        <li class="cascade-section__stat">
+                                            <span class="cascade-section__name">Площадь</span>
+                                            <span class="cascade-section__value">176&nbsp;640&nbsp;м2</span>
+                                        </li>
+                                        <li class="cascade-section__stat cascade-section__stat--reverse">
+                                            <span class="cascade-section__name">Объектов</span>
+                                            <span class="cascade-section__value">3</span>
+                                        </li>
+                                    </ul>
+
+                                    <div class="cascade-section__images">
+                                        <div class="cascade-section__small-image">
+                                            <picture>
+                                                <source srcset="./images/cascade/small.webp" type="image/webp">
+                                                <img src="./images/cascade/small.jpg" alt="">
+                                            </picture>
+                                        </div>
+
+                                        <div class="cascade-section__big-image hide-on-mobile">
+                                            <picture>
+                                                <source srcset="./images/cascade/big.webp" type="image/webp">
+                                                <img src="./images/cascade/big.jpg" alt="">
+                                            </picture>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
+                        </li>
+                        <li class="cascade-section__slider-item">
+                            <div class="cascade-section__site-container">
+                                <div class="cascade-section__heading section__heading">
+                                    <h2 class="section__title section__title--h1">
+                                        2023 г.
+                                    </h2>
 
-                            <div class="cascade-section__big-image hide-on-mobile">
-                                <picture>
-                                    <source srcset="./images/cascade/big.webp" type="image/webp">
-                                    <img src="./images/cascade/big.jpg" alt="">
-                                </picture>
+                                    <div class="section__subtitle">
+                                        <p class="text-box__heading">
+                                            <span class="text-box__heading-big">Фин.</span>
+                                            <span class="text-box__heading-small">показатели</span>
+                                        </p>
+                                    </div>
+                                </div>
+
+                                <div class="cascade-section__body">
+                                    <ul class="cascade-section__stats">
+                                        <li class="cascade-section__stat">
+                                            <span class="cascade-section__name">Выручка</span>
+                                            <p class="cascade-section__value">
+                                                1&nbsp;465&nbsp;108&nbsp;000
+                                                <span class="hide-on-mobile">
+                                                    руб.
+                                                </span>
+                                                <span class="show-on-mobile">
+                                                    ₽
+                                                </span>
+                                            </p>
+                                        </li>
+                                        <li class="cascade-section__stat">
+                                            <span class="cascade-section__name">Площадь</span>
+                                            <span class="cascade-section__value">235&nbsp;263&nbsp;м2</span>
+                                        </li>
+                                        <li class="cascade-section__stat cascade-section__stat--reverse">
+                                            <span class="cascade-section__name">Объектов</span>
+                                            <span class="cascade-section__value">4</span>
+                                        </li>
+                                    </ul>
+
+                                    <div class="cascade-section__images">
+                                        <div class="cascade-section__small-image">
+                                            <picture>
+                                                <source srcset="./images/cascade/small.webp" type="image/webp">
+                                                <img src="./images/cascade/small.jpg" alt="">
+                                            </picture>
+                                        </div>
+
+                                        <div class="cascade-section__big-image hide-on-mobile">
+                                            <picture>
+                                                <source srcset="./images/cascade/big.webp" type="image/webp">
+                                                <img src="./images/cascade/big.jpg" alt="">
+                                            </picture>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
-                        </div>
-                    </div>
+                        </li>
+                    </ul>
                 </section>
 
-                <section class="section grid-section grid-section--no-reverse">
+                <section class="section grid-section grid-section--no-reverse js-animation-trigger">
                     <div class="grid-section__site-container">
                         <div class="grid-section__heading section__heading">
                             <h2 class="section__title section__title--h1">
@@ -336,8 +456,8 @@
                             </div>
 
 
-                            <div class="grid-section__cell">
-                                <div class="grid-section__information-box information-box">
+                            <div class="grid-section__cell grid-section__cell--from-top">
+                                <div class="grid-section__information-box grid-section__information-box--transition information-box">
                                     <p class="information-box__number">
                                         70
                                     </p>
@@ -347,8 +467,8 @@
                                 </div>
                             </div>
 
-                            <div class="grid-section__cell">
-                                <div class="grid-section__information-box information-box">
+                            <div class="grid-section__cell grid-section__cell--from-top">
+                                <div class="grid-section__information-box grid-section__information-box--transition information-box">
                                     <p class="information-box__number">
                                         5
                                     </p>
@@ -358,8 +478,8 @@
                                 </div>
                             </div>
 
-                            <div class="grid-section__cell">
-                                <div class="grid-section__information-box information-box">
+                            <div class="grid-section__cell grid-section__cell--from-bottom">
+                                <div class="grid-section__information-box grid-section__information-box--transition information-box">
                                     <p class="information-box__number">
                                         1000
                                     </p>
@@ -369,8 +489,8 @@
                                 </div>
                             </div>
 
-                            <div class="grid-section__cell">
-                                <div class="grid-section__information-box information-box">
+                            <div class="grid-section__cell grid-section__cell--from-bottom">
+                                <div class="grid-section__information-box grid-section__information-box--transition information-box">
                                     <p class="information-box__number">
                                         13
                                     </p>
@@ -392,7 +512,7 @@
                     </div>
                 </section>
 
-                <section class="section carousel-section js-carousel">
+                <section class="section carousel-section js-carousel js-animation-trigger">
                     <div class="carousel-section__site-container">
                         <div class="carousel-section__heading section__heading">
                             <h2 class="section__title section__title--h1">
@@ -418,7 +538,7 @@
                                         </div>
 
                                         <div class="carousel-slide__body" data-swiper-parallax-opacity="0" data-swiper-parallax="-200">
-                                            <div class="carousel-slide__header">
+                                            <div class="carousel-slide__header carousel-slide__header--transition">
                                                 <p class="carousel-slide__subtitle carousel-slide__subtitle--h3">
                                                     АРХИТЕКТУРА
                                                 </p>
@@ -428,7 +548,7 @@
                                             </div>
 
                                             <ul class="carousel-slide__list">
-                                                <li class="carousel-slide__list-item">
+                                                <li class="carousel-slide__list-item carousel-slide__list-item--transition">
                                                     <p class="carousel-slide__start carousel-slide__start--h3">
                                                         Начало строительства
                                                     </p>
@@ -436,7 +556,7 @@
                                                         19.02.21
                                                     </p>
                                                 </li>
-                                                <li class="carousel-slide__list-item">
+                                                <li class="carousel-slide__list-item carousel-slide__list-item--transition">
                                                     <p class="carousel-slide__start carousel-slide__start--h3">
                                                         Общая площадь проекта
                                                     </p>
@@ -444,7 +564,7 @@
                                                         15 317 м2
                                                     </p>
                                                 </li>
-                                                <li class="carousel-slide__list-item">
+                                                <li class="carousel-slide__list-item carousel-slide__list-item--transition">
                                                     <p class="carousel-slide__start carousel-slide__start--h3">
                                                         Конец строительства
                                                     </p>
@@ -663,54 +783,85 @@
                     </div>
                 </section>
 
+                <section class="section simple-section js-simple-section js-animation-trigger">
+                    <div class="cascade-section__swiper swiper">
+                        <ul class="cascade-section__swiper-wrapper swiper-wrapper ">
+                            <li class="simple-section__swiper-slide swiper-slide">
+                                <div class="simple-section__site-container">
+                                    <div class="simple-section__body simple-section__body--transition">
+                                        <div class="simple-section__title simple-section__title--h1">
+                                            20 ОБЪЕКТОВ +
+                                        </div>
 
-                <section class="section simple-section">
-                    <div class="simple-section__site-container">
-                        <div class="simple-section__body">
-                            <div class="simple-section__title simple-section__title--h1">
-                                20 ОБЪЕКТОВ +
-                            </div>
+                                        <div class="simple-section__number gradient-number">
+                                            <span>
+                                                01
+                                            </span>
+                                        </div>
 
-                            <div class="simple-section__number gradient-number">
-                                <span>
-                                    01
-                                </span>
-                            </div>
+                                        <div class="simple-section__subtitle simple-section__subtitle--h2">
+                                            <p>
+                                                Возведение объектов значительно быстрее конкурентов
+                                            </p>
+                                        </div>
 
-                            <div class="simple-section__subtitle simple-section__subtitle--h2">
-                                <p>
-                                    Возведение объектов значительно быстрее конкурентов
-                                </p>
-                            </div>
+                                        <div class="simple-section__text simple-section__text--text">
+                                            Темп строительства нашей компании до 7 этажей в месяц
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="simple-section__swiper-slide swiper-slide">
+                                <div class="simple-section__site-container">
+                                    <div class="simple-section__body">
+                                        <div class="simple-section__title simple-section__title--h1">
+                                            20 ОБЪЕКТОВ +
+                                        </div>
 
-                            <div class="simple-section__text simple-section__text--text">
-                                Темп строительства нашей компании до 7 этажей в месяц
-                            </div>
-                        </div>
-                    </div>
-                </section>
+                                        <div class="simple-section__number gradient-number">
+                                            <span>
+                                                02
+                                            </span>
+                                        </div>
 
-                <section class="section feedback-section">
-                    <div class="feedback-section__site-container">
+                                        <div class="simple-section__subtitle simple-section__subtitle--h2">
+                                            <p>
+                                                Создание качественных объектов недвижемости для жизни людей
+                                            </p>
+                                        </div>
 
-                        <div class="feedback-section__heading">
-                            <p class="feedback-section__title feedback-section__title--top feedback-section__title--h1">
-                                Не&nbsp;нашли&nbsp;ответ&nbsp;на<br>интересующий&nbsp;вас<br>вопрос,
-                            </p>
-                            <p class="feedback-section__title feedback-section__title--bottom feedback-section__title--h1">
-                                свяжитесь<br>с&nbsp;нами
-                            </p>
-                        </div>
-                        <div class="feedback-section__footer">
-                            <p class="feedback-section__text feedback-section__text--text">
-                                Оставьте свои контакты, мы в скором времени<br>
-                                свяжемся с&nbsp;Вами и подробно ответим на все вопросы
-                            </p>
+                                        <div class="simple-section__text simple-section__text--text">
+                                            Гарантируем качество выполненных работ в соответсвии с заявленными техническими требованиями
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="simple-section__swiper-slide swiper-slide">
+                                <div class="simple-section__site-container">
+                                    <div class="simple-section__body">
+                                        <div class="simple-section__title simple-section__title--h1">
+                                            20 ОБЪЕКТОВ +
+                                        </div>
 
-                            <a href="#" class="feedback-section__btn feedback-btn">
-                                Хочу сотрудничать
-                            </a>
-                        </div>
+                                        <div class="simple-section__number gradient-number">
+                                            <span>
+                                                03
+                                            </span>
+                                        </div>
+
+                                        <div class="simple-section__subtitle simple-section__subtitle--h2">
+                                            <p>
+                                                Берем ответственность за исполнение взятых на себя обязательств
+                                            </p>
+                                        </div>
+
+                                        <div class="simple-section__text simple-section__text--text">
+                                            Завершение объектов строительства в согласованные сроки.
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
                     </div>
                 </section>
             </main>

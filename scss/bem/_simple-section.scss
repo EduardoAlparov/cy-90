@@ -1,4 +1,6 @@
 .simple-section {
+    overflow: hidden;
+
     &__body {
         display: grid;
 
@@ -16,6 +18,22 @@
                 "b_title b_title"
                 "b_subtitle b_number"
                 "b_subtitle b_text";
+        }
+
+        &--transition {
+            .simple-section__title,
+            .simple-section__number,
+            .simple-section__subtitle,
+            .simple-section__text {
+                transform: translateX(0%);
+                opacity: 1;
+
+                transition-duration: 0.6s;
+                transition-timing-function: ease-out;
+                transition-property: transform, opacity;
+
+                will-change: transform;
+            }
         }
     }
 

@@ -1,4 +1,6 @@
 .cascade-section {
+    overflow: hidden;
+
     &__heading {
         &.section__heading {
             @include breakpoint(portrait-tablet) {
@@ -24,7 +26,18 @@
         width: 100%;
 
         @include breakpointMF(portrait-tablet) {
-            grid-template-columns: max-content max-content auto;
+            grid-template-columns: max-content auto;
+        }
+    }
+
+    &__images {
+        display: grid;
+        grid-template-columns: 100%;
+        width: 100%;
+        gap: 2rem;
+
+        @include breakpointMF(portrait-tablet) {
+            grid-template-columns: max-content auto;
         }
     }
 
@@ -102,6 +115,7 @@
     &__big-image {
         position: relative;
         overflow: hidden;
+        border-radius: 0.5rem;
 
         &::before {
             position: absolute;
@@ -129,16 +143,45 @@
             object-fit: cover;
             object-position: center;
         }
+
+        @include breakpointMF(portrait-tablet) {
+            border-radius: 1rem;
+        }
     }
 
     &__small-image {
         width: 100%;
         aspect-ratio: 0.947 / 1;
-        border-radius: 0.5rem;
 
         @include breakpointMF(portrait-tablet) {
             width: 40rem;
-            border-radius: unset;
+        }
+    }
+
+    &__slider {
+        display: flex;
+        flex-wrap: nowrap;
+        align-items: stretch;
+        width: 100%;
+    }
+
+    &__slider-item {
+        width: 100%;
+        flex-grow: 1;
+        flex-shrink: 0;
+
+        &:first-child {
+            .cascade-section__stats--transition,
+            .cascade-section__images--transition {
+                transform: translateX(0%);
+                opacity: 1;
+
+                transition-duration: 0.6s;
+                transition-timing-function: ease-out;
+                transition-property: transform, opacity;
+
+                will-change: transform;
+            }
         }
     }
 }

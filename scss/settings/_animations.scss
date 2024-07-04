@@ -1,0 +1,147 @@
+// first section intro's animations:
+.js-animation-trigger {
+    &.intro-section {
+
+        .intro-section__heading {
+
+            .intro-section__subtitle,
+            .intro-section__text,
+            .intro-section__title {
+
+                @include breakpointMF(portrait-tablet) {
+                    transform: translateY(-200%);
+                }
+            }
+        }
+
+        .intro-section__picture {
+
+            @include breakpointMF(portrait-tablet) {
+                transform: scale(1);
+            }
+        }
+    }
+}
+
+// second section triple-section animations:
+.js-animation-trigger {
+    &.triple-section {
+
+        .triple-section__service {
+            .service__image {
+                img {
+                    @include breakpointMF(portrait-tablet) {
+                        transform: translate(-50%, -50%) scale(1.1);
+                    }
+                }
+            }
+        }
+    }
+}
+
+// third section grid-section animations:
+.js-animation-trigger {
+    &.grid-section {
+
+        .grid-section__cell--from-top {
+
+            .grid-section__information-box--transition {
+
+                @include breakpointMF(portrait-tablet) {
+                    transform: translateY(-150%);
+                    opacity: 0;
+                }
+            }
+        }
+
+        .grid-section__cell--from-bottom {
+
+            .grid-section__information-box--transition {
+
+                @include breakpointMF(portrait-tablet) {
+                    transform: translateY(150%);
+                    opacity: 0;
+                }
+            }
+        }
+    }
+}
+
+// fourth section cascade-section animations:
+.js-animation-trigger {
+    &.cascade-section {
+        .cascade-section__slider-item:first-child {
+
+            .cascade-section__stats--transition {
+
+                @include breakpointMF(portrait-tablet) {
+                    transform: translateX(-150%);
+                    opacity: 0;
+                }
+            }
+
+            .cascade-section__images--transition {
+
+                @include breakpointMF(portrait-tablet) {
+                    transform: translateX(150%);
+                    opacity: 0;
+                }
+            }
+        }
+    }
+}
+
+// five section carousel-section animations:
+.js-animation-trigger {
+    &.carousel-section {
+        .carousel-section__swiper-slide {
+            &:first-child {
+                .carousel-slide__header--transition {
+
+                    @include breakpointMF(portrait-tablet) {
+                        transform: translateY(-150%);
+                    }
+                }
+
+                .carousel-slide__list-item--transition {
+
+                    .carousel-slide__start,
+                    .carousel-slide__numbers {
+                        @include breakpointMF(portrait-tablet) {
+                            transform: translateY(100%);
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+// five section carousel-section animations:
+.js-animation-trigger {
+    &.simple-section {
+        .simple-section__swiper-slide {
+            &:first-child {
+                .simple-section__body--transition {
+                    .simple-section__title,
+                    .simple-section__subtitle {
+
+                        @include breakpointMF(portrait-tablet) {
+                            transform: translateX(-500px);
+                            opacity: 0;
+                        }
+                    }
+
+                    .simple-section__number,
+                    .simple-section__text {
+
+                        @include breakpointMF(portrait-tablet) {
+                            transform: translateX(500px);
+                            opacity: 0;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

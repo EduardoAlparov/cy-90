@@ -34,6 +34,17 @@
             object-fit: cover;
             object-position: center;
         }
+
+        &--transition {
+            img {
+                transform: translate(-50%, -50%) scale(1);
+                transform-origin: center;
+
+                transition-duration: 0.5s;
+                transition-timing-function: ease-out;
+                transition-property: transform;
+            }
+        }
     }
 
     &__info {

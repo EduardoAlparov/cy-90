@@ -12,16 +12,19 @@ import menuLinksOpacity from './modules/menuLinksOpacity.js';
 import setHeaderPadding from './modules/setHeaderPadding.js';
 import setFixedHeader from './modules/setFixedHeader.js';
 
+import animationsTriggers from './modules/animationsTriggers.js';
 import carouselSwiper from './modules/carouselSwiper.js';
+import cascadeSliderAnimation from './modules/cascadeSliderAnimation.js';
+import simpleSectionAnimation from './modules/simpleSectionAnimation.js';
 import partnersSwiper from './modules/partnersSwiper.js';
+
+gsap.registerPlugin(ScrollTrigger);
 
 document.addEventListener("DOMContentLoaded", () => {
     const body = document.body;
 
     // activate transition:
-    setTimeout(() => {
-        body.classList.remove('preload');
-    }, 500);
+    body.classList.remove('preload');
 
     // inits modals:
     const modal = new Modal({
@@ -49,6 +52,9 @@ document.addEventListener("DOMContentLoaded", () => {
     setHeaderPadding();
     setFixedHeader();
 
+    animationsTriggers();
     carouselSwiper();
+    cascadeSliderAnimation();
+    simpleSectionAnimation();
     partnersSwiper();
 })

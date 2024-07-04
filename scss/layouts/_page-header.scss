@@ -52,7 +52,7 @@
 
         .page-header__button {
             .burger-btn {
-                background-color: rgba(136, 136, 136, 0.25);
+                background-color: var(--back, #101010);
             }
         }
 

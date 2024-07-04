@@ -3,12 +3,13 @@ export default () => {
 
     carousels.forEach((carousel) => {
         const sw = carousel.querySelector('.carousel-section__swiper.swiper');
+
         const swiper = new Swiper(sw, {
             speed: 900,
             parallax: true,
 
             autoplay: {
-                delay: 3000
+                delay: 2500
             },
 
             pagination: {
@@ -23,6 +24,18 @@ export default () => {
                 992: {
                 }
             }
+        });
+
+        swiper.autoplay.stop();
+
+        ScrollTrigger.create({
+            trigger: carousel,
+            start: 'top center-=30%',
+            once: true,
+            markers: false,
+            onToggle: () => {
+                swiper.autoplay.start();
+            },
         });
     })
 }
