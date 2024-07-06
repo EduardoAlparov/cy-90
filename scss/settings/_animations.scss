@@ -2,7 +2,12 @@
 .js-animation-trigger {
     &.intro-section {
 
-        .intro-section__heading {
+        .intro-section__heading--transition {
+
+            @include breakpoint(portrait-tablet) {
+                transform: translateY(-150%);
+                opacity: 0;
+            }
 
             .intro-section__subtitle,
             .intro-section__text,
@@ -14,10 +19,28 @@
             }
         }
 
-        .intro-section__picture {
+        .intro-section__picture--transition {
+
+            @include breakpoint(portrait-tablet) {
+                transform: scale(1);
+            }
 
             @include breakpointMF(portrait-tablet) {
                 transform: scale(1);
+            }
+        }
+
+        .intro-section__video-btn {
+            @include breakpoint(portrait-tablet) {
+                transform: translateY(25rem);
+                opacity: 0;
+            }
+        }
+
+        .intro-section__slogan {
+            @include breakpoint(portrait-tablet) {
+                transform: translateY(150%);
+                opacity: 0;
             }
         }
     }
@@ -29,10 +52,38 @@
 
         .triple-section__service {
             .service__image {
+
                 img {
                     @include breakpointMF(portrait-tablet) {
                         transform: translate(-50%, -50%) scale(1.1);
                     }
+                }
+            }
+        }
+
+        .triple-section__heading--transition {
+
+            @include breakpoint(portrait-tablet) {
+                transform: translateY(-100%);
+                opacity: 0;
+            }
+        }
+
+        .triple-section__cell--transition {
+            &:first-child,
+            &:nth-child(3) {
+
+                @include breakpoint(portrait-tablet) {
+                    transform: translateX(-120%);
+                    opacity: 0;
+                }
+            }
+
+            &:nth-child(2) {
+
+                @include breakpoint(portrait-tablet) {
+                    transform: translateX(120%);
+                    opacity: 0;
                 }
             }
         }
@@ -47,9 +98,24 @@
 
             .grid-section__information-box--transition {
 
+                @include breakpoint(portrait-tablet) {
+                    transform: translateX(150%);
+                    opacity: 0;
+                }
+
                 @include breakpointMF(portrait-tablet) {
                     transform: translateY(-150%);
                     opacity: 0;
+                }
+            }
+
+            &.grid-section__cell--from-left {
+                .grid-section__information-box--transition {
+
+                    @include breakpoint(portrait-tablet) {
+                        transform: translateX(-150%);
+                        opacity: 0;
+                    }
                 }
             }
         }
@@ -58,9 +124,25 @@
 
             .grid-section__information-box--transition {
 
+                @include breakpoint(portrait-tablet) {
+                    transform: translateX(-150%);
+                    opacity: 0;
+                }
+
+
                 @include breakpointMF(portrait-tablet) {
                     transform: translateY(150%);
                     opacity: 0;
+                }
+            }
+
+            &.grid-section__cell--from-right {
+                .grid-section__information-box--transition {
+
+                    @include breakpoint(portrait-tablet) {
+                        transform: translateX(150%);
+                        opacity: 0;
+                    }
                 }
             }
         }
@@ -73,6 +155,10 @@
         .cascade-section__slider-item:first-child {
 
             .cascade-section__stats--transition {
+                @include breakpoint(portrait-tablet) {
+                    transform: translateX(-120%);
+                    opacity: 0;
+                }
 
                 @include breakpointMF(portrait-tablet) {
                     transform: translateX(-150%);
@@ -137,6 +223,23 @@
 
                         @include breakpointMF(portrait-tablet) {
                             transform: translateX(500px);
+                            opacity: 0;
+                        }
+                    }
+
+                    .simple-section__number {
+
+                        @include breakpoint(portrait-tablet) {
+                            transform: translateX(-120%);
+                            opacity: 0;
+                        }
+                    }
+
+                    .simple-section__subtitle,
+                    .simple-section__text {
+
+                        @include breakpoint(portrait-tablet) {
+                            transform: translateX(120%);
                             opacity: 0;
                         }
                     }

@@ -1,6 +1,14 @@
 .simple-section {
     overflow: hidden;
 
+    &.section {
+        padding: 5.2rem 0 10.4rem;
+
+        @include breakpointMF(portrait-tablet) {
+            padding: 6.8rem 0;
+        }
+    }
+
     &__body {
         display: grid;
 

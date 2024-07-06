@@ -18,11 +18,6 @@ export default () => {
                 renderBullet: function (index, className) {
                   return '<span class="' + className + ' swiper-pagination-line">' + "</span>";
                 },
-            },
-
-            breakpoints: {
-                992: {
-                }
             }
         });
 
@@ -34,7 +29,7 @@ export default () => {
             once: true,
             markers: false,
             onToggle: () => {
-                swiper.autoplay.start();
+                // swiper.autoplay.start();
             },
         });
     })

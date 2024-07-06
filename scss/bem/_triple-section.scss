@@ -21,6 +21,17 @@
                 }
             }
         }
+
+        &--transition {
+            @include breakpoint(portrait-tablet) {
+                transform: translateY(0%);
+                opacity: 1;
+
+                transition-duration: 0.5s;
+                transition-timing-function: ease-out;
+                transition-property: transform, opacity;
+            }
+        }
     }
 
     &__body {
@@ -47,6 +58,17 @@
         @include breakpointMF(portrait-tablet) {
             width: calc(100% / 3 - (2rem * 2 / 3));
             margin-bottom: unset;
+        }
+
+        &--transition {
+            @include breakpoint(portrait-tablet) {
+                transform: translateX(0%);
+                opacity: 1;
+
+                transition-duration: 0.7s;
+                transition-timing-function: ease-out;
+                transition-property: transform, opacity;
+            }
         }
     }
 

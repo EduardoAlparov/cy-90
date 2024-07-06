@@ -52,7 +52,11 @@
 
         .page-header__button {
             .burger-btn {
-                background-color: var(--back, #101010);
+                background-color: var(--Grey, #888);
+
+                @include breakpointMF(portrait-tablet) {
+                    background-color: var(--back, #101010);
+                }
             }
         }
 

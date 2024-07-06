@@ -37,12 +37,14 @@
 
         &--transition {
             img {
-                transform: translate(-50%, -50%) scale(1);
-                transform-origin: center;
+                @include breakpointMF(portrait-tablet) {
+                    transform: translate(-50%, -50%) scale(1);
+                    transform-origin: center;
 
-                transition-duration: 0.5s;
-                transition-timing-function: ease-out;
-                transition-property: transform;
+                    transition-duration: 0.5s;
+                    transition-timing-function: ease-out;
+                    transition-property: transform;
+                }
             }
         }
     }

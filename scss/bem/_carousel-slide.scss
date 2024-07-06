@@ -23,14 +23,17 @@
         }
 
         &--transition {
-            transform: translateY(0%);
-            opacity: 1;
 
-            transition-duration: 0.6s;
-            transition-timing-function: ease-out;
-            transition-property: transform, opacity;
+            @include breakpointMF(portrait-tablet) {
+                transform: translateY(0%);
+                opacity: 1;
 
-            will-change: transform;
+                transition-duration: 0.6s;
+                transition-timing-function: ease-out;
+                transition-property: transform, opacity;
+
+                will-change: transform;
+            }
         }
     }
 
@@ -127,8 +130,12 @@
             height: 100%;
 
             background: linear-gradient(180deg, rgba(24, 24, 24, 0.40) 0%, rgba(21, 21, 21, 0.25) 39.57%, rgba(19, 19, 19, 0.40) 75%, rgba(15, 15, 15, 0.70) 100%);
-
             content: "";
+
+            @include breakpointMF(portrait-tablet) {
+                background: linear-gradient(180deg, rgba(24, 24, 24, 0.40) 0%, rgba(21, 21, 21, 0.25) 39.57%, rgba(19, 19, 19, 0.40) 75%, rgba(15, 15, 15, 0.70) 100%);
+            }
+
         }
 
         img {
@@ -138,6 +145,121 @@
             min-height: 100%;
             object-fit: cover;
             object-position: center;
+        }
+    }
+
+    &.carousel-slide--expand-mobile {
+        @include breakpoint(portrait-tablet) {
+            height: 100%;
+        }
+
+        .carousel-slide__picture {
+
+            @include breakpoint(portrait-tablet) {
+                position: relative;
+                top: unset;
+                left: unset;
+                bottom: unset;
+                right: unset;
+
+                width: 100%;
+
+                overflow: hidden;
+                aspect-ratio: 0.68 / 1;
+            }
+        }
+
+        .carousel-slide__body {
+
+            @include breakpoint(portrait-tablet) {
+                position: static;
+                display: contents;
+            }
+        }
+
+        .carousel-slide__header {
+
+            @include breakpoint(portrait-tablet) {
+                position: absolute;
+                top: 0;
+                left: 0.5rem;
+                z-index: 200;
+
+                width: calc(100% - 1rem);
+                margin: 5.6rem auto 0;
+            }
+        }
+
+        .carousel-slide__list {
+
+            @include breakpoint(portrait-tablet) {
+                display: flex;
+                flex-direction: column;
+                align-items: stretch;
+                justify-content: unset;
+                padding: 2.4rem var(--content-padding, 2rem);
+            }
+
+            .carousel-slide__list-item {
+
+                &:first-child {
+                    @include breakpoint(portrait-tablet) {
+                        margin-right: unset;
+                    }
+                }
+
+                &:nth-child(2) {
+
+                    &::after,
+                    &::before {
+                        @include breakpoint(portrait-tablet) {
+                            content: none;
+                        }
+                    }
+                }
+
+                @include breakpoint(portrait-tablet) {
+                    margin-bottom: 2.4rem;
+                    padding: 4rem 3rem;
+                    flex-direction: column-reverse;
+
+                    background: var(--card, #1A1A1A);
+                    border-radius: 0.5rem;
+
+                    &:last-child {
+                        margin-bottom: 0;
+                    }
+                }
+            }
+
+            .carousel-slide__start {
+                @include breakpoint(portrait-tablet) {
+                    margin-bottom: 0;
+
+                    color: var(--Grey, #888);
+                    text-align: center;
+                    font-family: var(--third-ff);
+                    font-size: 2.5rem;
+                    font-style: normal;
+                    font-weight: 400;
+                    line-height: 115%;
+                    text-transform: uppercase;
+                }
+            }
+
+            .carousel-slide__numbers {
+                @include breakpoint(portrait-tablet) {
+                    margin-bottom: 3.2rem;
+                    color: var(--White, #EEE);
+                    font-family: var(--main-ff);
+                    font-size: 4rem;
+                    font-style: normal;
+                    font-weight: 600;
+                    line-height: 130%;
+                    letter-spacing: 0.02em;
+                    text-align: center;
+                }
+            }
         }
     }
 }
