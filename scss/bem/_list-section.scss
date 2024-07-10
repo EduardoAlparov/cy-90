@@ -1,4 +1,13 @@
 .list-section {
+    &__title--transition {
+        transform: translate(0, 0);
+        opacity: 1;
+
+        transition-duration: 0.9s;
+        transition-timing-function: ease-out;
+        transition-property: transform, opacity;
+    }
+
     &__list {
         display: flex;
         flex-direction: column;
@@ -14,6 +23,14 @@
 
         &:last-child {
             margin-bottom: 0;
+        }
+
+        &--opacity-transition {
+            opacity: 1;
+
+            transition-duration: 0.9s;
+            transition-timing-function: ease-out;
+            transition-property: opacity;
         }
 
         @include breakpointMF(portrait-tablet) {

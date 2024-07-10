@@ -25,7 +25,7 @@
         <link rel="stylesheet" href="./styles.css">
     </head>
     <body class="preload body-portfolio-page">
-        <div class="wrapper">
+        <div class="wrapper js-switchable-windows">
             <header class="page-header">
                 <div class="page-header__site-container">
                     <a href="/" class="page-header__logo logo">
@@ -44,14 +44,14 @@
                 </div>
                 <div class="page-header__breadcrumbs breadcrumbs">
                     <div class="breadcrumbs__site-container">
-                        <ul class="breadcrumbs__list">
+                        <ul class="breadcrumbs__list js-navbar">
                             <li class="breadcrumbs__item">
-                                <a href="#" class="breadcrumbs__link">
+                                <a href="#" data-switch-id="list-window-1" class="breadcrumbs__link js-navbar-link">
                                     Объекты Су-90
                                 </a>
                             </li>
                             <li class="breadcrumbs__item">
-                                <a href="#" class="breadcrumbs__link">
+                                <a href="#" data-switch-id="list-window-2" class="breadcrumbs__link js-navbar-link">
                                     Бригадный подряд
                                 </a>
                             </li>
@@ -60,7 +60,7 @@
                 </div>
             </header>
             <main class="page-main">
-                <section class="section objects-section">
+                <section id="list-window-1" data-switch-window class="section objects-section">
                     <div class="objects-section__site-container _intro-padding-top">
                         <div class="objects-section__heading section__heading">
                             <p class="section__subtitle section__subtitle--h2">
@@ -110,6 +110,7 @@
                                     </div>
                                 </a>
                             </li>
+
                             <li class="objects-section__item">
                                 <a href="#" id="" class="objects-section__object object">
                                     <div class="object__image">
@@ -151,6 +152,7 @@
                                     </div>
                                 </a>
                             </li>
+
                             <li class="objects-section__item">
                                 <a href="#" id="" class="objects-section__object object">
                                     <div class="object__image">
@@ -192,88 +194,222 @@
                                     </div>
                                 </a>
                             </li>
+
                             <li class="objects-section__item">
                                 <a href="#" id="" class="objects-section__object object">
                                     <div class="object__image">
                                         <picture>
-                                            <source srcset="./images/objects/img-1.webp" type="image/webp">
-                                            <img src="./images/objects/img-1.jpg" alt="">
+                                            <source srcset="./images/objects/img-4.webp" type="image/webp">
+                                            <img src="./images/objects/img-4.jpg" alt="">
                                         </picture>
                                     </div>
                                     <div class="object__body">
                                         <div class="object__top">
                                             <p class="object__title">
                                                 <span class="object__name">
-                                                    ЖК "Life Варшавская"
+                                                    ЖК "Дмитровское небо"
                                                 </span>
                                                 <span class="object__stage">
-                                                    3й этап
+                                                    1й этап
                                                 </span>
                                             </p>
                                             <p class="object__address">
-                                                г. Москва, 2-й Котляковский переулок, вл.1/1
+                                                Ильменский пр-д, вл.4
                                             </p>
                                         </div>
                                         <div class="object__bottom">
                                             <p class="object__services">
-                                                Монолитные и гидроизоляционные работы, каменная кладка
+                                                Монолитные  работы
                                             </p>
                                             <div class="object__footer">
                                                 <span class="object__station station">
-                                                    Варшавская
+                                                    Селигерская
                                                 </span>
                                                 <span class="object__business">
-                                                    ГК "Пионер"
+                                                    ГК "ЛСР"
                                                 </span>
                                                 <span class="object__area">
-                                                    104 000 м2
+                                                    74 473 м2
                                                 </span>
                                             </div>
                                         </div>
                                     </div>
                                 </a>
                             </li>
+
                             <li class="objects-section__item">
                                 <a href="#" id="" class="objects-section__object object">
                                     <div class="object__image">
                                         <picture>
-                                            <source srcset="./images/objects/img-2.webp" type="image/webp">
-                                            <img src="./images/objects/img-2.jpg" alt="">
+                                            <source srcset="./images/objects/img-5.webp" type="image/webp">
+                                            <img src="./images/objects/img-5.jpg" alt="">
                                         </picture>
                                     </div>
                                     <div class="object__body">
                                         <div class="object__top">
                                             <p class="object__title">
                                                 <span class="object__name">
-                                                    ЖК "Life Варшавская"
+                                                    ЖК «Михалковский»
                                                 </span>
-                                                <span class="object__stage">
-                                                    4й этап
-                                                </span>
+                                                <span class="object__stage"></span>
                                             </p>
                                             <p class="object__address">
-                                                г. Москва, 2-й Котляковский переулок, вл.1/1
+                                                г. Москва, ул. Михалковская, д.48с9
                                             </p>
                                         </div>
                                         <div class="object__bottom">
                                             <p class="object__services">
-                                                Монолитные и гидроизоляционные работы, каменная кладка
+                                                Монолитные  работы
                                             </p>
                                             <div class="object__footer">
-                                                <span class="object__station station">
-                                                    Варшавская
+                                                <span class="object__station station station--red">
+                                                    МЦК Коптево
                                                 </span>
                                                 <span class="object__business">
-                                                    ГК "Пионер"
+                                                    РГ-Девелопмент
                                                 </span>
                                                 <span class="object__area">
-                                                    181,78м2
+                                                    43 482,85 м2
                                                 </span>
                                             </div>
                                         </div>
                                     </div>
                                 </a>
                             </li>
+
+                            <li class="objects-section__item">
+                                <a href="#" id="" class="objects-section__object object">
+                                    <div class="object__image">
+                                        <picture>
+                                            <source srcset="./images/objects/img-6.webp" type="image/webp">
+                                            <img src="./images/objects/img-6.jpg" alt="">
+                                        </picture>
+                                    </div>
+                                    <div class="object__body">
+                                        <div class="object__top">
+                                            <p class="object__title">
+                                                <span class="object__name">
+                                                    ЖК "Селигер Сити"
+                                                </span>
+                                                <span class="object__stage"></span>
+                                            </p>
+                                            <p class="object__address">
+                                                г. Москва, Дмитровское шоссе, вл. 87
+                                            </p>
+                                        </div>
+                                        <div class="object__bottom">
+                                            <p class="object__services">
+                                                Монолитные и гидроизоляционные работы, каменная кладка, отделочные работы
+                                            </p>
+                                            <div class="object__footer">
+                                                <span class="object__station station">
+                                                    Верхние Лихоборы
+                                                </span>
+                                                <span class="object__business">
+                                                    MR Group
+                                                </span>
+                                                <span class="object__area">
+                                                    90 030,43 м2
+                                                </span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </a>
+                            </li>
+
+                            <li class="objects-section__item">
+                                <a href="#" id="" class="objects-section__object object">
+                                    <div class="object__image">
+                                        <picture>
+                                            <source srcset="./images/objects/img-7.webp" type="image/webp">
+                                            <img src="./images/objects/img-7.jpg" alt="">
+                                        </picture>
+                                    </div>
+                                    <div class="object__body">
+                                        <div class="object__top">
+                                            <p class="object__title">
+                                                <span class="object__name">
+                                                    ЖК "Дмитровское небо" 2й этап
+                                                </span>
+                                                <span class="object__stage"></span>
+                                            </p>
+                                            <p class="object__address">
+                                                Ильменский пр-д, вл.4 / 1 очередь стр-ва
+                                            </p>
+                                        </div>
+                                        <div class="object__bottom">
+                                            <p class="object__services">
+                                                Монолитные  работы
+                                            </p>
+                                            <div class="object__footer">
+                                                <span class="object__station station">
+                                                    Селигерская
+                                                </span>
+                                                <span class="object__business">
+                                                    ГК "ЛСР"
+                                                </span>
+                                                <span class="object__area">
+                                                    80 000 м2
+                                                </span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </a>
+                            </li>
+
+                            <li class="objects-section__item">
+                                <a href="#" id="" class="objects-section__object object">
+                                    <div class="object__image">
+                                        <picture>
+                                            <source srcset="./images/objects/img-8.webp" type="image/webp">
+                                            <img src="./images/objects/img-8.jpg" alt="">
+                                        </picture>
+                                    </div>
+                                    <div class="object__body">
+                                        <div class="object__top">
+                                            <p class="object__title">
+                                                <span class="object__name">
+                                                    ЖК «Famos
+                                                </span>
+                                                <span class="object__stage"></span>
+                                            </p>
+                                            <p class="object__address">
+                                                г.Москва, район Филевский парк,<br> пр-д Багратионовский, вл. 5
+                                            </p>
+                                        </div>
+                                        <div class="object__bottom">
+                                            <p class="object__services">
+                                                Монолитные  работы
+                                            </p>
+                                            <div class="object__footer">
+                                                <span class="object__station station">
+                                                    Селигерская
+                                                </span>
+                                                <span class="object__business">
+                                                    ГК "ЛСР"
+                                                </span>
+                                                <span class="object__area">
+                                                    80 000 м2
+                                                </span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </section>
+
+                <section id="list-window-2" data-switch-window class="section objects-section display-none">
+                    <div class="objects-section__site-container _intro-padding-top">
+                        <div class="objects-section__heading section__heading">
+                            <p class="section__subtitle section__subtitle--h2">
+                                Объекты Су-90
+                            </p>
+                        </div>
+
+                        <ul class="objects-section__list">
+
                             <li class="objects-section__item">
                                 <a href="#" id="" class="objects-section__object object">
                                     <div class="object__image">
@@ -315,82 +451,202 @@
                                     </div>
                                 </a>
                             </li>
+
                             <li class="objects-section__item">
                                 <a href="#" id="" class="objects-section__object object">
                                     <div class="object__image">
                                         <picture>
-                                            <source srcset="./images/objects/img-1.webp" type="image/webp">
-                                            <img src="./images/objects/img-1.jpg" alt="">
+                                            <source srcset="./images/objects/img-4.webp" type="image/webp">
+                                            <img src="./images/objects/img-4.jpg" alt="">
                                         </picture>
                                     </div>
                                     <div class="object__body">
                                         <div class="object__top">
                                             <p class="object__title">
                                                 <span class="object__name">
-                                                    ЖК "Life Варшавская"
+                                                    ЖК "Дмитровское небо"
                                                 </span>
                                                 <span class="object__stage">
-                                                    3й этап
+                                                    1й этап
                                                 </span>
                                             </p>
                                             <p class="object__address">
-                                                г. Москва, 2-й Котляковский переулок, вл.1/1
+                                                Ильменский пр-д, вл.4
                                             </p>
                                         </div>
                                         <div class="object__bottom">
                                             <p class="object__services">
-                                                Монолитные и гидроизоляционные работы, каменная кладка
+                                                Монолитные  работы
                                             </p>
                                             <div class="object__footer">
                                                 <span class="object__station station">
-                                                    Варшавская
+                                                    Селигерская
                                                 </span>
                                                 <span class="object__business">
-                                                    ГК "Пионер"
+                                                    ГК "ЛСР"
                                                 </span>
                                                 <span class="object__area">
-                                                    104 000 м2
+                                                    74 473 м2
                                                 </span>
                                             </div>
                                         </div>
                                     </div>
                                 </a>
                             </li>
+
                             <li class="objects-section__item">
                                 <a href="#" id="" class="objects-section__object object">
                                     <div class="object__image">
                                         <picture>
-                                            <source srcset="./images/objects/img-2.webp" type="image/webp">
-                                            <img src="./images/objects/img-2.jpg" alt="">
+                                            <source srcset="./images/objects/img-5.webp" type="image/webp">
+                                            <img src="./images/objects/img-5.jpg" alt="">
                                         </picture>
                                     </div>
                                     <div class="object__body">
                                         <div class="object__top">
                                             <p class="object__title">
                                                 <span class="object__name">
-                                                    ЖК "Life Варшавская"
+                                                    ЖК «Михалковский»
                                                 </span>
-                                                <span class="object__stage">
-                                                    4й этап
-                                                </span>
+                                                <span class="object__stage"></span>
                                             </p>
                                             <p class="object__address">
-                                                г. Москва, 2-й Котляковский переулок, вл.1/1
+                                                г. Москва, ул. Михалковская, д.48с9
                                             </p>
                                         </div>
                                         <div class="object__bottom">
                                             <p class="object__services">
-                                                Монолитные и гидроизоляционные работы, каменная кладка
+                                                Монолитные  работы
+                                            </p>
+                                            <div class="object__footer">
+                                                <span class="object__station station station--red">
+                                                    МЦК Коптево
+                                                </span>
+                                                <span class="object__business">
+                                                    РГ-Девелопмент
+                                                </span>
+                                                <span class="object__area">
+                                                    43 482,85 м2
+                                                </span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </a>
+                            </li>
+
+                            <li class="objects-section__item">
+                                <a href="#" id="" class="objects-section__object object">
+                                    <div class="object__image">
+                                        <picture>
+                                            <source srcset="./images/objects/img-6.webp" type="image/webp">
+                                            <img src="./images/objects/img-6.jpg" alt="">
+                                        </picture>
+                                    </div>
+                                    <div class="object__body">
+                                        <div class="object__top">
+                                            <p class="object__title">
+                                                <span class="object__name">
+                                                    ЖК "Селигер Сити"
+                                                </span>
+                                                <span class="object__stage"></span>
+                                            </p>
+                                            <p class="object__address">
+                                                г. Москва, Дмитровское шоссе, вл. 87
+                                            </p>
+                                        </div>
+                                        <div class="object__bottom">
+                                            <p class="object__services">
+                                                Монолитные и гидроизоляционные работы, каменная кладка, отделочные работы
                                             </p>
                                             <div class="object__footer">
                                                 <span class="object__station station">
-                                                    Варшавская
+                                                    Верхние Лихоборы
                                                 </span>
                                                 <span class="object__business">
-                                                    ГК "Пионер"
+                                                    MR Group
                                                 </span>
                                                 <span class="object__area">
-                                                    181,78м2
+                                                    90 030,43 м2
+                                                </span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </a>
+                            </li>
+
+                            <li class="objects-section__item">
+                                <a href="#" id="" class="objects-section__object object">
+                                    <div class="object__image">
+                                        <picture>
+                                            <source srcset="./images/objects/img-7.webp" type="image/webp">
+                                            <img src="./images/objects/img-7.jpg" alt="">
+                                        </picture>
+                                    </div>
+                                    <div class="object__body">
+                                        <div class="object__top">
+                                            <p class="object__title">
+                                                <span class="object__name">
+                                                    ЖК "Дмитровское небо" 2й этап
+                                                </span>
+                                                <span class="object__stage"></span>
+                                            </p>
+                                            <p class="object__address">
+                                                Ильменский пр-д, вл.4 / 1 очередь стр-ва
+                                            </p>
+                                        </div>
+                                        <div class="object__bottom">
+                                            <p class="object__services">
+                                                Монолитные  работы
+                                            </p>
+                                            <div class="object__footer">
+                                                <span class="object__station station">
+                                                    Селигерская
+                                                </span>
+                                                <span class="object__business">
+                                                    ГК "ЛСР"
+                                                </span>
+                                                <span class="object__area">
+                                                    80 000 м2
+                                                </span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </a>
+                            </li>
+
+                            <li class="objects-section__item">
+                                <a href="#" id="" class="objects-section__object object">
+                                    <div class="object__image">
+                                        <picture>
+                                            <source srcset="./images/objects/img-8.webp" type="image/webp">
+                                            <img src="./images/objects/img-8.jpg" alt="">
+                                        </picture>
+                                    </div>
+                                    <div class="object__body">
+                                        <div class="object__top">
+                                            <p class="object__title">
+                                                <span class="object__name">
+                                                    ЖК «Famos
+                                                </span>
+                                                <span class="object__stage"></span>
+                                            </p>
+                                            <p class="object__address">
+                                                г.Москва, район Филевский парк,<br> пр-д Багратионовский, вл. 5
+                                            </p>
+                                        </div>
+                                        <div class="object__bottom">
+                                            <p class="object__services">
+                                                Монолитные  работы
+                                            </p>
+                                            <div class="object__footer">
+                                                <span class="object__station station">
+                                                    Селигерская
+                                                </span>
+                                                <span class="object__business">
+                                                    ГК "ЛСР"
+                                                </span>
+                                                <span class="object__area">
+                                                    80 000 м2
                                                 </span>
                                             </div>
                                         </div>

@@ -248,3 +248,65 @@
         }
     }
 }
+
+// about page sections animations:
+.js-animation-trigger {
+    .about-section__image--transition {
+
+        @include breakpointMF(portrait-tablet) {
+            transform: translateX(-50%);
+            opacity: 0;
+        }
+    }
+
+    .list-section__item--opacity-transition {
+
+        @include breakpointMF(portrait-tablet) {
+            opacity: 0;
+        }
+    }
+
+    .list-section__title--from-left {
+
+        @include breakpointMF(portrait-tablet) {
+            transform: translateX(-50%);
+            opacity: 0;
+        }
+    }
+
+    .list-section__column--from-top-right {
+
+        @include breakpointMF(portrait-tablet) {
+            transform: translate(70%, -70%);
+            opacity: 0;
+        }
+    }
+
+    .list-section__column--from-right {
+
+        @include breakpointMF(portrait-tablet) {
+            transform: translate(50%, 0%);
+            opacity: 0;
+        }
+    }
+
+    .partners-section__swiper--bottom {
+        &.partners-section__swiper {
+
+            @include breakpointMF(portrait-tablet) {
+                opacity: 0;
+                transform: translate(100vw, 0%) !important;
+            }
+        }
+    }
+
+    .partners-section__swiper--top {
+        &.partners-section__swiper {
+
+            @include breakpointMF(portrait-tablet) {
+                opacity: 0;
+                transform: translate(-100vw, 0%) !important;
+            }
+        }
+    }
+}

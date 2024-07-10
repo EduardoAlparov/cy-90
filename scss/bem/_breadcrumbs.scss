@@ -17,16 +17,26 @@
         line-height: 135%;
         letter-spacing: 0.02em;
         pointer-events: none;
+        cursor: pointer;
 
         @include breakpointMF(portrait-tablet) {
             font-size: 2rem;
             line-height: 130%;
         }
+
+        &:is(.js-navbar-link) {
+            pointer-events: all;
+
+            &._active {
+                color: var(--Grey, #888);
+                pointer-events: none;
+            }
+        }
     }
 
     &__item {
         &:last-child {
-            a {
+            a:not(.js-navbar-link) {
                 color: var(--Grey, #888);
                 pointer-events: none;
             }

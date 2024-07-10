@@ -42,7 +42,7 @@
             font-size: 3rem;
         }
 
-        &--active {
+        @include hover() {
             color: var(--Grey, #888);
         }
     }

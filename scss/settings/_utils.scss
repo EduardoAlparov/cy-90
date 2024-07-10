@@ -99,6 +99,10 @@
     }
 }
 
+[class].display-none {
+    display: none !important;
+}
+
 .hide-on-mobile {
     @include breakpoint(portrait-tablet) {
         display: none !important;

@@ -70,6 +70,20 @@ export default () => {
         } else {
             swiperTop.init();
             swiperBottom.init();
+
+            swiperTop.autoplay.stop();
+            swiperBottom.autoplay.stop();
+
+            ScrollTrigger.create({
+                trigger: section,
+                start: 'top center-=15%',
+                once: true,
+                markers: false,
+                onToggle: () => {
+                    swiperTop.autoplay.start();
+                    swiperBottom.autoplay.start();
+                },
+            });
         }
     })
 }

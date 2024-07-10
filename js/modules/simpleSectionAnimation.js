@@ -15,7 +15,7 @@ export default () => {
 
             autoplay: {
                 delay: 2000,
-                stopOnLastSlide: true
+                stopOnLastSlide: false
             },
         });
 

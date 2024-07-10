@@ -30,6 +30,15 @@
   font-style: normal;
   font-weight: 700;
   src: local("Ruberoid Bold"),
+    url("../fonts/Ruberoid-SemiBold.woff") format("woff"),
+    url("../fonts/Ruberoid-SemiBold.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "Ruberoid";
+  font-style: normal;
+  font-weight: 700;
+  src: local("Ruberoid Bold"),
     url("../fonts/Ruberoid-Bold.woff") format("woff"),
     url("../fonts/Ruberoid-Bold.woff2") format("woff2");
 }

@@ -1,13 +1,9 @@
 import Modal from "./modules/Modal.js";
 import maps from "./modules/maps.js";
 
-// import validation from './modules/validation.js';
-// import masks from './modules/masks.js';
 // import lazyload from './modules/lazyload.js';
 
 import fancybox from './modules/fancybox.js';
-
-import menuLinksOpacity from './modules/menuLinksOpacity.js';
 
 import setHeaderPadding from './modules/setHeaderPadding.js';
 import setFixedHeader from './modules/setFixedHeader.js';
@@ -17,6 +13,7 @@ import carouselSwiper from './modules/carouselSwiper.js';
 import cascadeSliderAnimation from './modules/cascadeSliderAnimation.js';
 import simpleSectionAnimation from './modules/simpleSectionAnimation.js';
 import partnersSwiper from './modules/partnersSwiper.js';
+import navbarSwitch from './modules/navbarSwitch.js';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -36,10 +33,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
     maps();
 
-    // masks and validation:
-    // validation();
-    // masks();
-
     // lazyload for images, videos, iframes and objects:
     // lazyload();
 
@@ -47,7 +40,6 @@ document.addEventListener("DOMContentLoaded", () => {
     fancybox();
 
     // other scripts:
-    menuLinksOpacity();
 
     setHeaderPadding();
     setFixedHeader();
@@ -57,4 +49,5 @@ document.addEventListener("DOMContentLoaded", () => {
     cascadeSliderAnimation();
     simpleSectionAnimation();
     partnersSwiper();
+    navbarSwitch();
 })

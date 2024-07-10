@@ -29,7 +29,7 @@ export default () => {
             once: true,
             markers: false,
             onToggle: () => {
-                // swiper.autoplay.start();
+                swiper.autoplay.start();
             },
         });
     })

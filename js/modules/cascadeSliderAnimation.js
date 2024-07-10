@@ -1,24 +1,35 @@
 export default () => {
     const sections = document.querySelectorAll('.js-cascade-section');
 	const isMobile = window.matchMedia('(max-width: 992px)').matches;
-    let startPercent;
-    let endPercent;
-
-    isMobile ? (startPercent = 38) : (startPercent = 25);
-    isMobile ? (endPercent = 45) : (endPercent = 10);
 
     sections.forEach((section) => {
-		const tl = gsap.timeline();
-		tl.to(".js-cascade-slider", {xPercent: -200, duration: 3.5})
+		const sw = section.querySelector('.cascade-section__swiper.swiper');
 
-		ScrollTrigger.create({
-			animation: tl,
-			trigger: section,
-			start: `top center-=${startPercent}%`,
-			end: `bottom center+=${endPercent}%`,
-			scrub: 4.5,
-			once: true,
-			markers: false
-		});
+        const swiper = new Swiper(sw, {
+            speed: 700,
+            parallax: true,
+
+            freeMode: {
+                enabled: true,
+                sticky: true,
+            },
+
+            autoplay: {
+                delay: 2000,
+                stopOnLastSlide: false
+            },
+        });
+
+        swiper.autoplay.stop();
+
+        ScrollTrigger.create({
+            trigger: section,
+            start: 'top center-=10%',
+            once: true,
+            markers: false,
+            onToggle: () => {
+                // swiper.autoplay.start();
+            },
+        });
     })
 }

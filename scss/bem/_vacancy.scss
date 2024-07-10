@@ -15,7 +15,6 @@
         transition: border 0.2s ease;
 
         @include breakpointMF(portrait-tablet) {
-            max-width: 68rem;
             padding: 3.2rem;
         }
 

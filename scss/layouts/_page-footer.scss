@@ -138,4 +138,10 @@
             }
         }
     }
+
+    &__link {
+        &.page-footer__link--disabled {
+            pointer-events: none;
+        }
+    }
 }

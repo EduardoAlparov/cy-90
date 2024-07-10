@@ -56,7 +56,7 @@
             .intro-section__title {
                 transform: translateY(0%);
 
-                transition-duration: 0.5s;
+                transition-duration: 0.9s;
                 transition-timing-function: ease-out;
                 transition-property: transform;
             }
@@ -147,9 +147,9 @@
 
         &--transition {
             transform-origin: center;
-            transform: scale(1.1);
+            transform: scale(1.11);
 
-            transition-duration: 0.5s;
+            transition-duration: 0.9s;
             transition-timing-function: ease-out;
             transition-property: transform;
 
