@@ -33,11 +33,20 @@
             transition-property: opacity;
         }
 
+        &--mobile-transtion {
+            @include breakpoint(portrait-tablet) {
+                opacity: 1;
+
+                transition-duration: 0.7s;
+                transition-timing-function: ease-out;
+                transition-property: opacity;
+            }
+        }
+
         @include breakpointMF(portrait-tablet) {
             flex-direction: row;
             align-items: flex-start;
             justify-content: space-between;
-            // column-gap: 7rem;
 
             margin-bottom: 17.6rem;
 
@@ -61,6 +70,18 @@
     &__column {
         @include breakpointMF(portrait-tablet) {
             flex: 0 0 71.7rem;
+        }
+
+        &--mobile-transtion {
+
+            @include breakpoint(portrait-tablet) {
+                transform: translate(0, 0);
+                opacity: 1;
+
+                transition-duration: 0.7s;
+                transition-timing-function: ease-out;
+                transition-property: transform, opacity;
+            }
         }
     }
 

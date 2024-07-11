@@ -266,9 +266,24 @@
         }
     }
 
+    .list-section__item--mobile-opacity {
+
+        @include breakpoint(portrait-tablet) {
+            opacity: 0;
+        }
+    }
+
     .list-section__title--from-left {
 
         @include breakpointMF(portrait-tablet) {
+            transform: translateX(-50%);
+            opacity: 0;
+        }
+    }
+
+    .list-section__column--mobile-from-left {
+
+        @include breakpoint(portrait-tablet) {
             transform: translateX(-50%);
             opacity: 0;
         }
@@ -306,6 +321,113 @@
             @include breakpointMF(portrait-tablet) {
                 opacity: 0;
                 transform: translate(-100vw, 0%) !important;
+            }
+        }
+    }
+}
+
+// services page sections animations:
+.js-animation-trigger {
+    .triple-section__cell--animation {
+        &:nth-child(3) {
+            @include breakpoint(portrait-tablet) {
+                transform: translateX(50%);
+                opacity: 0;
+            }
+
+            @include breakpointMF(portrait-tablet) {
+                transform: translateX(-50%);
+                opacity: 0;
+            }
+        }
+
+        &:nth-child(2),
+        &:nth-child(5) {
+            @include breakpoint(portrait-tablet) {
+                transform: translate(0%, 0%);
+                opacity: 0;
+            }
+
+            @include breakpointMF(portrait-tablet) {
+                transform: translateY(50%);
+                opacity: 0;
+            }
+        }
+
+        &:nth-child(1) {
+            @include breakpoint(portrait-tablet) {
+                transform: translateX(-50%);
+                opacity: 0;
+            }
+
+            @include breakpointMF(portrait-tablet) {
+                transform: translateX(50%);
+                opacity: 0;
+            }
+        }
+    }
+}
+
+// contacts page sections animations:
+.js-animation-trigger {
+    .contacts-section__image-container--transition {
+        img {
+
+            @include breakpoint(portrait-tablet) {
+                transform: scale(1) translate(-50%, -50%);
+            }
+        }
+    }
+
+    .contacts-section__contacts--transition {
+
+        @include breakpointMF(portrait-tablet) {
+            opacity: 0;
+        }
+    }
+
+    .contacts-section__vacancies--transition {
+        transform: translateX(50%);
+        opacity: 0;
+    }
+}
+
+// services page sections animations:
+.js-animation-trigger {
+    .object-about__info-cell--animation {
+        &:nth-child(1) {
+            @include breakpoint(portrait-tablet) {
+                transform: translateX(-50%);
+                opacity: 0;
+            }
+
+            @include breakpointMF(portrait-tablet) {
+                transform: translateX(-50%);
+                opacity: 0;
+            }
+        }
+
+        &:nth-child(2) {
+            @include breakpoint(portrait-tablet) {
+                transform: translate(0%, 0%);
+                opacity: 0;
+            }
+
+            @include breakpointMF(portrait-tablet) {
+                transform: translateY(50%);
+                opacity: 0;
+            }
+        }
+
+        &:nth-child(3) {
+            @include breakpoint(portrait-tablet) {
+                transform: translateX(50%);
+                opacity: 0;
+            }
+
+            @include breakpointMF(portrait-tablet) {
+                transform: translateX(50%);
+                opacity: 0;
             }
         }
     }

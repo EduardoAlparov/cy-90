@@ -1,4 +1,6 @@
 .contacts-section {
+    overflow: hidden;
+
     &.section {
         padding: 0 0 3.3rem;
 
@@ -9,6 +11,7 @@
 
     &__intro {
         position: relative;
+        overflow: hidden;
         width: 100%;
         height: 47.3rem;
         margin-bottom: 4rem;
@@ -39,6 +42,20 @@
 
             object-fit: cover;
             object-position: center;
+        }
+
+        &--transition {
+            img {
+                transform-origin: center center;
+
+                @include breakpoint(portrait-tablet) {
+                    transform: scale(1.05) translate(-50%, -50%);
+
+                    transition-duration: 0.9s;
+                    transition-timing-function: ease-out;
+                    transition-property: transform;
+                }
+            }
         }
     }
 
@@ -77,6 +94,16 @@
             flex-direction: row;
             align-items: flex-start;
             justify-content: space-between;
+        }
+
+        &--transition {
+            @include breakpointMF(portrait-tablet) {
+                opacity: 1;
+
+                transition-duration: 0.7s;
+                transition-timing-function: ease-out;
+                transition-property: opacity;
+            }
         }
 
         .modal__times {
@@ -121,6 +148,15 @@
 
     &__vacancies {
         width: 100%;
+
+        &--transition {
+            transform: translate(0%, 0%);
+            opacity: 1;
+
+            transition-duration: 0.7s;
+            transition-timing-function: ease-out;
+            transition-property: transform, opacity;
+        }
     }
 
     &__vacancy {

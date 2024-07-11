@@ -62,12 +62,25 @@
 
         &--transition {
             @include breakpoint(portrait-tablet) {
-                transform: translateX(0%);
+                transform: translate(0%, 0%);
                 opacity: 1;
 
                 transition-duration: 0.7s;
                 transition-timing-function: ease-out;
                 transition-property: transform, opacity;
+            }
+        }
+
+        &--animation {
+            transform: translate(0%, 0%);
+            opacity: 1;
+
+            transition-duration: 0.7s;
+            transition-timing-function: ease-out;
+            transition-property: transform, opacity;
+
+            @include breakpoint(portrait-tablet) {
+                transition-duration: 0.5s;
             }
         }
     }

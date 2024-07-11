@@ -11,7 +11,24 @@ export default () => {
         const swiperMobile = new Swiper(swMobile, {
             init: false,
             spaceBetween: 56,
-            slidesPerView: 1.2,
+            speed: 7000,
+            loop: true,
+            loopAdditionalSlides: 0,
+
+            freeMode: true,
+            freeModeMomentum: false,
+
+            slidesPerView: 'auto',
+            centeredSlides: false,
+            centeredSlidesBounds: false,
+            centerInsufficientSlides: true,
+
+            autoplay: {
+                enabled: true,
+                delay: 0,
+                pauseOnMouseEnter: false,
+                disableOnInteraction: true,
+            },
         });
 
         const swiperTop = new Swiper(swTop, {
