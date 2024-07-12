@@ -74,6 +74,13 @@
             justify-content: space-between;
             margin-bottom: 5.6rem;
         }
+
+        &.section__heading--m-center {
+            @include breakpoint(portrait-tablet) {
+                align-items: center;
+                text-align: center;
+            }
+        }
     }
 
     &__subtitle {

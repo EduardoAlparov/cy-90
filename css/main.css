@@ -633,6 +633,14 @@ textarea:required:valid {
     margin-bottom: 5.6rem;
   }
 }
+@media only screen and (max-width: 992px) {
+  .section__heading.section__heading--m-center {
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    text-align: center;
+  }
+}
 .section__subtitle .text-box__heading {
   margin-bottom: 0;
 }
@@ -1066,7 +1074,7 @@ textarea:required:valid {
   grid-template-areas: "f_times f_menu" "f_contacts f_contacts";
   grid-template-columns: 1fr -webkit-min-content;
   grid-template-columns: 1fr min-content;
-  row-gap: 5.6rem;
+  row-gap: 3.3rem;
   width: 100%;
 }
 @media only screen and (min-width: 992px) {
@@ -4245,8 +4253,8 @@ textarea:required:valid {
   margin-bottom: 3rem;
 }
 .partners-section__swiper--mobile {
-  margin-right: calc(var(--content-padding) * -1);
-  padding-right: var(--content-padding);
+  margin: 0 calc(var(--content-padding) * -1);
+  padding: 0 var(--content-padding);
 }
 
 .partner {

@@ -53,8 +53,8 @@
         }
 
         &--mobile {
-            margin-right: calc(var(--content-padding) * -1);
-            padding-right: var(--content-padding);
+            margin: 0 calc(var(--content-padding) * -1);
+            padding: 0 var(--content-padding);
         }
     }
 }

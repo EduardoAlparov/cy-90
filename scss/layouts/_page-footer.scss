@@ -46,7 +46,7 @@
             "f_contacts f_contacts";
 
         grid-template-columns: 1fr min-content;
-        row-gap: 5.6rem;
+        row-gap: 3.3rem;
         width: 100%;
 
         @include breakpointMF(portrait-tablet) {
